@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="/app.js"></script>
+    <script src="/new.js"></script>
 
     <style>
         body { padding-top: 70px; }
@@ -25,9 +25,6 @@
     </div>
 </nav>
 <div class="container">
-    <div class="page-header">
-        <h1 id="race-name">New Race</h1>
-    </div>
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-primary">
@@ -40,18 +37,18 @@
         </div>
     </div>
     <div class="row">
-        <form action="#">
+        <form>
             <div class="col-xs-7 col-md-4 col-md-offset-3">
                 <div class="input-group">
                     <input id="candidate" type="text" class="form-control" placeholder="Candidate">
                 <span class="input-group-btn">
-                    <button type="submit" class="btn btn-default" onclick="addCandidate()">Add</button>
+                    <button type="submit" class="btn btn-default" onclick="addCandidate(event)">Add</button>
                 </span>
                 </div>
             </div>
             <div class="col-xs-5">
                 <div class="btn-group">
-                    <button type="button" class="btn btn-success" onclick="beginVoting()">Open Polls</button>
+                    <button type="button" class="btn btn-success" onclick="openPolls()">Open Polls</button>
                     <button type="button" class="btn btn-danger" onclick="clearCandidates()">Clear All</button>
                 </div>
             </div>
