@@ -3,7 +3,20 @@
   :url "https://github.com/ajoberstar/ranked-choice"
   :license {:name "Apache License, Version 2.0"
             :url "http://www.apache.org/licenses/LICENSE-2.0"}
-  :dependencies [[org.clojure/clojure "1.6.0"]]
+  :dependencies [[org.clojure/clojure "1.6.0"]
+                 [org.clojure/tools.logging "0.3.1"]
+                 [org.clojure/core.async "0.1.346.0-17112a-alpha"]
+                 [org.clojure/data.json "0.2.5"]
+
+                 ;; component
+                 [com.stuartsierra/component "0.2.2"]
+
+                 ;; http
+                 [ring/ring-core "1.3.2"]
+                 [http-kit "2.1.19"]
+                 [compojure "1.3.1"]]
   :main ^:skip-aot ranked-choice.core
   :target-path "target/%s"
-  :profiles {:uberjar {:aot :all}})
+  :profiles {:uberjar {:aot :all}
+             :dev {:dependencies [[org.clojure/tools.namespace "0.2.8"]]
+                   :source-paths ["dev"]}})

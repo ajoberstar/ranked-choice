@@ -1,7 +1,19 @@
 (ns ranked-choice.core
-  (:gen-class))
+  (:require [com.stuartsierra.component :as component]
+            [ranked-choice.server :as server]
+            [ranked-choice.routes :as routes]))
 
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
+(defn http-server []
+  (server/map->Server {:handler-fn routes/app
+                       :options {}}))
+
+(defn dev-system []
+  (component/system-map
+    :server (http-server)))
+
+(defn prod-system []
+  (component/system-map
+    :server (http-server)))
+
+(defn -main [& args]
+  (component/start-system (dev-system)))
