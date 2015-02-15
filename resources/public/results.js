@@ -20,10 +20,7 @@ socket.onmessage = function(event) {
         var cells = result.map(function(cell) {
             return '<td>' + cell + '</td>'
         }).join('')
-        $(tbody).append('<tr><td>' + (index + 1) + '</td>' + cells + '</tr>')
+        var tclass = index == 0 ? "success" : ""
+        $(tbody).append('<tr class="' + tclass + '"><td>' + (index + 1) + '</td>' + cells + '</tr>')
     })
-}
-
-function closePoll() {
-    console.log("Not supported yet.")
 }

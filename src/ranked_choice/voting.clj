@@ -23,17 +23,56 @@
       deref
       (nth poll-id nil)))
 
+(defn- tabulate
+  [votes]
+  (let [candidates (first votes)
+        base-results (zipmap candidates (repeat 0))]
+    (->> votes
+         (map first)
+         frequencies
+         (into base-results))))
+
+(defn- remove-candidate
+  [votes candidate]
+  (map (fn [vote]
+         (remove #(= % candidate) vote))
+       votes))
+
+(defn- empty-results
+  [candidates]
+  (zipmap candidates (repeat [])))
+
+(defn- format-results
+  [results]
+  (->> results
+       (map (fn [[candidate votes]]
+              (into [candidate] votes)))
+       (sort-by (comp #(into [] %) reverse))
+       reverse
+       (into [])))
+
 (defn- count-votes
   [votes]
-  [["Teddy" 15 19 21]
-   ["Abe" 10 15 16]
-   ["George" 5 0 0]])
+  (let [candidates (first votes)
+        votes-to-win (/ (count votes) 2)
+        base-results (zipmap candidates (repeat 0))]
+    (loop [remaining-votes votes
+           prev-results (empty-results candidates)]
+      (let [round-results (tabulate remaining-votes)
+            new-results (->> round-results
+                             (into base-results)
+                             (merge-with conj prev-results))
+            most-votes (reduce max (vals round-results))
+            last-place (first (apply min-key last round-results))]
+        (if (> most-votes votes-to-win)
+          new-results
+          (recur (remove-candidate remaining-votes last-place) new-results))))))
 
 (defn- handle-poll
   [msg old-votes old-results]
   (if-let [vote (:vote msg)]
     (let [new-votes (conj old-votes vote)
-          new-results (count-votes new-votes)]
+          new-results (-> new-votes count-votes format-results)]
       [new-votes new-results])
     [old-votes old-results]))
 
