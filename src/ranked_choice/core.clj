@@ -1,19 +1,17 @@
 (ns ranked-choice.core
   (:require [com.stuartsierra.component :as component]
             [ranked-choice.server :as server]
-            [ranked-choice.routes :as routes]))
+            [ranked-choice.routes :as routes]
+            [ranked-choice.vote :as vote]))
 
-(defn http-server []
-  (server/map->Server {:handler-fn routes/app
-                       :options {}}))
-
-(defn dev-system []
+(defn system
+  [httpkit-opts]
   (component/system-map
-    :server (http-server)))
-
-(defn prod-system []
-  (component/system-map
-    :server (http-server)))
+    :races (vote/map->Races {})
+    :handler (component/using {:handler-fn routes/app} {:vote/races :races})
+    :server (component/using
+              (server/map->Server {:options httpkit-opts})
+              [:handler])))
 
 (defn -main [& args]
-  (component/start-system (dev-system)))
+  (component/start-system (system {})))

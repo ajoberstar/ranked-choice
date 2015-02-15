@@ -10,8 +10,8 @@
                 (redirect "/new"))
            (GET "/new" []
                 (resource-response "/new.html"))
-           (POST "/new" [candidates]
-                 (str candidates))
+           (POST "/new" [candidates :as {races :vote/races}]
+                 (vote/new-poll races candidates))
            (GET "/vote/:id" [id]
                 (resource-response "/vote.html"))
            (resources ""))

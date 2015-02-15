@@ -7,7 +7,7 @@
 
  (defn init []
    (alter-var-root #'system (fn [sys]
-                              (core/dev-system))))
+                              (core/system {}))))
 
  (defn start []
    (alter-var-root #'system component/start-system))
