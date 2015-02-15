@@ -5,21 +5,20 @@
 
  (def system nil)
 
- (defn init []
-   (alter-var-root #'system (fn [sys]
-                              (core/system {}))))
+ (defn- alter-system [f]
+   (alter-var-root #'system f))
 
  (defn start []
-   (alter-var-root #'system component/start-system))
+   (alter-system component/start-system))
 
  (defn stop []
-   (alter-var-root #'system component/stop-system))
+   (alter-system component/stop-system))
 
- (defn go []
-   (init)
+ (defn- start-fresh []
+   (alter-system (fn [_] (core/system {})))
    (start)
    :ready)
 
- (defn reset []
+ (defn reload []
    (stop)
-   (refresh-all :after 'user/go))
+   (refresh-all :after 'user/start-fresh))
