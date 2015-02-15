@@ -1,10 +1,54 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title></title>
+
+    <title>Ranked Choice Voting</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="/html.sortable.min.js"></script>
+    <script src="/vote.js"></script>
+
+    <style>
+        body { padding-top: 70px; }
+    </style>
 </head>
 <body>
-
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Ranked Choice Voting</a>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Candidates</div>
+                <div class="panel-body">
+                    <ul id="candidateList" class="sortable list-group">
+                        <li class="candidate list-group-item"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="text-center">
+            <form method="POST">
+                <div id="candidateVotes"></div>
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-success" onclick="votePrep()">Vote</button>
+                    <a class="btn btn-danger" href="/poll/0/results">Abstain</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -5,25 +5,30 @@
             [compojure.route :refer [resources]]
             [ring.util.response :refer [resource-response redirect not-found]]
             [ring.middleware.params :refer [wrap-params]]
+            [net.cgrand.enlive-html :as html]
             [clojure.core.async :as async]
             [clojure.data.json :as json]))
 
+(html/deftemplate vote "vote.html" [candidates]
+  [:li.candidate] (html/clone-for [candidate candidates] (html/content candidate)))
+
 (defn poll-routes
-  [poll-ch]
+  [poll id]
   (routes
     (GET "/vote" []
-         (resource-response "/vote.html"))
+         (vote (:candidates poll)))
     (POST "/vote" [vote]
-          (async/put! poll-ch {:vote vote}))
+          (async/put! (:poll-ch poll) {:vote vote})
+          (redirect (str "/poll/" id "/results")))
     (GET "/results" [socket :as request]
          (if socket
            (let [in-ch (async/chan (async/sliding-buffer 1))
                  out-ch (async/chan 1 (map json/write-str))]
-             (async/put! poll-ch {:reply-ch out-ch})
+             (async/put! (:poll-ch poll) {:reply-ch out-ch})
              (websocket/websocket-handler in-ch out-ch))
            (resource-response "/results.html")))
     (GET "/close" []
-         (async/close! poll-ch))))
+         (async/close! (:poll-ch poll)))))
 
 (defroutes app-routes
   (GET "/" []
@@ -34,8 +39,8 @@
         (let [poll-id (voting/new-poll poll-mgr candidates)]
           (redirect (str "/poll/" poll-id "/vote"))))
   (context "/poll/:id" [id :as {poll-mgr :voting/poll-mgr}]
-           (if-let [poll-ch (voting/get-poll-ch poll-mgr (Integer/parseInt id))]
-             (poll-routes poll-ch)
+           (if-let [poll (voting/get-poll poll-mgr (Integer/parseInt id))]
+             (poll-routes poll id)
              (not-found (str "No poll found with id: " id))))
   (resources ""))
 

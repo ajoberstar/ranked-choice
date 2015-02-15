@@ -2,20 +2,23 @@
   (:require [com.stuartsierra.component :as component]
             [clojure.core.async :as async]))
 
-(defrecord PollManager [poll-chs]
+(defrecord Poll [candidates poll-ch])
+
+(defrecord PollManager [polls]
   component/Lifecycle
   (start [component]
-    (assoc component :poll-chs (atom [])))
+    (assoc component :polls (atom [])))
   (stop [component]
-    (swap! (:poll-chs component)
-           (fn [poll-chs]
-             (doall (filter async/close! poll-chs))))
-    (dissoc component :poll-chs)))
+    (swap! (:polls component)
+           (fn [polls]
+             (doseq [poll polls]
+               (async/close! (:poll-ch poll)))))
+    (dissoc component :polls)))
 
-(defn get-poll-ch
+(defn get-poll
   [poll-mgr poll-id]
   (-> poll-mgr
-      :poll-chs
+      :polls
       deref
       (nth poll-id nil)))
 
@@ -33,20 +36,20 @@
 
 (defn new-poll
   [poll-mgr candidates]
-  (let [poll-ch (async/chan)]
+  (let [poll-ch (async/chan)
+        results-ch (async/chan)
+        results-mult (async/mult results-ch)]
     (async/go-loop [old-votes []
-                    old-results []
-                    results-ch (async/chan)
-                    results-mult (async/mult results-ch)]
+                    old-results []]
       (if-let [msg (async/<! poll-ch)]
         (do
           (some->> (:reply-ch msg) (async/tap results-mult))
           (let [[new-votes new-results] (handle-poll msg old-votes old-results)]
             (async/>! results-ch new-results)
-            (recur new-votes new-results results-ch results-mult)))
+            (recur new-votes new-results)))
         (async/close! results-ch)))
     (-> poll-mgr
-        :poll-chs
-        (swap! conj poll-ch)
+        :polls
+        (swap! conj (->Poll candidates poll-ch))
         count
         dec)))
