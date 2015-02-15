@@ -9,14 +9,15 @@
             [clojure.core.async :as async]
             [clojure.data.json :as json]))
 
-(html/deftemplate vote "vote.html" [candidates]
-  [:li.candidate] (html/clone-for [candidate candidates] (html/content candidate)))
+(html/deftemplate vote "vote.html" [id candidates]
+  [:li.candidate] (html/clone-for [candidate candidates] (html/content candidate))
+  [:#abstain-btn] (html/set-attr :href (str "/poll/" id "/results") ))
 
 (defn poll-routes
   [poll id]
   (routes
     (GET "/vote" []
-         (vote (:candidates poll)))
+         (vote id (:candidates poll)))
     (POST "/vote" [vote]
           (async/put! (:poll-ch poll) {:vote vote})
           (redirect (str "/poll/" id "/results")))

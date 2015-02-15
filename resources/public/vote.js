@@ -4,7 +4,7 @@ $(document).ready(function () {
     })
 })
 
-function vote() {
+function votePrep() {
     $('#candidateList .candidate').each(function() {
         $('#candidateVotes').append('<input type="hidden" name="vote" value="' + $(this).text() + '">')
     })

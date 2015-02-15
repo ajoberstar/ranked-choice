@@ -1,6 +1,7 @@
 (ns ranked-choice.voting
   (:require [com.stuartsierra.component :as component]
-            [clojure.core.async :as async]))
+            [clojure.core.async :as async]
+            [clojure.tools.logging :as log]))
 
 (defrecord Poll [candidates poll-ch])
 
@@ -24,7 +25,9 @@
 
 (defn- count-votes
   [votes]
-  votes)
+  [["Teddy" 15 19 21]
+   ["Abe" 10 15 16]
+   ["George" 5 0 0]])
 
 (defn- handle-poll
   [msg old-votes old-results]
@@ -43,8 +46,11 @@
                     old-results []]
       (if-let [msg (async/<! poll-ch)]
         (do
+          (log/info "Received " msg)
           (some->> (:reply-ch msg) (async/tap results-mult))
           (let [[new-votes new-results] (handle-poll msg old-votes old-results)]
+            (log/info "Votes: " new-votes)
+            (log/info "Results: " new-results)
             (async/>! results-ch new-results)
             (recur new-votes new-results)))
         (async/close! results-ch)))
