@@ -11,11 +11,7 @@
            (GET "/new" []
                 (resource-response "/new.html"))
            (POST "/new" [candidates]
-                 (if-let [id (vote/new-poll candidates)]
-                   {:status 201
-                    :location (str "/vote/" id)}
-                   {:status 400
-                    :body "Failed to open polls."}))
+                 (str candidates))
            (GET "/vote/:id" [id]
                 (resource-response "/vote.html"))
            (resources ""))

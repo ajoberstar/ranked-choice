@@ -1,21 +1,21 @@
 function addCandidate(event) {
     var candidate = $('#candidate').val().trim()
     if (candidate) {
-        $('#candidates').append('<a href="" class="list-group-item"><span class="candidate">' + candidate + '</span><span class="label label-danger pull-right hidden">Remove</span></li>')
+        $('#candidateList').append('<a href="" class="list-group-item"><span class="candidate">' + candidate + '</span><span class="label label-danger pull-right hidden">Remove</span></li>')
         $('#candidate').val('')
     }
     event.preventDefault()
 }
 
 function clearCandidates() {
-    $('#candidates').empty()
+    $('#candidateList').empty()
+    $('#candidateResults').empty()
 }
 
 function openPolls() {
-    var candidates = $('#candidates .candidate').map(function() {
-        return $(this).text()
-    }).get()
-    console.log(candidates)
+    $('#candidateList .candidate').each(function() {
+        $('#candidateResults').append('<input type="hidden" name="candidates" value="' + $(this).text() + '">')
+    })
 }
 
 $(document).on('click', '#candidates a', function(event) {
