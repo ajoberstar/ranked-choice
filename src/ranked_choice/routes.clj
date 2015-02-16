@@ -19,8 +19,9 @@
     (GET "/vote" []
          (vote id (:candidates poll)))
     (POST "/vote" [vote]
-          (async/put! (:poll-ch poll) {:vote vote})
-          (redirect (str "/poll/" id "/results")))
+          (let [vote-coll (if (instance? String vote) [vote] vote)]
+            (async/put! (:poll-ch poll) {:vote vote-coll})
+            (redirect (str "/poll/" id "/results"))))
     (GET "/results" [socket :as request]
          (if socket
            (let [in-ch (async/chan (async/sliding-buffer 1))
@@ -37,7 +38,8 @@
   (GET "/poll/new" []
        (resource-response "/new.html"))
   (POST "/poll/new" [candidates :as {poll-mgr :voting/poll-mgr}]
-        (let [poll-id (voting/new-poll poll-mgr candidates)]
+        (let [candidates-coll (if (instance? String candidates) [candidates] candidates)
+              poll-id (voting/new-poll poll-mgr candidates-coll)]
           (redirect (str "/poll/" poll-id "/vote"))))
   (context "/poll/:id" [id :as {poll-mgr :voting/poll-mgr}]
            (if-let [poll (voting/get-poll poll-mgr (Integer/parseInt id))]
