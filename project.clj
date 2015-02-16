@@ -18,6 +18,7 @@
                  [enlive "1.1.5"]]
   :main ^:skip-aot ranked-choice.core
   :target-path "target/%s"
+  :uberjar-name "ranked-choice.jar"
   :profiles {:uberjar {:aot :all}
              :dev {:dependencies [[org.clojure/tools.namespace "0.2.8"]]
                    :source-paths ["dev"]}})
