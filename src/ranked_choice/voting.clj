@@ -32,11 +32,9 @@
          frequencies
          (into base-results))))
 
-(defn- remove-candidate
-  [votes candidate]
-  (map (fn [vote]
-         (remove #(= % candidate) vote))
-       votes))
+(defn- remove-candidates
+  [votes candidates]
+  (map (partial remove candidates) votes))
 
 (defn- empty-results
   [candidates]
@@ -63,10 +61,14 @@
                              (into base-results)
                              (merge-with conj prev-results))
             most-votes (reduce max (vals round-results))
-            last-place (first (apply min-key last round-results))]
+            least-votes (reduce min (vals round-results))
+            losers (->> round-results
+                        (filter (comp #{least-votes} last))
+                        (map first)
+                        (into #{}))]
         (if (>= most-votes votes-to-win)
           new-results
-          (recur (remove-candidate remaining-votes last-place) new-results))))))
+          (recur (remove-candidates remaining-votes losers) new-results))))))
 
 (defn- handle-poll
   [msg old-votes old-results]
