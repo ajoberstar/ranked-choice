@@ -18,15 +18,15 @@ function openPolls() {
     })
 }
 
-$(document).on('click', '#candidates a', function(event) {
+$(document).on('click', '#candidateList a', function(event) {
     $(this).remove()
     event.preventDefault()
 })
 
-$(document).on('mouseover', '#candidates a', function() {
+$(document).on('mouseover', '#candidateList a', function() {
     $(this).find('span.label').removeClass('hidden')
 })
 
-$(document).on('mouseleave', '#candidates a', function() {
+$(document).on('mouseleave', '#candidateList a', function() {
     $(this).find('span.label').addClass('hidden')
 })
