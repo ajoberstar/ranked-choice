@@ -64,7 +64,7 @@
                              (merge-with conj prev-results))
             most-votes (reduce max (vals round-results))
             last-place (first (apply min-key last round-results))]
-        (if (> most-votes votes-to-win)
+        (if (>= most-votes votes-to-win)
           new-results
           (recur (remove-candidate remaining-votes last-place) new-results))))))
 
