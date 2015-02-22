@@ -38,7 +38,7 @@
            (resource-response "/results.html")))
     (GET "/close" []
          (async/close! (:votes-ch poll))
-         (swap! (:polls poll-mgr) assoc (Integer/parseInt id) nil)
+         (swap! (:polls poll-mgr) assoc id nil)
          (redirect "/poll/monitor"))))
 
 (defroutes app-routes
@@ -56,9 +56,10 @@
              polls-by-id (->> polls (map-indexed vector) (filter last))]
          (monitor polls-by-id)))
   (context "/poll/:id" [id :as {poll-mgr :poll/poll-mgr}]
-           (if-let [poll (poll/get-poll poll-mgr (Integer/parseInt id))]
-             (poll-routes poll-mgr poll id)
-             (not-found (str "No poll found with id: " id))))
+           (let [poll-id (Integer/parseInt id)]
+             (if-let [poll (poll/get-poll poll-mgr poll-id)]
+               (poll-routes poll-mgr poll poll-id)
+               (not-found (str "No poll found with id: " poll-id)))))
   (resources ""))
 
 (def app (wrap-params app-routes))
