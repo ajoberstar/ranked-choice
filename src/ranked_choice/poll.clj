@@ -16,7 +16,7 @@
                          (map (voting/results vsys))
                          (xf/peek (partial reset! latest-results)))
         votes-ch (async/chan 10)
-        results-mult (-> (async/chan 1 results-xf) (async/pipe votes-ch) async/mult)]
+        results-mult (->> (async/chan 1 results-xf) (async/pipe votes-ch) async/mult)]
     (->Poll candidates votes-ch results-mult latest-results)))
 
 (defn pipe-results
@@ -32,7 +32,7 @@
   (stop [component]
     (swap! (:polls component)
            (fn [polls]
-             (doseq [poll polls]
+             (doseq [poll (keep identity polls)]
                (async/close! (:votes-ch poll)))))
     (dissoc component :polls)))
 
