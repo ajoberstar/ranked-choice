@@ -1,6 +1,6 @@
 (ns ranked-choice.core
   (:require [com.stuartsierra.component :as component]
-            [ranked-choice.server :as server]
+            [ranked-choice.httpkit :as httpkit]
             [ranked-choice.routes :as routes]
             [ranked-choice.poll :as poll])
   (:gen-class))
@@ -11,7 +11,7 @@
     :poll/poll-mgr (poll/map->PollManager {})
     :handler (component/using {:handler-fn routes/app} [:poll/poll-mgr])
     :server (component/using
-              (server/map->Server {:options httpkit-opts})
+              (httpkit/map->HttpKitServer {:options httpkit-opts})
               [:handler])))
 
 (defn -main [& args]

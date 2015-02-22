@@ -1,5 +1,5 @@
 (ns ranked-choice.routes
-  (:require [ranked-choice.websocket :as websocket]
+  (:require [ranked-choice.httpkit :as httpkit]
             [compojure.core :refer :all]
             [compojure.route :refer [resources]]
             [ring.util.response :refer [resource-response redirect not-found]]
@@ -34,7 +34,7 @@
            (let [in-ch (async/chan (async/sliding-buffer 1))
                  out-ch (async/chan (async/sliding-buffer 1) (map json/write-str))]
              (poll/pipe-results poll out-ch)
-             (websocket/websocket-handler in-ch out-ch))
+             (httpkit/websocket-handler in-ch out-ch))
            (resource-response "/results.html")))
     (GET "/close" []
          (async/close! (:votes-ch poll))
