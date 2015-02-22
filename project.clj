@@ -15,11 +15,11 @@
                  ;; http
                  [ring/ring-core "1.3.2"]
                  [http-kit "2.1.19"]
-                 [compojure "1.3.1"]
+                 [compojure "1.3.2"]
                  [enlive "1.1.5"]]
   :main ^:skip-aot ranked-choice.core
   :target-path "target/%s"
   :uberjar-name "ranked-choice.jar"
   :profiles {:uberjar {:aot :all}
-             :dev {:dependencies [[org.clojure/tools.namespace "0.2.8"]]
+             :dev {:dependencies [[org.clojure/tools.namespace "0.2.9"]]
                    :source-paths ["dev"]}})
