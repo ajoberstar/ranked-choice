@@ -51,9 +51,9 @@
               poll (poll/new-poll (irv/->InstantRunoff) candidates-coll)
               poll-id (poll/conj-poll poll-mgr poll)]
           (redirect (str "/poll/" poll-id "/vote"))))
-  (GET "/poll/monitor" {poll-mgr :voting/poll-mgr}
+  (GET "/poll/monitor" {poll-mgr :poll/poll-mgr}
        (let [polls @(:polls poll-mgr)
-             polls-by-id (->> polls (map-indexed vector) (filter (comp :candidates last)))]
+             polls-by-id (->> polls (map-indexed vector) (filter last))]
          (monitor polls-by-id)))
   (context "/poll/:id" [id :as {poll-mgr :poll/poll-mgr}]
            (if-let [poll (poll/get-poll poll-mgr (Integer/parseInt id))]
