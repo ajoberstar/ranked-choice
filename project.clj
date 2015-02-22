@@ -21,5 +21,6 @@
   :target-path "target/%s"
   :uberjar-name "ranked-choice.jar"
   :profiles {:uberjar {:aot :all}
-             :dev {:dependencies [[org.clojure/tools.namespace "0.2.9"]]
+             :dev {:dependencies [[reloaded.repl "0.1.0"]
+                                  [org.clojure/tools.namespace "0.2.9"]]
                    :source-paths ["dev"]}})
