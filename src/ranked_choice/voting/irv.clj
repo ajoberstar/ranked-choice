@@ -22,7 +22,7 @@
 
 (defrecord InstantRunoff []
   voting/VotingSystem
-  (count-votes [_ votes]
+  (count-ballots [_ _ votes]
     (let [candidates (first votes)
           votes-to-win (/ (count votes) 2)
           base-results (zipmap candidates (repeat 0))]

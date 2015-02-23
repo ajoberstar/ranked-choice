@@ -3,7 +3,7 @@
 (defprotocol VotingSystem
   "Protocol specifying how to
   determine a winner of a poll."
-  (count-votes [vsys votes]))
+  (count-ballots [vsys candidates votes]))
 
 (defn- format-results
   [results]
@@ -39,6 +39,6 @@
    [Lucy 1 0 0]]"
   ([vsys]
     (comp format-results
-          (partial count-votes vsys)))
+          (partial count-ballots vsys)))
   ([vsys votes]
     (-> vsys results votes)))
