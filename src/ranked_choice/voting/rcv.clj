@@ -77,10 +77,11 @@
 
 (defn- runoff-everyone [{:keys [ballots]}] ballots)
 
-(def irv (->RankedChoice first-count no-majority? runoff-but-last))
+(def systems {"irv" (->RankedChoice first-count no-majority? runoff-but-last)
+              "borda" (->RankedChoice borda-count one-round runoff-everyone)
+              "nauru" (->RankedChoice nauru-count one-round runoff-everyone)
+              "nanson" (->RankedChoice borda-count challenger? runoff-avg)
+              "baldwin" (->RankedChoice borda-count challenger? runoff-but-last)})
+
 ;; (def coombs (->RankedChoice first-count no-majority? runoff-coombs))
 ;; (def bucklin (->RankedChoice bucklin-count no-majority? runoff-everyone))
-(def borda (->RankedChoice borda-count one-round runoff-everyone))
-(def nauru (->RankedChoice nauru-count one-round runoff-everyone))
-(def nanson (->RankedChoice borda-count challenger? runoff-avg))
-(def baldwin (->RankedChoice borda-count challenger? runoff-but-last))

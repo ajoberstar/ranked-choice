@@ -46,9 +46,9 @@
        (redirect "/poll/new"))
   (GET "/poll/new" []
        (resource-response "/new.html"))
-  (POST "/poll/new" [candidates :as {poll-mgr :poll/poll-mgr}]
+  (POST "/poll/new" [candidates vsys :as {poll-mgr :poll/poll-mgr}]
         (let [candidates-coll (if (instance? String candidates) [candidates] candidates)
-              poll (poll/new-poll rcv/irv candidates-coll)
+              poll (poll/new-poll (get rcv/systems vsys) candidates-coll)
               poll-id (poll/conj-poll poll-mgr poll)]
           (redirect (str "/poll/" poll-id "/vote"))))
   (GET "/poll/monitor" {poll-mgr :poll/poll-mgr}

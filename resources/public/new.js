@@ -16,6 +16,7 @@ function openPolls() {
     $('#candidateList .candidate').each(function() {
         $('#candidateResults').append('<input type="hidden" name="candidates" value="' + $(this).text() + '">')
     })
+    $('#vsysResults').append('<input type="hidden" name="vsys" value="' + $('#vsys').val() + '">')
 }
 
 $(document).on('click', '#candidateList a', function(event) {
