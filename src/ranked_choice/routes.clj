@@ -24,7 +24,7 @@
   [poll-mgr poll id]
   (routes
     (GET "/vote" []
-         (vote id (:candidates poll)))
+         (vote id (-> poll :candidates shuffle)))
     (POST "/vote" [vote]
           (let [vote-coll (if (instance? String vote) [vote] vote)]
             (async/put! (:votes-ch poll) vote-coll)
