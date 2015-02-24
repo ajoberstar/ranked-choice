@@ -37,8 +37,8 @@
    [Billy 2 2 3]
    [Johnny 2 2 0]
    [Lucy 1 0 0]]"
-  ([vsys]
-    (comp format-results
-          (partial count-ballots vsys)))
-  ([vsys votes]
-    (-> vsys results votes)))
+  ([vsys candidates]
+   (partial results vsys candidates))
+  ([vsys candidates votes]
+   (-> (count-ballots vsys candidates votes)
+       (format-results))))

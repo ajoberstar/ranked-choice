@@ -34,9 +34,8 @@
       (async/tap tally-mult results-ch)
       (async/pipe runoff-ch votes-ch)
       (async/put! votes-ch ballots)
-      (async/reduce #(merge-with conj %1 %2)
-                    base-results
-                    results-ch))))
+      (let [results (async/reduce #(merge-with conj %1 %2) base-results results-ch)]
+        (async/<!! results)))))
 
 (defn- first-count [ballot] {(first ballot) 1})
 

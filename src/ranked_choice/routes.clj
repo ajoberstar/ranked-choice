@@ -9,7 +9,7 @@
             [clojure.data.json :as json]
             [clojure.string :as string]
             [ranked-choice.poll :as poll]
-            [ranked-choice.voting.irv :as irv]))
+            [ranked-choice.voting.rcv :as rcv]))
 
 (html/deftemplate vote "vote.html" [id candidates]
   [:li.candidate] (html/clone-for [candidate candidates] (html/content candidate))
@@ -48,7 +48,7 @@
        (resource-response "/new.html"))
   (POST "/poll/new" [candidates :as {poll-mgr :poll/poll-mgr}]
         (let [candidates-coll (if (instance? String candidates) [candidates] candidates)
-              poll (poll/new-poll (irv/->InstantRunoff) candidates-coll)
+              poll (poll/new-poll rcv/irv candidates-coll)
               poll-id (poll/conj-poll poll-mgr poll)]
           (redirect (str "/poll/" poll-id "/vote"))))
   (GET "/poll/monitor" {poll-mgr :poll/poll-mgr}

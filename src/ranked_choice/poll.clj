@@ -19,7 +19,7 @@
   [vsys candidates]
   (let [latest-results (atom [])
         results-xf (comp (xf/reductions conj)
-                         (map (voting/results vsys))
+                         (map (voting/results vsys candidates))
                          (xf/peek (partial reset! latest-results)))
         votes-ch (async/chan 10)
         results-mult (->> (async/chan 1 results-xf) (async/pipe votes-ch) async/mult)]
