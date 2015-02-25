@@ -21,6 +21,7 @@
   :target-path "target/%s"
   :uberjar-name "ranked-choice.jar"
   :profiles {:uberjar {:aot :all}
+             :java-agents [[com.newrelic.agent.java/newrelic-agent "3.9.0"]]
              :dev {:dependencies [[reloaded.repl "0.1.0"]
                                   [org.clojure/tools.namespace "0.2.9"]]
                    :source-paths ["dev"]}})
