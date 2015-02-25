@@ -18,6 +18,7 @@
           base-tally (zipmap candidates (repeat 0))
           {:keys [tally no-winner? runoff]} vsys
           votes-ch (async/chan 1 (comp (dedupe)
+                                       (xf/peek (partial log/info "Processing Ballots: "))
                                        (tally-xf tally)))
           runoff-ch (async/chan 1 (comp (take-while no-winner?)
                                         (map runoff)))

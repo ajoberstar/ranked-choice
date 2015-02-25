@@ -2,7 +2,8 @@
   (:require [com.stuartsierra.component :as component]
             [clojure.core.async :as async]
             [ranked-choice.voting :as voting]
-            [ranked-choice.transducers :as xf]))
+            [ranked-choice.transducers :as xf]
+            [clojure.tools.logging :as log]))
 
 (defrecord Poll [candidates
                  votes-ch
@@ -18,7 +19,8 @@
   added to their channel. Returns the new poll."
   [vsys candidates]
   (let [latest-results (atom [])
-        results-xf (comp (xf/reductions conj)
+        results-xf (comp (xf/peek (partial log/info "Vote Received: "))
+                         (xf/reductions conj)
                          (map (voting/results vsys candidates))
                          (xf/peek (partial reset! latest-results)))
         votes-ch (async/chan 10)
