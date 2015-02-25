@@ -17,7 +17,7 @@
                  [http-kit "2.1.19"]
                  [compojure "1.3.2"]
                  [enlive "1.1.5"]]
-  :java-agents [[com.newrelic.agent.java/newrelic-agent "3.9.0"]]
+  :java-agents [[com.newrelic.agent.java/newrelic-agent "3.12.0"]]
   :main ^:skip-aot ranked-choice.core
   :target-path "target/%s"
   :uberjar-name "ranked-choice.jar"
