@@ -1,0 +1,914 @@
+2015-02-16T00:54:47.608906+00:00 heroku[api]: Enable Logplex by ajoberstar@gmail.com
+2015-02-16T00:54:47.608906+00:00 heroku[api]: Release v2 created by ajoberstar@gmail.com
+2015-02-16T00:55:51.986615+00:00 heroku[api]: Scale to web=1 by ajoberstar@gmail.com
+2015-02-16T00:55:52.060347+00:00 heroku[api]: Deploy 5fa31db by ajoberstar@gmail.com
+2015-02-16T00:55:52.060347+00:00 heroku[api]: Release v3 created by ajoberstar@gmail.com
+2015-02-16T00:55:56.390717+00:00 heroku[web.1]: Starting process with command `java -jar target/uberjar/ranked-choice.jar 21428`
+2015-02-16T00:55:57.780700+00:00 app[web.1]: Error: Unable to access jarfile target/uberjar/ranked-choice.jar
+2015-02-16T00:55:58.550288+00:00 heroku[web.1]: Process exited with status 1
+2015-02-16T00:55:58.564709+00:00 heroku[web.1]: State changed from crashed to starting
+2015-02-16T00:55:58.564114+00:00 heroku[web.1]: State changed from starting to crashed
+2015-02-16T00:56:02.939345+00:00 heroku[web.1]: Starting process with command `java -jar target/uberjar/ranked-choice.jar 31318`
+2015-02-16T00:56:04.199564+00:00 app[web.1]: Error: Unable to access jarfile target/uberjar/ranked-choice.jar
+2015-02-16T00:56:04.864171+00:00 heroku[web.1]: Process exited with status 1
+2015-02-16T00:56:04.880031+00:00 heroku[web.1]: State changed from starting to crashed
+2015-02-16T00:56:40.226682+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=ranked-choice.herokuapp.com request_id=5519f4bc-9dd7-477b-b320-2cbffb945c33 fwd="71.193.75.8" dyno= connect= service= status=503 bytes=
+2015-02-16T00:56:40.702300+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=7f9edc30-6285-4464-8a73-ec4596d7a920 fwd="71.193.75.8" dyno= connect= service= status=503 bytes=
+2015-02-16T01:01:02.167775+00:00 heroku[api]: Deploy e663b8f by ajoberstar@gmail.com
+2015-02-16T01:01:02.167775+00:00 heroku[api]: Release v4 created by ajoberstar@gmail.com
+2015-02-16T01:01:02.817223+00:00 heroku[web.1]: State changed from crashed to starting
+2015-02-16T01:01:08.289007+00:00 heroku[web.1]: Starting process with command `java -jar target/uberjar/ranked-choice.jar 25498`
+2015-02-16T01:01:09.820131+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx384m -Xss512k -Dfile.encoding=UTF-8 -Djava.rmi.server.useCodebaseOnly=true
+2015-02-16T01:01:16.125531+00:00 heroku[web.1]: State changed from starting to up
+2015-02-16T01:01:57.545331+00:00 heroku[router]: at=info method=GET path="/" host=ranked-choice.herokuapp.com request_id=36c8828a-85e9-439c-b7bd-7352c72f60f2 fwd="71.193.75.8" dyno=web.1 connect=0ms service=48ms status=302 bytes=117
+2015-02-16T01:01:57.617597+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=f1adbfee-02c0-47e5-8768-de04b3f9cb90 fwd="71.193.75.8" dyno=web.1 connect=0ms service=10ms status=200 bytes=2429
+2015-02-16T01:01:57.756070+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=52b6fbe9-5ccd-4606-b5cf-c6fd43ba18ba fwd="71.193.75.8" dyno=web.1 connect=0ms service=8ms status=200 bytes=1167
+2015-02-16T01:01:57.928260+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=3311f526-3001-4ffc-84e9-43721c451e5a fwd="71.193.75.8" dyno=web.1 connect=0ms service=3ms status=404 bytes=100
+2015-02-16T01:02:27.773871+00:00 heroku[router]: at=info method=GET path="/" host=vote.ajoberstar.com request_id=2a1c74e5-39a1-4ec5-89d5-763192c7d6ec fwd="71.193.75.8" dyno=web.1 connect=0ms service=2ms status=302 bytes=117
+2015-02-16T01:02:27.838239+00:00 heroku[router]: at=info method=GET path="/poll/new" host=vote.ajoberstar.com request_id=dfd31574-203f-4aac-a447-d454499b9208 fwd="71.193.75.8" dyno=web.1 connect=4ms service=5ms status=200 bytes=2429
+2015-02-16T01:02:27.975426+00:00 heroku[router]: at=info method=GET path="/new.js" host=vote.ajoberstar.com request_id=8209d0ba-9f05-4548-b7b7-f2e59a09dcd8 fwd="71.193.75.8" dyno=web.1 connect=0ms service=6ms status=200 bytes=1167
+2015-02-16T01:02:28.175044+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=vote.ajoberstar.com request_id=96e98eba-57c4-46d4-9492-8d2e15a8a40e fwd="71.193.75.8" dyno=web.1 connect=0ms service=2ms status=404 bytes=100
+2015-02-16T01:02:35.691379+00:00 heroku[router]: at=info method=POST path="/poll/new" host=vote.ajoberstar.com request_id=815982f2-dc9b-4e9c-ba29-2d8dd2478c52 fwd="71.193.75.8" dyno=web.1 connect=0ms service=12ms status=302 bytes=120
+2015-02-16T01:02:35.816246+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=vote.ajoberstar.com request_id=a2644b1d-2d5b-4242-aca8-c8de50113b99 fwd="71.193.75.8" dyno=web.1 connect=0ms service=70ms status=200 bytes=2149
+2015-02-16T01:02:35.976016+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=vote.ajoberstar.com request_id=17434053-78f7-4873-85bf-0e33f8741879 fwd="71.193.75.8" dyno=web.1 connect=0ms service=3ms status=200 bytes=2853
+2015-02-16T01:02:35.981243+00:00 heroku[router]: at=info method=GET path="/vote.js" host=vote.ajoberstar.com request_id=223c1afc-3ff2-4d2b-8d91-1f7411e0dd2c fwd="71.193.75.8" dyno=web.1 connect=0ms service=4ms status=200 bytes=496
+2015-02-16T01:02:38.819562+00:00 heroku[router]: at=info method=POST path="/poll/0/vote" host=vote.ajoberstar.com request_id=b99461bd-7340-4997-87cd-0ab5ee5347ea fwd="71.193.75.8" dyno=web.1 connect=1ms service=10ms status=302 bytes=123
+2015-02-16T01:02:38.885440+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=vote.ajoberstar.com request_id=089d6165-71e8-4a11-ae4c-14bda9e2cdf6 fwd="71.193.75.8" dyno=web.1 connect=1ms service=7ms status=200 bytes=1568
+2015-02-16T01:02:38.849985+00:00 app[web.1]: Feb 16, 2015 1:02:38 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:38.849991+00:00 app[web.1]: INFO: Received  {:vote [Sue Bob Bill]}
+2015-02-16T01:02:38.854301+00:00 app[web.1]: Feb 16, 2015 1:02:38 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:38.854305+00:00 app[web.1]: INFO: Votes:  [[Sue Bob Bill]]
+2015-02-16T01:02:38.856557+00:00 app[web.1]: Feb 16, 2015 1:02:38 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:38.856560+00:00 app[web.1]: INFO: Results:  [[Sue 1] [Bob 0] [Bill 0]]
+2015-02-16T01:02:39.010189+00:00 heroku[router]: at=info method=GET path="/results.js" host=vote.ajoberstar.com request_id=7035f11e-29b7-4ecb-9904-2bc1635f14f1 fwd="71.193.75.8" dyno=web.1 connect=0ms service=4ms status=200 bytes=1063
+2015-02-16T01:02:39.143571+00:00 app[web.1]: Feb 16, 2015 1:02:39 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:39.143577+00:00 app[web.1]: INFO: Received  {:reply-ch #<ManyToManyChannel clojure.core.async.impl.channels.ManyToManyChannel@7fd8175f>}
+2015-02-16T01:02:39.156860+00:00 app[web.1]: Feb 16, 2015 1:02:39 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:39.156867+00:00 app[web.1]: INFO: Votes:  [[Sue Bob Bill]]
+2015-02-16T01:02:39.157698+00:00 app[web.1]: INFO: Results:  [[Sue 1] [Bob 0] [Bill 0]]
+2015-02-16T01:02:39.157694+00:00 app[web.1]: Feb 16, 2015 1:02:39 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:39.166798+00:00 app[web.1]: INFO: Connecting to  #<AsyncChannel /172.17.211.110:25498<->/10.12.159.100:44446>
+2015-02-16T01:02:39.166791+00:00 app[web.1]: Feb 16, 2015 1:02:39 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:43.397325+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=vote.ajoberstar.com request_id=7fe025ba-9968-4e99-b0af-9f2c8e885cc2 fwd="71.193.75.8" dyno=web.1 connect=2ms service=13ms status=200 bytes=2149
+2015-02-16T01:02:43.468660+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=vote.ajoberstar.com request_id=b996d5ad-ca4a-4e73-916a-26f87a83a6d0 fwd="71.193.75.8" dyno=web.1 connect=0ms service=4347ms status=101 bytes=203
+2015-02-16T01:02:43.462981+00:00 app[web.1]: Feb 16, 2015 1:02:43 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:43.462989+00:00 app[web.1]: INFO: Closing  #<AsyncChannel 0.0.0.0/0.0.0.0:25498<->null>  because  :going-away
+2015-02-16T01:02:45.336842+00:00 app[web.1]: Feb 16, 2015 1:02:45 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:45.338023+00:00 app[web.1]: INFO: Votes:  [[Sue Bob Bill]]
+2015-02-16T01:02:45.336871+00:00 app[web.1]: INFO: Received  {:reply-ch #<ManyToManyChannel clojure.core.async.impl.channels.ManyToManyChannel@44d814ba>}
+2015-02-16T01:02:45.338841+00:00 app[web.1]: INFO: Results:  [[Sue 1] [Bob 0] [Bill 0]]
+2015-02-16T01:02:45.338020+00:00 app[web.1]: Feb 16, 2015 1:02:45 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:45.341492+00:00 app[web.1]: Feb 16, 2015 1:02:45 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:45.338838+00:00 app[web.1]: Feb 16, 2015 1:02:45 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:45.341496+00:00 app[web.1]: INFO: Connecting to  #<AsyncChannel /172.17.211.110:25498<->/10.185.0.100:38517>
+2015-02-16T01:02:48.501143+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=vote.ajoberstar.com request_id=9608dc97-45e5-4e14-a5c2-0fde45dc1c11 fwd="71.193.75.8" dyno=web.1 connect=0ms service=12ms status=200 bytes=2149
+2015-02-16T01:02:48.614880+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=vote.ajoberstar.com request_id=eed675ca-741e-4e92-afb3-d4981b802dae fwd="71.193.75.8" dyno=web.1 connect=1ms service=3ms status=200 bytes=2853
+2015-02-16T01:02:48.561723+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=vote.ajoberstar.com request_id=0dbeebc2-60d4-4fb4-b997-681cca9fe482 fwd="71.193.75.8" dyno=web.1 connect=22ms service=3240ms status=101 bytes=203
+2015-02-16T01:02:48.561911+00:00 app[web.1]: INFO: Closing  #<AsyncChannel 0.0.0.0/0.0.0.0:25498<->null>  because  :going-away
+2015-02-16T01:02:48.561904+00:00 app[web.1]: Feb 16, 2015 1:02:48 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:48.621477+00:00 heroku[router]: at=info method=GET path="/vote.js" host=vote.ajoberstar.com request_id=94157dae-bb37-46b6-b180-720e4a917464 fwd="71.193.75.8" dyno=web.1 connect=1ms service=3ms status=200 bytes=496
+2015-02-16T01:02:51.510847+00:00 heroku[router]: at=info method=POST path="/poll/0/vote" host=vote.ajoberstar.com request_id=3b5a16c7-e856-41a7-84ef-23fe531760d6 fwd="71.193.75.8" dyno=web.1 connect=4ms service=6ms status=302 bytes=123
+2015-02-16T01:02:51.575398+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=vote.ajoberstar.com request_id=8a97466b-7bf1-4645-a22a-e9e4d45f2889 fwd="71.193.75.8" dyno=web.1 connect=0ms service=7ms status=200 bytes=1568
+2015-02-16T01:02:51.507729+00:00 app[web.1]: INFO: Results:  [[Bob 1 1 2] [Sue 1 1 0] [Bill 0 0 0]]
+2015-02-16T01:02:51.504240+00:00 app[web.1]: INFO: Received  {:vote [Bob Sue Bill]}
+2015-02-16T01:02:51.507726+00:00 app[web.1]: Feb 16, 2015 1:02:51 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:51.742028+00:00 app[web.1]: INFO: Connecting to  #<AsyncChannel /172.17.211.110:25498<->/10.38.42.185:33389>
+2015-02-16T01:02:51.742743+00:00 app[web.1]: Feb 16, 2015 1:02:51 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:51.742746+00:00 app[web.1]: INFO: Received  {:reply-ch #<ManyToManyChannel clojure.core.async.impl.channels.ManyToManyChannel@3cfdbee8>}
+2015-02-16T01:02:51.506823+00:00 app[web.1]: Feb 16, 2015 1:02:51 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:51.744632+00:00 app[web.1]: Feb 16, 2015 1:02:51 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:51.744635+00:00 app[web.1]: INFO: Votes:  [[Sue Bob Bill] [Bob Sue Bill]]
+2015-02-16T01:02:51.504233+00:00 app[web.1]: Feb 16, 2015 1:02:51 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:51.745383+00:00 app[web.1]: Feb 16, 2015 1:02:51 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:02:51.745385+00:00 app[web.1]: INFO: Results:  [[Bob 1 1 2] [Sue 1 1 0] [Bill 0 0 0]]
+2015-02-16T01:02:51.506828+00:00 app[web.1]: INFO: Votes:  [[Sue Bob Bill] [Bob Sue Bill]]
+2015-02-16T01:02:51.742022+00:00 app[web.1]: Feb 16, 2015 1:02:51 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:03:06.827884+00:00 heroku[router]: at=info method=GET path="/" host=vote.ajoberstar.com request_id=271b4cb9-4c5d-470a-a732-ddd71dde0792 fwd="71.193.75.8" dyno=web.1 connect=0ms service=2ms status=302 bytes=117
+2015-02-16T01:03:06.884827+00:00 heroku[router]: at=info method=GET path="/poll/new" host=vote.ajoberstar.com request_id=8e0eb344-8351-47fe-b11f-eafa264b608c fwd="71.193.75.8" dyno=web.1 connect=1ms service=3ms status=200 bytes=2429
+2015-02-16T01:03:06.950940+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=vote.ajoberstar.com request_id=a63b392f-db2d-4d9a-aa68-e70af3db1289 fwd="71.193.75.8" dyno=web.1 connect=1ms service=15211ms status=101 bytes=203
+2015-02-16T01:03:07.000309+00:00 heroku[router]: at=info method=GET path="/new.js" host=vote.ajoberstar.com request_id=a7ece213-39ae-4d18-bb91-8511018562fb fwd="71.193.75.8" dyno=web.1 connect=1ms service=4ms status=200 bytes=1167
+2015-02-16T01:03:06.944714+00:00 app[web.1]: INFO: Closing  #<AsyncChannel 0.0.0.0/0.0.0.0:25498<->null>  because  :going-away
+2015-02-16T01:03:06.944696+00:00 app[web.1]: Feb 16, 2015 1:03:06 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:05:25.800301+00:00 heroku[router]: at=info method=GET path="/" host=vote.ajoberstar.com request_id=1f03f162-c655-4533-a77f-15801490a984 fwd="71.193.75.8" dyno=web.1 connect=1ms service=4ms status=302 bytes=117
+2015-02-16T01:05:25.863068+00:00 heroku[router]: at=info method=GET path="/poll/new" host=vote.ajoberstar.com request_id=c865709e-7607-4929-b959-4ff3c282eca9 fwd="71.193.75.8" dyno=web.1 connect=0ms service=8ms status=200 bytes=2429
+2015-02-16T01:05:26.017755+00:00 heroku[router]: at=info method=GET path="/new.js" host=vote.ajoberstar.com request_id=74040cf1-e15a-4ada-a0f1-ce84a3441366 fwd="71.193.75.8" dyno=web.1 connect=1ms service=22ms status=200 bytes=1167
+2015-02-16T01:40:43.819239+00:00 heroku[router]: at=info method=GET path="/" host=vote.ajoberstar.com request_id=ee7fda35-266d-49ab-b568-9f1ce8c127d0 fwd="71.193.75.8" dyno=web.1 connect=1ms service=5ms status=302 bytes=117
+2015-02-16T01:40:43.881471+00:00 heroku[router]: at=info method=GET path="/poll/new" host=vote.ajoberstar.com request_id=0731a17e-bb40-4826-83c9-d26078e62154 fwd="71.193.75.8" dyno=web.1 connect=3ms service=3ms status=200 bytes=2429
+2015-02-16T01:40:44.026877+00:00 heroku[router]: at=info method=GET path="/new.js" host=vote.ajoberstar.com request_id=1a3fdc18-2f26-47ed-9bc5-1d0c7e046c0d fwd="71.193.75.8" dyno=web.1 connect=0ms service=4ms status=200 bytes=1167
+2015-02-16T01:40:44.328292+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=vote.ajoberstar.com request_id=1a727716-3590-45fa-811d-c289ff09e8f8 fwd="71.193.75.8" dyno=web.1 connect=1ms service=6ms status=404 bytes=100
+2015-02-16T01:40:49.554290+00:00 heroku[router]: at=info method=POST path="/poll/new" host=vote.ajoberstar.com request_id=c20ba994-6f23-44a9-aef2-c524cb93ba85 fwd="71.193.75.8" dyno=web.1 connect=0ms service=4ms status=302 bytes=120
+2015-02-16T01:40:49.640853+00:00 heroku[router]: at=info method=GET path="/poll/1/vote" host=vote.ajoberstar.com request_id=bddf3f3f-9462-4b57-8b2d-a871c5dad044 fwd="71.193.75.8" dyno=web.1 connect=0ms service=16ms status=500 bytes=168
+2015-02-16T01:40:49.642990+00:00 app[web.1]: Mon Feb 16 01:40:49 UTC 2015
+ [worker-2] ERROR - GET /poll/1/vote
+2015-02-16T01:40:49.642997+00:00 app[web.1]: java.lang.IllegalArgumentException: Don't know how to create ISeq from: java.lang.Character
+2015-02-16T01:40:49.642999+00:00 app[web.1]: 	at clojure.lang.RT.seqFrom(RT.java:506)
+2015-02-16T01:40:49.643010+00:00 app[web.1]: 	at clojure.lang.RT.seq(RT.java:485)
+2015-02-16T01:40:49.643001+00:00 app[web.1]: 	at clojure.lang.RT.seq(RT.java:487)
+2015-02-16T01:40:49.643004+00:00 app[web.1]: 	at net.cgrand.enlive_html$flatten_nodes_coll$flat_STAR___8081.invoke(enlive_html.clj:227)
+2015-02-16T01:40:49.643002+00:00 app[web.1]: 	at clojure.core$seq__4109.invoke(core.clj:135)
+2015-02-16T01:40:49.643007+00:00 app[web.1]: 	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+2015-02-16T01:40:49.643009+00:00 app[web.1]: 	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+2015-02-16T01:40:49.643013+00:00 app[web.1]: 	at clojure.core$comp$fn__4476.invoke(core.clj:2434)
+2015-02-16T01:40:49.643012+00:00 app[web.1]: 	at clojure.core$seq__4109.invoke(core.clj:135)
+2015-02-16T01:40:49.643016+00:00 app[web.1]: 	at clojure.zip$down.invoke(zip.clj:116)
+2015-02-16T01:40:49.643018+00:00 app[web.1]: 	at net.cgrand.enlive_html$children_locs.invoke(enlive_html.clj:417)
+2015-02-16T01:40:49.643006+00:00 app[web.1]: 	at net.cgrand.enlive_html$flatten_nodes_coll$flat__8085$fn__8086.invoke(enlive_html.clj:232)
+2015-02-16T01:40:49.643015+00:00 app[web.1]: 	at clojure.zip$children.invoke(zip.clj:80)
+2015-02-16T01:40:49.643019+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_loc.invoke(enlive_html.clj:426)
+2015-02-16T01:40:49.643020+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_loc$fn__8274.invoke(enlive_html.clj:425)
+2015-02-16T01:40:49.643028+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_loc$fn__8274.invoke(enlive_html.clj:425)
+2015-02-16T01:40:49.643022+00:00 app[web.1]: 	at clojure.lang.PersistentVector.reduce(PersistentVector.java:332)
+2015-02-16T01:40:49.643026+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_loc.invoke(enlive_html.clj:426)
+2015-02-16T01:40:49.643037+00:00 app[web.1]: 	at clojure.core$reduce.invoke(core.clj:6513)
+2015-02-16T01:40:49.643029+00:00 app[web.1]: 	at clojure.lang.PersistentVector.reduce(PersistentVector.java:332)
+2015-02-16T01:40:49.643040+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_loc.invoke(enlive_html.clj:426)
+2015-02-16T01:40:49.643039+00:00 app[web.1]: 	at net.cgrand.enlive_html$mapknitv.invoke(enlive_html.clj:199)
+2015-02-16T01:40:49.643025+00:00 app[web.1]: 	at net.cgrand.enlive_html$mapknitv.invoke(enlive_html.clj:199)
+2015-02-16T01:40:49.643036+00:00 app[web.1]: 	at clojure.lang.PersistentVector.reduce(PersistentVector.java:332)
+2015-02-16T01:40:49.643033+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_loc.invoke(enlive_html.clj:426)
+2015-02-16T01:40:49.643035+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_loc$fn__8274.invoke(enlive_html.clj:425)
+2015-02-16T01:40:49.643032+00:00 app[web.1]: 	at net.cgrand.enlive_html$mapknitv.invoke(enlive_html.clj:199)
+2015-02-16T01:40:49.643042+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_loc$fn__8274.invoke(enlive_html.clj:425)
+2015-02-16T01:40:49.643023+00:00 app[web.1]: 	at clojure.core$reduce.invoke(core.clj:6513)
+2015-02-16T01:40:49.643046+00:00 app[web.1]: 	at net.cgrand.enlive_html$mapknitv.invoke(enlive_html.clj:199)
+2015-02-16T01:40:49.643049+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_loc$fn__8274.invoke(enlive_html.clj:425)
+2015-02-16T01:40:49.643050+00:00 app[web.1]: 	at clojure.lang.PersistentVector.reduce(PersistentVector.java:332)
+2015-02-16T01:40:49.643051+00:00 app[web.1]: 	at clojure.core$reduce.invoke(core.clj:6513)
+2015-02-16T01:40:49.643053+00:00 app[web.1]: 	at net.cgrand.enlive_html$mapknitv.invoke(enlive_html.clj:199)
+2015-02-16T01:40:49.643030+00:00 app[web.1]: 	at clojure.core$reduce.invoke(core.clj:6513)
+2015-02-16T01:40:49.643047+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_loc.invoke(enlive_html.clj:426)
+2015-02-16T01:40:49.643044+00:00 app[web.1]: 	at clojure.core$reduce.invoke(core.clj:6513)
+2015-02-16T01:40:49.643043+00:00 app[web.1]: 	at clojure.lang.PersistentVector.reduce(PersistentVector.java:332)
+2015-02-16T01:40:49.643072+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_loc$fn__8274.invoke(enlive_html.clj:425)
+2015-02-16T01:40:49.643054+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_loc.invoke(enlive_html.clj:426)
+2015-02-16T01:40:49.643073+00:00 app[web.1]: 	at clojure.lang.PersistentVector.reduce(PersistentVector.java:332)
+2015-02-16T01:40:49.643076+00:00 app[web.1]: 	at net.cgrand.enlive_html$mapknitv.invoke(enlive_html.clj:199)
+2015-02-16T01:40:49.643080+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_loc$fn__8274.invoke(enlive_html.clj:425)
+2015-02-16T01:40:49.643078+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_loc.invoke(enlive_html.clj:426)
+2015-02-16T01:40:49.643082+00:00 app[web.1]: 	at clojure.lang.PersistentVector.reduce(PersistentVector.java:332)
+2015-02-16T01:40:49.643075+00:00 app[web.1]: 	at clojure.core$reduce.invoke(core.clj:6513)
+2015-02-16T01:40:49.643086+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_loc.invoke(enlive_html.clj:426)
+2015-02-16T01:40:49.643093+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_loc.invoke(enlive_html.clj:426)
+2015-02-16T01:40:49.643094+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_node$fn__8283.invoke(enlive_html.clj:441)
+2015-02-16T01:40:49.643096+00:00 app[web.1]: 	at clojure.lang.PersistentVector.reduce(PersistentVector.java:332)
+2015-02-16T01:40:49.643084+00:00 app[web.1]: 	at net.cgrand.enlive_html$mapknitv.invoke(enlive_html.clj:199)
+2015-02-16T01:40:49.643083+00:00 app[web.1]: 	at clojure.core$reduce.invoke(core.clj:6513)
+2015-02-16T01:40:49.643089+00:00 app[web.1]: 	at clojure.lang.PersistentVector.reduce(PersistentVector.java:332)
+2015-02-16T01:40:49.643102+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform.invoke(enlive_html.clj:485)
+2015-02-16T01:40:49.643097+00:00 app[web.1]: 	at clojure.core$reduce.invoke(core.clj:6513)
+2015-02-16T01:40:49.643115+00:00 app[web.1]: 	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+2015-02-16T01:40:49.643099+00:00 app[web.1]: 	at net.cgrand.enlive_html$mapknitv.invoke(enlive_html.clj:199)
+2015-02-16T01:40:49.643103+00:00 app[web.1]: 	at ranked_choice.routes$fn__8770$fn__8772$fn__8773.invoke(routes.clj:14)
+2015-02-16T01:40:49.643106+00:00 app[web.1]: 	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+2015-02-16T01:40:49.643118+00:00 app[web.1]: 	at clojure.lang.ChunkedCons.next(ChunkedCons.java:43)
+2015-02-16T01:40:49.643119+00:00 app[web.1]: 	at clojure.lang.RT.next(RT.java:646)
+2015-02-16T01:40:49.643122+00:00 app[web.1]: 	at clojure.core$nthnext.invoke(core.clj:3033)
+2015-02-16T01:40:49.643120+00:00 app[web.1]: 	at clojure.core$next__4093.invoke(core.clj:64)
+2015-02-16T01:40:49.643090+00:00 app[web.1]: 	at clojure.core$reduce.invoke(core.clj:6513)
+2015-02-16T01:40:49.643091+00:00 app[web.1]: 	at net.cgrand.enlive_html$mapknitv.invoke(enlive_html.clj:199)
+2015-02-16T01:40:49.643087+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_loc$fn__8274.invoke(enlive_html.clj:425)
+2015-02-16T01:40:49.643129+00:00 app[web.1]: 	at clojure.lang.RT.seq(RT.java:485)
+2015-02-16T01:40:49.643132+00:00 app[web.1]: 	at clojure.core$dorun.invoke(core.clj:3004)
+2015-02-16T01:40:49.643133+00:00 app[web.1]: 	at clojure.core$doall.invoke(core.clj:3020)
+2015-02-16T01:40:49.643135+00:00 app[web.1]: 	at ranked_choice.routes$fn__8770$fn__8772.invoke(routes.clj:12)
+2015-02-16T01:40:49.643136+00:00 app[web.1]: 	at clojure.core$comp$fn__4476.invoke(core.clj:2435)
+2015-02-16T01:40:49.643138+00:00 app[web.1]: 	at ranked_choice.routes$poll_routes$fn__8795.invoke(routes.clj:20)
+2015-02-16T01:40:49.643130+00:00 app[web.1]: 	at clojure.core$seq__4109.invoke(core.clj:135)
+2015-02-16T01:40:49.643100+00:00 app[web.1]: 	at net.cgrand.enlive_html$transform_node.invoke(enlive_html.clj:441)
+2015-02-16T01:40:49.643125+00:00 app[web.1]: 	at net.cgrand.enlive_html$flatten_nodes_coll$flat__8085$fn__8086.invoke(enlive_html.clj:232)
+2015-02-16T01:40:49.643126+00:00 app[web.1]: 	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+2015-02-16T01:40:49.643147+00:00 app[web.1]: 	at clojure.core$some.invoke(core.clj:2560)
+2015-02-16T01:40:49.643145+00:00 app[web.1]: 	at compojure.core$routing$fn__7816.invoke(core.clj:118)
+2015-02-16T01:40:49.643148+00:00 app[web.1]: 	at compojure.core$routing.doInvoke(core.clj:118)
+2015-02-16T01:40:49.643152+00:00 app[web.1]: 	at clojure.core$apply.invoke(core.clj:628)
+2015-02-16T01:40:49.643155+00:00 app[web.1]: 	at compojure.core$routing$fn__7816.invoke(core.clj:118)
+2015-02-16T01:40:49.643167+00:00 app[web.1]: 	at clojure.lang.RestFn.invoke(RestFn.java:423)
+2015-02-16T01:40:49.643169+00:00 app[web.1]: 	at ranked_choice.routes$fn__8811.invoke(routes.clj:45)
+2015-02-16T01:40:49.643150+00:00 app[web.1]: 	at clojure.lang.RestFn.applyTo(RestFn.java:139)
+2015-02-16T01:40:49.643170+00:00 app[web.1]: 	at compojure.core$if_context$fn__7838.invoke(core.clj:189)
+2015-02-16T01:40:49.643173+00:00 app[web.1]: 	at clojure.core$some.invoke(core.clj:2560)
+2015-02-16T01:40:49.643179+00:00 app[web.1]: 	at compojure.core$routes$fn__7820.invoke(core.clj:123)
+2015-02-16T01:40:49.643104+00:00 app[web.1]: 	at clojure.core$map$fn__4529.invoke(core.clj:2614)
+2015-02-16T01:40:49.643139+00:00 app[web.1]: 	at compojure.core$make_route$fn__7810.invoke(core.clj:104)
+2015-02-16T01:40:49.643141+00:00 app[web.1]: 	at compojure.core$wrap_route_middleware$fn__7806.invoke(core.clj:94)
+2015-02-16T01:40:49.643174+00:00 app[web.1]: 	at compojure.core$routing.doInvoke(core.clj:118)
+2015-02-16T01:40:49.643180+00:00 app[web.1]: 	at ring.middleware.params$wrap_params$fn__7941.invoke(params.clj:64)
+2015-02-16T01:40:49.643181+00:00 app[web.1]: 	at ranked_choice.server$wrap_component$fn__6388.invoke(server.clj:7)
+2015-02-16T01:40:49.643116+00:00 app[web.1]: 	at clojure.lang.ChunkedCons.chunkedNext(ChunkedCons.java:59)
+2015-02-16T01:40:49.643185+00:00 app[web.1]: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+2015-02-16T01:40:49.643123+00:00 app[web.1]: 	at net.cgrand.enlive_html$flatten_nodes_coll$flat_STAR___8081.invoke(enlive_html.clj:227)
+2015-02-16T01:40:49.643186+00:00 app[web.1]: 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2015-02-16T01:40:49.643187+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+2015-02-16T01:40:49.643128+00:00 app[web.1]: 	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+2015-02-16T01:40:49.643164+00:00 app[web.1]: 	at clojure.core$some.invoke(core.clj:2560)
+2015-02-16T01:40:49.643144+00:00 app[web.1]: 	at compojure.core$if_method$fn__7784.invoke(core.clj:27)
+2015-02-16T01:40:49.643142+00:00 app[web.1]: 	at compojure.core$if_route$fn__7792.invoke(core.clj:41)
+2015-02-16T01:40:49.643172+00:00 app[web.1]: 	at compojure.core$routing$fn__7816.invoke(core.clj:118)
+2015-02-16T01:40:49.643166+00:00 app[web.1]: 	at compojure.core$routing.doInvoke(core.clj:118)
+2015-02-16T01:40:49.643153+00:00 app[web.1]: 	at compojure.core$routes$fn__7820.invoke(core.clj:123)
+2015-02-16T01:40:49.643177+00:00 app[web.1]: 	at clojure.core$apply.invoke(core.clj:628)
+2015-02-16T01:40:49.643176+00:00 app[web.1]: 	at clojure.lang.RestFn.applyTo(RestFn.java:139)
+2015-02-16T01:40:49.643183+00:00 app[web.1]: 	at org.httpkit.server.HttpHandler.run(RingHandler.java:91)
+2015-02-16T01:40:49.643190+00:00 app[web.1]: 	at java.lang.Thread.run(Thread.java:745)
+2015-02-16T01:40:49.643189+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+2015-02-16T01:42:24.823064+00:00 heroku[router]: at=info method=GET path="/poll/new" host=vote.ajoberstar.com request_id=318b6d49-3612-4a3c-9400-f4c89812251b fwd="71.193.75.8" dyno=web.1 connect=0ms service=3ms status=200 bytes=2429
+2015-02-16T01:48:42.851664+00:00 heroku[router]: at=info method=POST path="/poll/new" host=vote.ajoberstar.com request_id=121075b5-e5c2-4ca8-a4c8-9bee0b9989fc fwd="71.193.75.8" dyno=web.1 connect=1ms service=11ms status=302 bytes=120
+2015-02-16T01:48:42.940068+00:00 heroku[router]: at=info method=GET path="/poll/2/vote" host=vote.ajoberstar.com request_id=6f096497-4b05-4f39-98de-b0c9708b9ad2 fwd="71.193.75.8" dyno=web.1 connect=1ms service=27ms status=200 bytes=2250
+2015-02-16T01:48:43.119519+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=vote.ajoberstar.com request_id=641968bb-8146-48b0-8fdb-770ccd35b6fb fwd="71.193.75.8" dyno=web.1 connect=1ms service=4ms status=200 bytes=2853
+2015-02-16T01:48:43.172045+00:00 heroku[router]: at=info method=GET path="/vote.js" host=vote.ajoberstar.com request_id=cc462986-9dcc-497c-b0dc-b052413640da fwd="71.193.75.8" dyno=web.1 connect=1ms service=3ms status=200 bytes=496
+2015-02-16T01:48:53.722945+00:00 heroku[router]: at=info method=POST path="/poll/2/vote" host=vote.ajoberstar.com request_id=99cdaaf4-0412-471c-8bad-559d95f8893a fwd="71.193.75.8" dyno=web.1 connect=1ms service=7ms status=302 bytes=123
+2015-02-16T01:48:53.718847+00:00 app[web.1]: INFO: Received  {:vote [Jack George Teddy Abe Frankie]}
+2015-02-16T01:48:53.720079+00:00 app[web.1]: INFO: Votes:  [[Jack George Teddy Abe Frankie]]
+2015-02-16T01:48:53.720771+00:00 app[web.1]: INFO: Results:  [[Jack 1] [Teddy 0] [George 0] [Frankie 0] [Abe 0]]
+2015-02-16T01:48:53.720076+00:00 app[web.1]: Feb 16, 2015 1:48:53 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:48:53.718841+00:00 app[web.1]: Feb 16, 2015 1:48:53 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:48:53.720768+00:00 app[web.1]: Feb 16, 2015 1:48:53 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:48:53.784008+00:00 heroku[router]: at=info method=GET path="/poll/2/results" host=vote.ajoberstar.com request_id=14ecb47d-ff52-426a-9d54-d997a6482e9c fwd="71.193.75.8" dyno=web.1 connect=1ms service=5ms status=200 bytes=1568
+2015-02-16T01:48:53.959448+00:00 heroku[router]: at=info method=GET path="/results.js" host=vote.ajoberstar.com request_id=8b4c2022-b6ca-46f2-a8b4-6071ce5316e9 fwd="71.193.75.8" dyno=web.1 connect=0ms service=3ms status=200 bytes=1063
+2015-02-16T01:48:54.180638+00:00 app[web.1]: Feb 16, 2015 1:48:54 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:48:54.180645+00:00 app[web.1]: INFO: Received  {:reply-ch #<ManyToManyChannel clojure.core.async.impl.channels.ManyToManyChannel@9eaf622>}
+2015-02-16T01:48:54.181238+00:00 app[web.1]: Feb 16, 2015 1:48:54 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:48:54.181242+00:00 app[web.1]: INFO: Connecting to  #<AsyncChannel /172.17.211.110:25498<->/10.151.28.50:26017>
+2015-02-16T01:48:54.181748+00:00 app[web.1]: Feb 16, 2015 1:48:54 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:48:54.181752+00:00 app[web.1]: INFO: Votes:  [[Jack George Teddy Abe Frankie]]
+2015-02-16T01:48:54.184607+00:00 app[web.1]: Feb 16, 2015 1:48:54 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:48:54.184611+00:00 app[web.1]: INFO: Results:  [[Jack 1] [Teddy 0] [George 0] [Frankie 0] [Abe 0]]
+2015-02-16T01:48:57.718580+00:00 heroku[router]: at=info method=GET path="/poll/2/results?socket=true" host=vote.ajoberstar.com request_id=cd83a106-75f2-4dad-a1ca-6d0a3fdc2666 fwd="71.193.75.8" dyno=web.1 connect=2ms service=3545ms status=101 bytes=203
+2015-02-16T01:48:57.664153+00:00 heroku[router]: at=info method=GET path="/poll/2/vote" host=vote.ajoberstar.com request_id=37992d98-80ed-4363-8d99-de403f0191de fwd="71.193.75.8" dyno=web.1 connect=1ms service=15ms status=200 bytes=2250
+2015-02-16T01:48:57.718792+00:00 app[web.1]: Feb 16, 2015 1:48:57 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:48:57.718797+00:00 app[web.1]: INFO: Closing  #<AsyncChannel 0.0.0.0/0.0.0.0:25498<->/10.151.28.50:26017>  because  :going-away
+2015-02-16T01:49:02.536229+00:00 heroku[router]: at=info method=GET path="/poll/2/results" host=vote.ajoberstar.com request_id=7dd8fce7-3aad-4eea-92d9-2b4a4aa7e145 fwd="71.193.75.8" dyno=web.1 connect=1ms service=5ms status=200 bytes=1568
+2015-02-16T01:49:02.469415+00:00 heroku[router]: at=info method=POST path="/poll/2/vote" host=vote.ajoberstar.com request_id=df396c29-0e36-4330-ac44-ce45aa1e6200 fwd="71.193.75.8" dyno=web.1 connect=2ms service=6ms status=302 bytes=123
+2015-02-16T01:49:02.465891+00:00 app[web.1]: INFO: Received  {:vote [Abe George Teddy Frankie Jack]}
+2015-02-16T01:49:02.467258+00:00 app[web.1]: Feb 16, 2015 1:49:02 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:49:02.468026+00:00 app[web.1]: Feb 16, 2015 1:49:02 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:49:02.465885+00:00 app[web.1]: Feb 16, 2015 1:49:02 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:49:02.467261+00:00 app[web.1]: INFO: Votes:  [[Jack George Teddy Abe Frankie] [Abe George Teddy Frankie Jack]]
+2015-02-16T01:49:02.468029+00:00 app[web.1]: INFO: Results:  [[Abe 1 1 1 1 2] [Jack 1 1 1 1 0] [Teddy 0 0 0 0 0] [George 0 0 0 0 0] [Frankie 0 0 0 0 0]]
+2015-02-16T01:49:02.728608+00:00 app[web.1]: Feb 16, 2015 1:49:02 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:49:02.732797+00:00 app[web.1]: INFO: Received  {:reply-ch #<ManyToManyChannel clojure.core.async.impl.channels.ManyToManyChannel@307d82b6>}
+2015-02-16T01:49:02.732794+00:00 app[web.1]: Feb 16, 2015 1:49:02 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:49:02.728612+00:00 app[web.1]: INFO: Connecting to  #<AsyncChannel /172.17.211.110:25498<->/10.68.151.164:37740>
+2015-02-16T01:49:02.733364+00:00 app[web.1]: INFO: Votes:  [[Jack George Teddy Abe Frankie] [Abe George Teddy Frankie Jack]]
+2015-02-16T01:49:02.733912+00:00 app[web.1]: INFO: Results:  [[Abe 1 1 1 1 2] [Jack 1 1 1 1 0] [Teddy 0 0 0 0 0] [George 0 0 0 0 0] [Frankie 0 0 0 0 0]]
+2015-02-16T01:49:02.733909+00:00 app[web.1]: Feb 16, 2015 1:49:02 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:49:02.733361+00:00 app[web.1]: Feb 16, 2015 1:49:02 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:49:28.085910+00:00 heroku[router]: at=info method=GET path="/poll/2/vote" host=vote.ajoberstar.com request_id=9455dc88-cd40-40ea-bfa0-0a51bb65d557 fwd="71.193.75.8" dyno=web.1 connect=0ms service=12ms status=200 bytes=2250
+2015-02-16T01:49:28.315731+00:00 heroku[router]: at=info method=GET path="/poll/2/results?socket=true" host=vote.ajoberstar.com request_id=744217d7-b5fc-406f-a70a-82c15aa25884 fwd="71.193.75.8" dyno=web.1 connect=3ms service=25589ms status=101 bytes=203
+2015-02-16T01:49:28.309421+00:00 app[web.1]: Feb 16, 2015 1:49:28 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:49:28.309428+00:00 app[web.1]: INFO: Closing  #<AsyncChannel 0.0.0.0/0.0.0.0:25498<->null>  because  :going-away
+2015-02-16T01:49:33.221559+00:00 heroku[router]: at=info method=POST path="/poll/2/vote" host=vote.ajoberstar.com request_id=3a67114a-6c32-49b1-97e6-7cf18af4bca7 fwd="71.193.75.8" dyno=web.1 connect=1ms service=20ms status=302 bytes=123
+2015-02-16T01:49:33.284286+00:00 heroku[router]: at=info method=GET path="/poll/2/results" host=vote.ajoberstar.com request_id=2d5df838-4b11-43e4-a6a0-04468dc71505 fwd="71.193.75.8" dyno=web.1 connect=0ms service=7ms status=200 bytes=1568
+2015-02-16T01:49:33.232725+00:00 app[web.1]: Feb 16, 2015 1:49:33 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:49:33.472775+00:00 app[web.1]: Feb 16, 2015 1:49:33 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:49:33.232732+00:00 app[web.1]: INFO: Received  {:vote [Abe Teddy Frankie George Jack]}
+2015-02-16T01:49:33.234498+00:00 app[web.1]: Feb 16, 2015 1:49:33 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:49:33.472781+00:00 app[web.1]: INFO: Received  {:reply-ch #<ManyToManyChannel clojure.core.async.impl.channels.ManyToManyChannel@364dec93>}
+2015-02-16T01:49:33.235269+00:00 app[web.1]: INFO: Results:  [[Abe 2] [Jack 1] [Teddy 0] [George 0] [Frankie 0]]
+2015-02-16T01:49:33.473616+00:00 app[web.1]: Feb 16, 2015 1:49:33 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:49:33.473619+00:00 app[web.1]: INFO: Connecting to  #<AsyncChannel /172.17.211.110:25498<->/10.12.137.167:51099>
+2015-02-16T01:49:33.473938+00:00 app[web.1]: Feb 16, 2015 1:49:33 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:49:33.234501+00:00 app[web.1]: INFO: Votes:  [[Jack George Teddy Abe Frankie] [Abe George Teddy Frankie Jack] [Abe Teddy Frankie George Jack]]
+2015-02-16T01:49:33.235266+00:00 app[web.1]: Feb 16, 2015 1:49:33 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:49:33.474460+00:00 app[web.1]: INFO: Results:  [[Abe 2] [Jack 1] [Teddy 0] [George 0] [Frankie 0]]
+2015-02-16T01:49:33.473940+00:00 app[web.1]: INFO: Votes:  [[Jack George Teddy Abe Frankie] [Abe George Teddy Frankie Jack] [Abe Teddy Frankie George Jack]]
+2015-02-16T01:49:33.474458+00:00 app[web.1]: Feb 16, 2015 1:49:33 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:50:28.485639+00:00 heroku[router]: at=error code=H15 desc="Idle connection" method=GET path="/poll/2/results?socket=true" host=vote.ajoberstar.com request_id=6adc9a3b-c2b4-4713-a177-91cadcea26d5 fwd="71.193.75.8" dyno=web.1 connect=1ms service=55016ms status=503 bytes=266
+2015-02-16T01:50:28.485032+00:00 app[web.1]: Feb 16, 2015 1:50:28 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T01:50:28.485038+00:00 app[web.1]: INFO: Closing  #<AsyncChannel 0.0.0.0/0.0.0.0:25498<->null>  because  :going-away
+2015-02-16T02:43:59.376687+00:00 heroku[router]: at=info method=GET path="/" host=vote.ajoberstar.com request_id=2fc0f600-a4fa-4f6c-951e-8769ecc7f7e3 fwd="71.193.75.8" dyno=web.1 connect=3ms service=3ms status=302 bytes=117
+2015-02-16T02:43:59.439803+00:00 heroku[router]: at=info method=GET path="/poll/new" host=vote.ajoberstar.com request_id=f599514a-c219-4105-b147-a38bc7aeea8d fwd="71.193.75.8" dyno=web.1 connect=4ms service=4ms status=200 bytes=2429
+2015-02-16T02:43:59.614715+00:00 heroku[router]: at=info method=GET path="/new.js" host=vote.ajoberstar.com request_id=22c3c57f-9c69-4d2b-804c-d99742e5b49d fwd="71.193.75.8" dyno=web.1 connect=2ms service=4ms status=200 bytes=1167
+2015-02-16T02:44:16.045676+00:00 heroku[router]: at=info method=POST path="/poll/new" host=vote.ajoberstar.com request_id=180788c7-c1eb-4a1c-ac10-bc2f8a84c357 fwd="71.193.75.8" dyno=web.1 connect=2ms service=6ms status=302 bytes=120
+2015-02-16T02:44:16.123029+00:00 heroku[router]: at=info method=GET path="/poll/3/vote" host=vote.ajoberstar.com request_id=e9268ec9-d534-4aa8-9751-3120c38f263d fwd="71.193.75.8" dyno=web.1 connect=3ms service=14ms status=200 bytes=2149
+2015-02-16T02:44:16.327619+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=vote.ajoberstar.com request_id=c4f239c5-088a-4237-ac9f-894f88504bf1 fwd="71.193.75.8" dyno=web.1 connect=1ms service=4ms status=200 bytes=2853
+2015-02-16T02:44:16.386716+00:00 heroku[router]: at=info method=GET path="/vote.js" host=vote.ajoberstar.com request_id=8831934c-b4c5-4e5b-9e64-be7e59594f38 fwd="71.193.75.8" dyno=web.1 connect=1ms service=5ms status=200 bytes=496
+2015-02-16T02:44:18.274666+00:00 heroku[router]: at=info method=POST path="/poll/3/vote" host=vote.ajoberstar.com request_id=a17c8fc6-9423-433e-b7d4-cc6e547e6ed7 fwd="71.193.75.8" dyno=web.1 connect=2ms service=21ms status=302 bytes=123
+2015-02-16T02:44:18.344705+00:00 heroku[router]: at=info method=GET path="/poll/3/results" host=vote.ajoberstar.com request_id=f117b627-0a82-485e-b4d6-d5d2ee283ffc fwd="71.193.75.8" dyno=web.1 connect=5ms service=8ms status=200 bytes=1568
+2015-02-16T02:44:18.269508+00:00 app[web.1]: INFO: Received  {:vote [test ibe two]}
+2015-02-16T02:44:18.269500+00:00 app[web.1]: Feb 16, 2015 2:44:18 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T02:44:18.270755+00:00 app[web.1]: Feb 16, 2015 2:44:18 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T02:44:18.273445+00:00 app[web.1]: INFO: Results:  [[test 1] [two 0] [ibe 0]]
+2015-02-16T02:44:18.270757+00:00 app[web.1]: INFO: Votes:  [[test ibe two]]
+2015-02-16T02:44:18.273440+00:00 app[web.1]: Feb 16, 2015 2:44:18 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T02:44:18.506484+00:00 heroku[router]: at=info method=GET path="/results.js" host=vote.ajoberstar.com request_id=94fcf640-fabf-4f92-aeb0-1c6e3ecb10ea fwd="71.193.75.8" dyno=web.1 connect=1ms service=4ms status=200 bytes=1063
+2015-02-16T02:44:18.623662+00:00 app[web.1]: Feb 16, 2015 2:44:18 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T02:44:18.629220+00:00 app[web.1]: INFO: Received  {:reply-ch #<ManyToManyChannel clojure.core.async.impl.channels.ManyToManyChannel@135e16ce>}
+2015-02-16T02:44:18.629216+00:00 app[web.1]: Feb 16, 2015 2:44:18 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T02:44:18.623669+00:00 app[web.1]: INFO: Connecting to  #<AsyncChannel /172.17.211.110:25498<->/10.137.28.37:42972>
+2015-02-16T02:44:18.629609+00:00 app[web.1]: Feb 16, 2015 2:44:18 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T02:44:18.629613+00:00 app[web.1]: INFO: Votes:  [[test ibe two]]
+2015-02-16T02:44:18.629991+00:00 app[web.1]: Feb 16, 2015 2:44:18 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T02:44:18.629993+00:00 app[web.1]: INFO: Results:  [[test 1] [two 0] [ibe 0]]
+2015-02-16T02:45:13.651511+00:00 heroku[router]: at=error code=H15 desc="Idle connection" method=GET path="/poll/3/results?socket=true" host=vote.ajoberstar.com request_id=758b64c4-f371-4eb3-8f34-691725a87de3 fwd="71.193.75.8" dyno=web.1 connect=3ms service=55031ms status=503 bytes=237
+2015-02-16T02:45:13.647215+00:00 app[web.1]: Feb 16, 2015 2:45:13 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T02:45:13.647248+00:00 app[web.1]: INFO: Closing  #<AsyncChannel 0.0.0.0/0.0.0.0:25498<->null>  because  :going-away
+2015-02-16T03:29:30.169431+00:00 heroku[api]: Deploy fb18a5f by ajoberstar@gmail.com
+2015-02-16T03:29:30.169431+00:00 heroku[api]: Release v5 created by ajoberstar@gmail.com
+2015-02-16T03:29:30.541018+00:00 heroku[web.1]: State changed from up to starting
+2015-02-16T03:29:33.359841+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-02-16T03:29:34.839076+00:00 heroku[web.1]: Starting process with command `java -jar target/uberjar/ranked-choice.jar 22608`
+2015-02-16T03:29:35.501572+00:00 heroku[web.1]: Process exited with status 143
+2015-02-16T03:29:36.410635+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx384m -Xss512k -Dfile.encoding=UTF-8 -Djava.rmi.server.useCodebaseOnly=true
+2015-02-16T03:29:43.104074+00:00 heroku[web.1]: State changed from starting to up
+2015-02-16T03:29:49.831738+00:00 heroku[router]: at=info method=GET path="/" host=vote.ajoberstar.com request_id=8d29b873-3bdd-4781-97e3-d09cb9e1c5e9 fwd="71.193.75.8" dyno=web.1 connect=1ms service=46ms status=302 bytes=117
+2015-02-16T03:29:49.898433+00:00 heroku[router]: at=info method=GET path="/poll/new" host=vote.ajoberstar.com request_id=74e90321-8035-4e78-a192-c53b6641a55f fwd="71.193.75.8" dyno=web.1 connect=1ms service=12ms status=200 bytes=2429
+2015-02-16T03:29:50.070074+00:00 heroku[router]: at=info method=GET path="/new.js" host=vote.ajoberstar.com request_id=a619d1d9-6c5f-432e-91c2-060c1ff5c7be fwd="71.193.75.8" dyno=web.1 connect=0ms service=16ms status=200 bytes=1167
+2015-02-16T03:29:50.271520+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=vote.ajoberstar.com request_id=d024e6eb-a3fb-4cf0-9b30-7c9ac96d4844 fwd="71.193.75.8" dyno=web.1 connect=7ms service=4ms status=404 bytes=100
+2015-02-16T03:29:54.586205+00:00 heroku[router]: at=info method=GET path="/poll/monitor" host=vote.ajoberstar.com request_id=f8e48339-22bf-4db1-84d9-7479a480230b fwd="71.193.75.8" dyno=web.1 connect=1ms service=60ms status=200 bytes=1452
+2015-02-16T04:37:48.333569+00:00 heroku[web.1]: Idling
+2015-02-16T04:37:48.334142+00:00 heroku[web.1]: State changed from up to down
+2015-02-16T04:37:51.206426+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-02-16T04:37:53.492372+00:00 heroku[web.1]: Process exited with status 143
+2015-02-16T11:44:37.582971+00:00 heroku[web.1]: Unidling
+2015-02-16T11:44:37.583306+00:00 heroku[web.1]: State changed from down to starting
+2015-02-16T11:44:42.304457+00:00 heroku[web.1]: Starting process with command `java -jar target/uberjar/ranked-choice.jar 30628`
+2015-02-16T11:44:43.858137+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx384m -Xss512k -Dfile.encoding=UTF-8 -Djava.rmi.server.useCodebaseOnly=true
+2015-02-16T11:44:49.610001+00:00 heroku[web.1]: State changed from starting to up
+2015-02-16T11:44:51.701148+00:00 heroku[router]: at=info method=GET path="/" host=vote.ajoberstar.com request_id=3622c03d-c6e7-4a43-8ccd-3935db5aa66f fwd="71.193.75.8,64.233.172.179" dyno=web.1 connect=1ms service=46ms status=302 bytes=117
+2015-02-16T11:44:51.903377+00:00 heroku[router]: at=info method=GET path="/poll/new" host=vote.ajoberstar.com request_id=b46c762a-82a4-4cf1-89e0-66457d637d97 fwd="71.193.75.8,64.233.172.171" dyno=web.1 connect=0ms service=9ms status=200 bytes=2429
+2015-02-16T11:44:52.171433+00:00 heroku[router]: at=info method=GET path="/new.js" host=vote.ajoberstar.com request_id=b37ce865-e8d0-49d8-b33a-fdcca41204e1 fwd="71.193.75.8,64.233.172.171" dyno=web.1 connect=0ms service=8ms status=200 bytes=1167
+2015-02-16T11:44:52.742882+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=vote.ajoberstar.com request_id=0e254dd3-8ac2-48c8-b7f6-20da9042b69d fwd="71.193.75.8,64.233.172.179" dyno=web.1 connect=0ms service=4ms status=404 bytes=100
+2015-02-16T11:45:40.766518+00:00 heroku[router]: at=info method=POST path="/poll/new" host=vote.ajoberstar.com request_id=9b0b0938-5b15-4e1b-b0ea-1bedb28e87a5 fwd="71.193.75.8,64.233.172.232" dyno=web.1 connect=1ms service=16ms status=302 bytes=120
+2015-02-16T11:45:40.955140+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=vote.ajoberstar.com request_id=4e33c244-b4bc-4f8a-95df-ef5d8751d826 fwd="71.193.75.8,64.233.172.240" dyno=web.1 connect=2ms service=63ms status=200 bytes=2150
+2015-02-16T11:45:41.233043+00:00 heroku[router]: at=info method=GET path="/vote.js" host=vote.ajoberstar.com request_id=b19b431a-e2cf-47ef-94ae-55ef37a5dbf1 fwd="71.193.75.8,64.233.172.224" dyno=web.1 connect=3ms service=4ms status=200 bytes=496
+2015-02-16T11:45:41.206846+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=vote.ajoberstar.com request_id=78dbc7cb-70aa-446d-a3c7-f918e2cd1004 fwd="71.193.75.8,64.233.172.171" dyno=web.1 connect=2ms service=8ms status=200 bytes=2853
+2015-02-16T11:45:51.122365+00:00 heroku[router]: at=info method=POST path="/poll/0/vote" host=vote.ajoberstar.com request_id=5b2c9d24-79d4-4a61-a9a3-631f9a588890 fwd="71.193.75.8,64.233.172.233" dyno=web.1 connect=0ms service=16ms status=302 bytes=123
+2015-02-16T11:45:51.167682+00:00 app[web.1]: INFO: Received  {:vote [vlas gu vhuuu]}
+2015-02-16T11:45:51.175367+00:00 app[web.1]: Feb 16, 2015 11:45:51 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:45:51.175372+00:00 app[web.1]: INFO: Votes:  [[vlas gu vhuuu]]
+2015-02-16T11:45:51.178871+00:00 app[web.1]: Feb 16, 2015 11:45:51 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:45:51.167674+00:00 app[web.1]: Feb 16, 2015 11:45:51 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:45:51.178874+00:00 app[web.1]: INFO: Results:  [[vlas 1] [vhuuu 0] [gu 0]]
+2015-02-16T11:45:57.825171+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=vote.a
+joberstar.com request_id=45357c15-5d94-4c5f-84de-fde1bc1cec98 fwd="71.193.75.8,64.233.172.233" dyno=web.1 connect=0ms service=6ms status=200 bytes=1568
+2015-02-16T11:45:58.076054+00:00 heroku[router]: at=info method=GET path="/results.js" host=vote.ajoberstar.com request_id=c349ee1b-4d15-45cf-84f6-1a9007147186 fwd="71.193.75.8,64.233.172.233" dyno=web.1 connect=1ms service=4ms status=200 bytes=1063
+2015-02-16T11:45:58.336589+00:00 app[web.1]: INFO: Votes:  [[vlas gu vhuuu]]
+2015-02-16T11:45:58.369652+00:00 app[web.1]: INFO: Connecting to  #<AsyncChannel /172.16.187.170:30628<->/10.40.78.219:57269>
+2015-02-16T11:45:58.333097+00:00 app[web.1]: Feb 16, 2015 11:45:58 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:45:58.333103+00:00 app[web.1]: INFO: Received  {:reply-ch #<ManyToManyChannel clojure.core.async.impl.channels.ManyToManyChannel@5848a1e1>}
+2015-02-16T11:45:58.336586+00:00 app[web.1]: Feb 16, 2015 11:45:58 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:45:58.338852+00:00 app[web.1]: Feb 16, 2015 11:45:58 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:45:58.338855+00:00 app[web.1]: INFO: Results:  [[vlas 1] [vhuuu 0] [gu 0]]
+2015-02-16T11:45:58.369645+00:00 app[web.1]: Feb 16, 2015 11:45:58 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:46:11.381477+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=vote.ajoberstar.com request_id=7bf791a8-e1f5-4210-9849-896a9bcdd722 fwd="71.193.75.8,64.233.172.232" dyno=web.1 connect=1ms service=31ms status=200 bytes=2150
+2015-02-16T11:46:11.451689+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=vote.ajoberstar.com request_id=26e05dba-1716-432f-b498-6b5d35218d59 fwd="71.193.75.8" dyno=web.1 connect=1ms service=13149ms status=101 bytes=203
+2015-02-16T11:46:11.450897+00:00 app[web.1]: Feb 16, 2015 11:46:11 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:46:11.450905+00:00 app[web.1]: INFO: Closing  #<AsyncChannel 0.0.0.0/0.0.0.0:30628<->null>  because  :going-away
+2015-02-16T11:46:14.439011+00:00 heroku[router]: at=info method=POST path="/poll/0/vote" host=vote.ajoberstar.com request_id=4a125918-24c7-4170-9b90-7ffe89cea48c fwd="71.193.75.8,64.233.172.225" dyno=web.1 connect=1ms service=9ms status=302 bytes=123
+2015-02-16T11:46:14.436777+00:00 app[web.1]: INFO: Received  {:vote [vlas gu vhuuu]}
+2015-02-16T11:46:14.437660+00:00 app[web.1]: INFO: Votes:  [[vlas gu vhuuu] [vlas gu vhuuu]]
+2015-02-16T11:46:14.436771+00:00 app[web.1]: Feb 16, 2015 11:46:14 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:46:14.437657+00:00 app[web.1]: Feb 16, 2015 11:46:14 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:46:14.438479+00:00 app[web.1]: Feb 16, 2015 11:46:14 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:46:14.438481+00:00 app[web.1]: INFO: Results:  [[vlas 2] [vhuuu 0] [gu 0]]
+2015-02-16T11:47:28.348626+00:00 app[web.1]: INFO: Received  {:reply-ch #<ManyToManyChannel clojure.core.async.impl.channels.ManyToManyChannel@70a480f3>}
+2015-02-16T11:47:28.348619+00:00 app[web.1]: Feb 16, 2015 11:47:28 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:47:28.349268+00:00 app[web.1]: Feb 16, 2015 11:47:28 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:47:28.356296+00:00 app[web.1]: Feb 16, 2015 11:47:28 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:47:28.349837+00:00 app[web.1]: INFO: Results:  [[vlas 2] [vhuuu 0] [gu 0]]
+2015-02-16T11:47:28.356302+00:00 app[web.1]: INFO: Connecting to  #<AsyncChannel /172.16.187.170:30628<->/10.4.230.212:17009>
+2015-02-16T11:47:28.349272+00:00 app[web.1]: INFO: Votes:  [[vlas gu vhuuu] [vlas gu vhuuu]]
+2015-02-16T11:47:28.349834+00:00 app[web.1]: Feb 16, 2015 11:47:28 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:47:37.151891+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=vote.ajoberstar.com request_id=f3c16cf8-f00e-47a5-ac28-04ff2fa476f2 fwd="71.193.75.8" dyno=web.1 connect=1ms service=8853ms status=101 bytes=203
+2015-02-16T11:47:37.152361+00:00 app[web.1]: Feb 16, 2015 11:47:37 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:47:37.152367+00:00 app[web.1]: INFO: Closing  #<AsyncChannel 0.0.0.0/0.0.0.0:30628<->null>  because  :going-away
+2015-02-16T11:47:38.500609+00:00 app[web.1]: Feb 16, 2015 11:47:38 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:47:38.501725+00:00 app[web.1]: INFO: Results:  [[vlas 2] [vhuuu 0] [gu 0]]
+2015-02-16T11:47:38.500181+00:00 app[web.1]: INFO: Received  {:reply-ch #<ManyToManyChannel clojure.core.async.impl.channels.ManyToManyChannel@6ada4060>}
+2015-02-16T11:47:38.500612+00:00 app[web.1]: INFO: Connecting to  #<AsyncChannel /172.16.187.170:30628<->/10.4.74.119:32413>
+2015-02-16T11:47:38.501723+00:00 app[web.1]: Feb 16, 2015 11:47:38 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:47:38.500176+00:00 app[web.1]: Feb 16, 2015 11:47:38 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:47:38.501159+00:00 app[web.1]: INFO: Votes:  [[vlas gu vhuuu] [vlas gu vhuuu]]
+2015-02-16T11:47:38.501156+00:00 app[web.1]: Feb 16, 2015 11:47:38 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:48:00.582780+00:00 heroku[router]: at=info method=GET path="/poll/0/monitor" host=vote.ajoberstar.com request_id=3efc9227-9814-451a-9af6-f0f82fafd2db fwd="71.193.75.8,64.233.172.218" dyno=web.1 connect=0ms service=6ms status=404 bytes=100
+2015-02-16T11:48:00.656570+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=vote.ajoberstar.com request_id=ffce2395-f77a-46be-9df0-794ce931d8eb fwd="71.193.75.8" dyno=web.1 connect=1ms service=22161ms status=101 bytes=203
+2015-02-16T11:48:00.655598+00:00 app[web.1]: Feb 16, 2015 11:48:00 AM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T11:48:00.655603+00:00 app[web.1]: INFO: Closing  #<AsyncChannel /172.16.187.170:30628<->/10.4.74.119:32413>  because  :going-away
+2015-02-16T11:48:11.703379+00:00 heroku[router]: at=info method=GET path="/poll/0/monitor" host=vote.ajoberstar.com request_id=02c98533-d8cc-41f6-a2ec-d7a8504c4fb9 fwd="71.193.75.8,64.233.172.202" dyno=web.1 connect=0ms service=7ms status=404 bytes=100
+2015-02-16T11:48:36.532875+00:00 heroku[router]: at=info method=GET path="/poll/0/monitor" host=vote.ajoberstar.com request_id=a6daee0e-f65c-415f-9a6c-f775f98ba59b fwd="71.193.75.8,64.233.172.202" dyno=web.1 connect=1ms service=7ms status=404 bytes=100
+2015-02-16T11:48:46.434920+00:00 heroku[router]: at=info method=GET path="/poll/0/monitor" host=vote.ajoberstar.com request_id=06471890-8696-4125-affc-b34737edb86d fwd="71.193.75.8,64.233.172.218" dyno=web.1 connect=1ms service=5ms status=404 bytes=100
+2015-02-16T11:48:50.777342+00:00 heroku[router]: at=info method=GET path="/poll/0/monitor" host=vote.ajoberstar.com request_id=75c851b1-3123-41fb-bc20-1df78a6660bc fwd="71.193.75.8,64.233.172.202" dyno=web.1 connect=1ms service=10ms status=404 bytes=100
+2015-02-16T12:12:12.630875+00:00 heroku[router]: at=info method=GET path="/" host=vote.ajoberstar.com request_id=53ee4788-e5f2-4cae-a9b2-d9617b788cb1 fwd="71.193.75.8" dyno=web.1 connect=1ms service=2ms status=302 bytes=117
+2015-02-16T12:12:12.689402+00:00 heroku[router]: at=info method=GET path="/poll/new" host=vote.ajoberstar.com request_id=5d933b66-7cb3-453c-90cc-4a6daf213ffd fwd="71.193.75.8" dyno=web.1 connect=1ms service=5ms status=200 bytes=2429
+2015-02-16T12:12:12.918710+00:00 heroku[router]: at=info method=GET path="/new.js" host=vote.ajoberstar.com request_id=5dd63ad2-7760-4bbd-b62a-4ebae49471bb fwd="71.193.75.8" dyno=web.1 connect=1ms service=4ms status=200 bytes=1167
+2015-02-16T12:12:13.118751+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=vote.ajoberstar.com request_id=20c1ffbb-7e4c-4421-ba95-88890090e255 fwd="71.193.75.8" dyno=web.1 connect=1ms service=2ms status=404 bytes=100
+2015-02-16T12:12:24.633626+00:00 heroku[router]: at=info method=GET path="/poll/monitor" host=vote.ajoberstar.com request_id=32099c21-33ef-4972-8fc6-2b16bacdd9bf fwd="71.193.75.8" dyno=web.1 connect=2ms service=18ms status=200 bytes=1717
+2015-02-16T12:12:29.707921+00:00 heroku[router]: at=info method=GET path="/poll/0/close" host=vote.ajoberstar.com request_id=453a0893-709f-4b06-b49e-df5edfe9e41f fwd="71.193.75.8" dyno=web.1 connect=1ms service=13ms status=302 bytes=121
+2015-02-16T12:12:29.806592+00:00 heroku[router]: at=info method=GET path="/poll/monitor" host=vote.ajoberstar.com request_id=032dfff9-5464-49e5-aeed-af22ee491b61 fwd="71.193.75.8" dyno=web.1 connect=36ms service=8ms status=200 bytes=1452
+2015-02-16T12:12:58.139385+00:00 heroku[router]: at=info method=POST path="/poll/new" host=vote.ajoberstar.com request_id=1e8ee25a-a7de-439e-a606-169e3859a5ef fwd="71.193.75.8" dyno=web.1 connect=1ms service=10ms status=302 bytes=120
+2015-02-16T12:12:58.217488+00:00 heroku[router]: at=info method=GET path="/poll/1/vote" host=vote.ajoberstar.com request_id=5c1be748-39fb-4642-8afa-348bf1b8eed1 fwd="71.193.75.8" dyno=web.1 connect=6ms service=10ms status=200 bytes=2150
+2015-02-16T12:12:58.340989+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=vote.ajoberstar.com request_id=1363fcc2-c447-4cd4-997a-946f58d17123 fwd="71.193.75.8" dyno=web.1 connect=1ms service=4ms status=200 bytes=2853
+2015-02-16T12:12:58.394743+00:00 heroku[router]: at=info method=GET path="/vote.js" host=vote.ajoberstar.com request_id=5db3ab43-8d4c-4ce6-bf1e-0090f5119d45 fwd="71.193.75.8" dyno=web.1 connect=1ms service=5ms status=200 bytes=496
+2015-02-16T12:13:02.716559+00:00 heroku[router]: at=info method=GET path="/poll/1/results" host=vote.ajoberstar.com request_id=2f542ed9-8ff5-42be-a46d-21a42c2ddf6d fwd="71.193.75.8" dyno=web.1 connect=2ms service=6ms status=200 bytes=1568
+2015-02-16T12:13:02.651533+00:00 heroku[router]: at=info method=POST path="/poll/1/vote" host=vote.ajoberstar.com request_id=30f4166c-0a42-4592-8431-9153734bafdf fwd="71.193.75.8" dyno=web.1 connect=1ms service=7ms status=302 bytes=123
+2015-02-16T12:13:02.836588+00:00 heroku[router]: at=info method=GET path="/results.js" host=vote.ajoberstar.com request_id=7451a56a-d06b-4985-a9c4-94a7ae7ced90 fwd="71.193.75.8" dyno=web.1 connect=1ms service=3ms status=200 bytes=1063
+2015-02-16T12:13:02.652979+00:00 app[web.1]: Feb 16, 2015 12:13:02 PM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T12:13:02.652985+00:00 app[web.1]: INFO: Received  {:vote [two one three]}
+2015-02-16T12:13:02.653909+00:00 app[web.1]: INFO: Votes:  [[two one three]]
+2015-02-16T12:13:02.654468+00:00 app[web.1]: INFO: Results:  [[two 1] [three 0] [one 0]]
+2015-02-16T12:13:02.653906+00:00 app[web.1]: Feb 16, 2015 12:13:02 PM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T12:13:02.654465+00:00 app[web.1]: Feb 16, 2015 12:13:02 PM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T12:13:02.977262+00:00 app[web.1]: INFO: Results:  [[two 1] [three 0] [one 0]]
+2015-02-16T12:13:02.973279+00:00 app[web.1]: Feb 16, 2015 12:13:02 PM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T12:13:02.973286+00:00 app[web.1]: INFO: Connecting to  #<AsyncChannel /172.16.187.170:30628<->/10.224.131.57:31737>
+2015-02-16T12:13:02.976211+00:00 app[web.1]: INFO: Received  {:reply-ch #<ManyToManyChannel clojure.core.async.impl.channels.ManyToManyChannel@309a5614>}
+2015-02-16T12:13:02.976207+00:00 app[web.1]: Feb 16, 2015 12:13:02 PM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T12:13:02.976754+00:00 app[web.1]: INFO: Votes:  [[two one three]]
+2015-02-16T12:13:02.976751+00:00 app[web.1]: Feb 16, 2015 12:13:02 PM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T12:13:02.977259+00:00 app[web.1]: Feb 16, 2015 12:13:02 PM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T12:13:08.714639+00:00 heroku[router]: at=info method=GET path="/poll/1/results?socket=true" host=vote.ajoberstar.com request_id=cc887a65-d396-4f87-ad82-9c17525b52e8 fwd="71.193.75.8" dyno=web.1 connect=1ms service=5767ms status=101 bytes=203
+2015-02-16T12:13:08.661774+00:00 heroku[router]: at=info method=GET path="/poll/monitor" host=vote.ajoberstar.com request_id=aa111965-1bae-420d-b450-a66de3a5806b fwd="71.193.75.8" dyno=web.1 connect=1ms service=17ms status=200 bytes=1717
+2015-02-16T12:13:08.715390+00:00 app[web.1]: Feb 16, 2015 12:13:08 PM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T12:13:08.715396+00:00 app[web.1]: INFO: Closing  #<AsyncChannel 0.0.0.0/0.0.0.0:30628<->null>  because  :going-away
+2015-02-16T12:13:10.380162+00:00 heroku[router]: at=info method=GET path="/poll/1/close" host=vote.ajoberstar.com request_id=695b5ff5-b86f-4c83-bfee-df6ec9e6e75c fwd="71.193.75.8" dyno=web.1 connect=2ms service=11ms status=302 bytes=121
+2015-02-16T12:13:10.456544+00:00 heroku[router]: at=info method=GET path="/poll/monitor" host=vote.ajoberstar.com request_id=5a15a55f-5b45-41b2-9904-aa4b3d7e8b34 fwd="71.193.75.8" dyno=web.1 connect=1ms service=18ms status=200 bytes=1452
+2015-02-16T13:15:18.066043+00:00 heroku[web.1]: Idling
+2015-02-16T13:15:18.066827+00:00 heroku[web.1]: State changed from up to down
+2015-02-16T13:15:21.419729+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-02-16T13:15:24.128648+00:00 heroku[web.1]: Process exited with status 143
+2015-02-16T13:37:01.291991+00:00 heroku[web.1]: Unidling
+2015-02-16T13:37:01.292385+00:00 heroku[web.1]: State changed from down to starting
+2015-02-16T13:37:06.220155+00:00 heroku[web.1]: Starting process with command `java -jar target/uberjar/ranked-choice.jar 39839`
+2015-02-16T13:37:07.768868+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx384m -Xss512k -Dfile.encoding=UTF-8 -Djava.rmi.server.useCodebaseOnly=true
+2015-02-16T13:37:14.379850+00:00 heroku[web.1]: State changed from starting to up
+2015-02-16T13:37:15.419704+00:00 heroku[router]: at=info method=GET path="/" host=vote.ajoberstar.com request_id=d96596c6-1bdf-4560-abd8-4e89f38b8de6 fwd="170.11.30.141" dyno=web.1 connect=1ms service=50ms status=302 bytes=117
+2015-02-16T13:37:24.096020+00:00 heroku[router]: at=info method=GET path="/" host=ranked-choice.herokuapp.com request_id=4be47c16-4a54-479a-a590-3680a7866eb0 fwd="170.11.30.141" dyno=web.1 connect=1ms service=6ms status=302 bytes=117
+2015-02-16T13:37:24.152593+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=41de4f63-fc6b-4ef9-a0d4-dbf687569def fwd="170.11.30.141" dyno=web.1 connect=1ms service=12ms status=200 bytes=2429
+2015-02-16T13:37:24.272742+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=4ed1720f-91bb-4fc4-a3ff-b83901bb99c8 fwd="170.11.30.141" dyno=web.1 connect=2ms service=10ms status=200 bytes=1167
+2015-02-16T13:37:24.505088+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=166d7d29-316d-4a52-a598-39345a892ad8 fwd="170.11.30.141" dyno=web.1 connect=2ms service=4ms status=404 bytes=100
+2015-02-16T13:47:01.955723+00:00 heroku[router]: at=info method=GET path="/" host=ranked-choice.herokuapp.com request_id=577a0553-9616-4c6b-8ec9-cd2159f9514c fwd="170.11.30.141" dyno=web.1 connect=2ms service=19ms status=302 bytes=117
+2015-02-16T13:47:02.012852+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=025b70a1-1bcf-4fe4-85ee-98c031fe4f67 fwd="170.11.30.141" dyno=web.1 connect=1ms service=9ms status=200 bytes=2429
+2015-02-16T13:47:02.078362+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=f973e5d3-5aae-494d-9d20-649e829289e1 fwd="170.11.30.141" dyno=web.1 connect=1ms service=4ms status=200 bytes=1167
+2015-02-16T13:47:02.237386+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=cbcc0217-2e3a
+-445e-a282-562f5981cc7b fwd="170.11.30.141" dyno=web.1 connect=3ms service=4ms status=404 bytes=100
+2015-02-16T13:50:15.159621+00:00 heroku[router]: at=info method=GET path="/" host=ranked-choice.herokuapp.com request_id=0eb2333d-059b-4772-a645-b408258978a5 fwd="170.11.30.141" dyno=web.1 connect=1ms service=2ms status=302 bytes=117
+2015-02-16T13:50:15.215151+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=9df9e9c0-6028-415a-82a7-354f7195ec0a fwd="170.11.30.141" dyno=web.1 connect=0ms service=7ms status=200 bytes=2429
+2015-02-16T13:50:15.282192+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=574aeea6-55f7-41eb-934c-eb54c9cf1d15 fwd="170.11.30.141" dyno=web.1 connect=0ms service=3ms status=200 bytes=1167
+2015-02-16T14:51:53.108302+00:00 heroku[web.1]: Idling
+2015-02-16T14:51:53.109115+00:00 heroku[web.1]: State changed from up to down
+2015-02-16T14:51:56.078533+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-02-16T14:51:58.692594+00:00 heroku[web.1]: Process exited with status 143
+2015-02-16T15:28:49.470592+00:00 heroku[web.1]: Unidling
+2015-02-16T15:28:49.470899+00:00 heroku[web.1]: State changed from down to starting
+2015-02-16T15:28:55.150455+00:00 heroku[web.1]: Starting process with command `java -jar target/uberjar/ranked-choice.jar 18609`
+2015-02-16T15:28:57.176685+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx384m -Xss512k -Dfile.encoding=UTF-8 -Djava.rmi.server.useCodebaseOnly=true
+2015-02-16T15:29:16.059224+00:00 heroku[web.1]: State changed from starting to up
+2015-02-16T15:29:17.966211+00:00 heroku[router]: at=info method=GET path="/" host=ranked-choice.herokuapp.com request_id=6514fb3a-2bc3-45b7-9c6d-6b15ede6b730 fwd="170.11.30.141" dyno=web.1 connect=1ms service=351ms status=302 bytes=117
+2015-02-16T15:29:18.210868+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=5ee36fc0-be98-4f1c-85e8-67d5c954b87a fwd="170.11.30.141" dyno=web.1 connect=1ms service=138ms status=200 bytes=2429
+2015-02-16T15:29:18.571930+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=f276d9ea-f573-4854-90d2-73a0067415bb fwd="170.11.30.141" dyno=web.1 connect=0ms service=30ms status=200 bytes=1167
+2015-02-16T15:29:21.316149+00:00 heroku[router]: at=info method=GET path="/" host=ranked-choice.herokuapp.com request_id=1ae2a9e7-689e-4731-bb56-e91b312e8b9d fwd="170.11.30.141" dyno=web.1 connect=1ms service=16ms status=302 bytes=117
+2015-02-16T15:29:21.609122+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=3efe097a-bc96-44e7-93d5-588792ce7139 fwd="170.11.30.141" dyno=web.1 connect=14ms service=225ms status=200 bytes=2429
+2015-02-16T15:29:21.700671+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=3384eb11-9f16-44bb-b77d-5d1c4b3d81a9 fwd="170.11.30.141" dyno=web.1 connect=1ms service=21ms status=200 bytes=1167
+2015-02-16T15:29:21.907486+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=3f72ca31-6e07-43b3-81a5-56d3f4bc7427 fwd="170.11.30.141" dyno=web.1 connect=1ms service=6ms status=404 bytes=100
+2015-02-16T15:31:04.209675+00:00 heroku[router]: at=info method=GET path="/" host=ranked-choice.herokuapp.com request_id=99aeef88-0100-438f-bd1a-9480e56e187f fwd="170.11.30.141" dyno=web.1 connect=2ms service=16ms status=302 bytes=117
+2015-02-16T15:31:10.299163+00:00 heroku[router]: at=info method=POST path="/poll/new" host=ranked-choice.herokuapp.com request_id=bc9fadc6-0439-4391-bc27-30a8925d2520 fwd="170.11.30.141" dyno=web.1 connect=0ms service=30ms status=302 bytes=120
+2015-02-16T15:31:10.757402+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=190fe1d9-aeee-4f4a-b87f-1a2430962149 fwd="170.11.30.141" dyno=web.1 connect=0ms service=402ms status=200 bytes=2197
+2015-02-16T15:31:11.142300+00:00 heroku[router]: at=info method=GET path="/vote.js" host=ranked-choice.herokuapp.com request_id=a6c154bf-d01e-44b5-996d-b18ff8588103 fwd="170.11.30.141" dyno=web.1 connect=0ms service=16ms status=200 bytes=496
+2015-02-16T15:31:11.185414+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=ranked-choice.herokuapp.com request_id=f69be9e5-f820-4682-a474-c7c9e5a0d557 fwd="170.11.30.141" dyno=web.1 connect=2ms service=57ms status=200 bytes=2853
+2015-02-16T15:31:19.678918+00:00 heroku[router]: at=info method=POST path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=58a1055e-1369-47c0-b5e6-7bab90a7416b fwd="170.11.30.141" dyno=web.1 connect=1ms service=62ms status=302 bytes=123
+2015-02-16T15:31:19.866933+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=afc229c6-8a1c-4df2-be16-ca4d88a7356f fwd="170.11.30.141" dyno=web.1 connect=5ms service=23ms status=200 bytes=1568
+2015-02-16T15:31:19.841738+00:00 app[web.1]: Feb 16, 2015 3:31:19 PM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T15:31:19.841750+00:00 app[web.1]: INFO: Received  {:vote [Two Test One Three]}
+2015-02-16T15:31:19.876353+00:00 app[web.1]: Feb 16, 2015 3:31:19 PM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T15:31:19.876361+00:00 app[web.1]: INFO: Votes:  [[Two Test One Three]]
+2015-02-16T15:31:19.879088+00:00 app[web.1]: INFO: Results:  [[Two 1] [Three 0] [Test 0] [One 0]]
+2015-02-16T15:31:19.879085+00:00 app[web.1]: Feb 16, 2015 3:31:19 PM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T15:31:20.073881+00:00 heroku[router]: at=info method=GET path="/results.js" host=ranked-choice.herokuapp.com request_id=e782d283-dc88-4b70-bcd8-7b5224c9eddb fwd="170.11.30.141" dyno=web.1 connect=0ms service=14ms status=200 bytes=1063
+2015-02-16T15:31:20.320482+00:00 app[web.1]: Feb 16, 2015 3:31:20 PM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T15:31:20.320510+00:00 app[web.1]: INFO: Received  {:reply-ch #<ManyToManyChannel clojure.core.async.impl.channels.ManyToManyChannel@1baecca7>}
+2015-02-16T15:31:20.326213+00:00 app[web.1]: INFO: Votes:  [[Two Test One Three]]
+2015-02-16T15:31:20.445104+00:00 app[web.1]: Feb 16, 2015 3:31:20 PM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T15:31:20.445112+00:00 app[web.1]: INFO: Connecting to  #<AsyncChannel /172.16.250.6:18609<->/10.6.91.64:15005>
+2015-02-16T15:31:20.326210+00:00 app[web.1]: Feb 16, 2015 3:31:20 PM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T15:31:20.345426+00:00 app[web.1]: INFO: Results:  [[Two 1] [Three 0] [Test 0] [One 0]]
+2015-02-16T15:31:20.345420+00:00 app[web.1]: Feb 16, 2015 3:31:20 PM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T15:32:15.492328+00:00 heroku[router]: at=error code=H15 desc="Idle connection" method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=a4479b4f-e06c-438d-bfa4-2e17e5b2eec7 fwd="170.11.30.141" dyno=web.1 connect=1ms service=55301ms status=503 bytes=249
+2015-02-16T15:32:15.491427+00:00 app[web.1]: Feb 16, 2015 3:32:15 PM clojure.tools.logging$eval1$fn__5 invoke
+2015-02-16T15:32:15.491434+00:00 app[web.1]: INFO: Closing  #<AsyncChannel 0.0.0.0/0.0.0.0:18609<->null>  because  :going-away
+2015-02-16T15:33:37.857602+00:00 heroku[router]: at=info method=GET path="/poll/monitor" host=ranked-choice.herokuapp.com request_id=b594de46-b973-48f1-9b33-555eb2c0de53 fwd="170.11.30.141" dyno=web.1 connect=1ms service=53ms status=200 bytes=1723
+2015-02-16T15:33:39.844030+00:00 heroku[router]: at=info method=GET path="/poll/0/close" host=ranked-choice.herokuapp.com request_id=986e6f34-c11f-4bbb-b89d-7fb8d56b821e fwd="170.11.30.141" dyno=web.1 connect=10ms service=40ms status=302 bytes=121
+2015-02-16T15:33:40.467703+00:00 heroku[router]: at=info method=GET path="/poll/monitor" host=ranked-choice.herokuapp.com request_id=cf1a5dd4-8c10-46da-8510-01d25419445d fwd="170.11.30.141" dyno=web.1 connect=18ms service=39ms status=200 bytes=1452
+2015-02-16T16:36:21.951042+00:00 heroku[web.1]: State changed from up to down
+2015-02-16T16:36:21.950499+00:00 heroku[web.1]: Idling
+2015-02-16T16:36:25.293833+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-02-16T16:36:27.853327+00:00 heroku[web.1]: Process exited with status 143
+2015-02-17T03:17:49.079967+00:00 heroku[api]: Deploy 291e1a0 by ajoberstar@gmail.com
+2015-02-17T03:17:49.079967+00:00 heroku[api]: Release v6 created by ajoberstar@gmail.com
+2015-02-17T03:22:20.794655+00:00 heroku[web.1]: State changed from down to starting
+2015-02-17T03:22:20.794326+00:00 heroku[web.1]: Unidling
+2015-02-17T03:22:25.322720+00:00 heroku[web.1]: Starting process with command `java -jar target/uberjar/ranked-choice.jar 48489`
+2015-02-17T03:22:26.499703+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx384m -Xss512k -Dfile.encoding=UTF-8 -Djava.rmi.server.useCodebaseOnly=true
+2015-02-17T03:22:31.274610+00:00 heroku[web.1]: State changed from starting to up
+2015-02-17T03:22:32.895109+00:00 heroku[router]: at=info method=GET path="/" host=vote.ajoberstar.com request_id=5d47e977-42bf-4e50-bd79-59b181efa329 fwd="71.193.75.8" dyno=web.1 connect=0ms service=40ms status=302 bytes=117
+2015-02-17T03:41:20.304035+00:00 heroku[router]: at=info method=GET path="/" host=vote.ajoberstar.com request_id=71bb8788-c31e-4a7a-8853-54eb070d920c fwd="71.193.75.8" dyno=web.1 connect=2ms service=96ms status=302 bytes=117
+2015-02-17T03:41:20.404148+00:00 heroku[router]: at=info method=GET path="/poll/new" host=vote.ajoberstar.com request_id=59757545-6f8e-43c1-a5ef-74f7d425adfd fwd="71.193.75.8" dyno=web.1 connect=3ms service=37ms status=200 bytes=2429
+2015-02-17T03:41:20.659639+00:00 heroku[router]: at=info method=GET path="/new.js" host=vote.ajoberstar.com request_id=edc63f99-0b85-41d5-9b18-eba9d79c75e9 fwd="71.193.75.8" dyno=web.1 connect=3ms service=8ms status=200 bytes=1177
+2015-02-17T04:43:40.485858+00:00 heroku[web.1]: Idling
+2015-02-17T04:43:40.486452+00:00 heroku[web.1]: State changed from up to down
+2015-02-17T04:43:44.180111+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-02-17T04:43:46.716866+00:00 heroku[web.1]: Process exited with status 143
+2015-02-17T09:08:59.167661+00:00 heroku[web.1]: State changed from down to starting
+2015-02-17T09:08:59.167299+00:00 heroku[web.1]: Unidling
+2015-02-17T09:09:03.776222+00:00 heroku[web.1]: Starting process with command `java -jar target/uberjar/ranked-choice.jar 15482`
+2015-02-17T09:09:05.298948+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx384m -Xss512k -Dfile.encoding=UTF-8 -Djava.rmi.server.useCodebaseOnly=true
+2015-02-17T09:09:11.062227+00:00 heroku[web.1]: State changed from starting to up
+2015-02-17T09:09:13.300304+00:00 heroku[router]: at=info method=GET path="/" host=vote.ajoberstar.com request_id=b752f5da-6428-41dd-8cab-241fc61adc1a fwd="64.74.215.50" dyno=web.1 connect=1ms service=60ms status=302 bytes=117
+2015-02-17T09:09:13.394024+00:00 heroku[router]: at=info method=GET path="/poll/new" host=vote.ajoberstar.com request_id=794de6a7-dc16-4805-9bf4-0b81646c3b04 fwd="64.74.215.50" dyno=web.1 connect=1ms service=17ms status=200 bytes=2429
+2015-02-17T09:09:13.487261+00:00 heroku[router]: at=info method=GET path="/new.js" host=vote.ajoberstar.com request_id=58cda577-e0d5-4185-b8ee-dd9f7d28b6b4 fwd="64.74.215.50" dyno=web.1 connect=1ms service=9ms status=200 bytes=1177
+2015-02-17T10:13:06.220000+00:00 heroku[web.1]: Idling
+2015-02-17T10:13:06.220916+00:00 heroku[web.1]: State changed from up to down
+2015-02-17T10:13:09.579079+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-02-17T10:13:12.204688+00:00 heroku[web.1]: Process exited with status 143
+2015-02-22T02:05:25.335941+00:00 heroku[api]: Deploy 424b3f8 by ajoberstar@gmail.com
+2015-02-22T02:05:25.335941+00:00 heroku[api]: Release v7 created by ajoberstar@gmail.com
+2015-02-22T02:05:30.858538+00:00 heroku[web.1]: Unidling
+2015-02-22T02:05:30.858820+00:00 heroku[web.1]: State changed from down to starting
+2015-02-22T02:05:34.728993+00:00 heroku[web.1]: Starting process with command `java -jar target/uberjar/ranked-choice.jar 18554`
+2015-02-22T02:05:35.835345+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx384m -Xss512k -Dfile.encoding=UTF-8 -Djava.rmi.server.useCodebaseOnly=true
+2015-02-22T02:05:41.257346+00:00 heroku[web.1]: State changed from starting to up
+2015-02-22T02:05:43.025541+00:00 heroku[router]: at=info method=GET path="/" host=vote.ajoberstar.com request_id=2372ff9f-c874-4466-bb44-9657a3d249b6 fwd="71.193.75.8" dyno=web.1 connect=1ms service=52ms status=302 bytes=117
+2015-02-22T02:05:43.107383+00:00 heroku[router]: at=info method=GET path="/poll/new" host=vote.ajoberstar.com request_id=40aa9df9-8f7a-4cf9-9a58-4af654b8f005 fwd="71.193.75.8" dyno=web.1 connect=3ms service=21ms status=200 bytes=2429
+2015-02-22T02:05:43.258441+00:00 heroku[router]: at=info method=GET path="/new.js" host=vote.ajoberstar.com request_id=0caba1d9-beb9-415f-af99-a2c6ed598c70 fwd="71.193.75.8" dyno=web.1 connect=1ms service=7ms status=200 bytes=1177
+2015-02-22T02:05:43.450062+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=vote.ajoberstar.com request_id=70eed182-5ab5-42f4-809c-c228d224cf6e fwd="71.193.75.8" dyno=web.1 connect=4ms service=3ms status=404 bytes=100
+2015-02-22T03:11:54.392950+00:00 heroku[web.1]: Idling
+2015-02-22T03:11:54.394007+00:00 heroku[web.1]: State changed from up to down
+2015-02-22T03:11:56.813507+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-02-22T03:11:58.504070+00:00 heroku[web.1]: Process exited with status 143
+2015-02-24T03:43:43.447890+00:00 heroku[web.1]: Unidling
+2015-02-24T03:43:43.448374+00:00 heroku[web.1]: State changed from down to starting
+2015-02-24T03:43:58.082208+00:00 heroku[web.1]: Starting process with command `java -jar target/uberjar/ranked-choice.jar 54200`
+2015-02-24T03:44:00.760469+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx384m -Xss512k -Dfile.encoding=UTF-8 -Djava.rmi.server.useCodebaseOnly=true
+2015-02-24T03:44:09.113853+00:00 heroku[web.1]: State changed from starting to up
+2015-02-24T03:44:11.593505+00:00 heroku[router]: at=info method=GET path="/" host=vote.ajoberstar.com request_id=292aeff6-fc4e-41b3-8506-431c186b93da fwd="64.74.215.148" dyno=web.1 connect=2ms service=52ms status=302 bytes=117
+2015-02-24T03:44:11.692918+00:00 heroku[router]: at=info method=GET path="/poll/new" host=vote.ajoberstar.com request_id=cba8a584-2837-4bbc-959c-82780ad442ba fwd="64.74.215.148" dyno=web.1 connect=1ms service=15ms status=200 bytes=2429
+2015-02-24T03:44:11.899661+00:00 heroku[router]: at=info method=GET path="/new.js" host=vote.ajoberstar.com request_id=17c98ba2-6391-4a3b-9fc3-0c4b5aa9474a fwd="64.74.215.148" dyno=web.1 connect=1ms service=8ms status=200 bytes=1177
+2015-02-24T03:50:34.762245+00:00 heroku[api]: Deploy a1fc685 by ajoberstar@gmail.com
+2015-02-24T03:50:34.762245+00:00 heroku[api]: Release v8 created by ajoberstar@gmail.com
+2015-02-24T03:50:34.988561+00:00 heroku[web.1]: State changed from up to starting
+2015-02-24T03:50:37.773232+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-02-24T03:50:39.550414+00:00 heroku[web.1]: Starting process with command `java -jar target/uberjar/ranked-choice.jar 41263`
+2015-02-24T03:50:39.650117+00:00 heroku[web.1]: Process exited with status 143
+2015-02-24T03:50:41.502184+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx384m -Xss512k -Dfile.encoding=UTF-8 -Djava.rmi.server.useCodebaseOnly=true
+2015-02-24T03:50:49.138526+00:00 heroku[web.1]: State changed from starting to up
+2015-02-24T03:51:20.523409+00:00 heroku[router]: at=info method=GET path="/" host=vote.ajoberstar.com req
+uest_id=beae6762-601e-4e0f-b4dc-fbcdaaf33cd6 fwd="71.193.75.8" dyno=web.1 connect=2ms service=59ms status=302 bytes=117
+2015-02-24T03:51:20.608858+00:00 heroku[router]: at=info method=GET path="/poll/new" host=vote.ajoberstar.com request_id=6524860b-d3b5-4bde-a57f-5e95ddf387db fwd="71.193.75.8" dyno=web.1 connect=1ms service=25ms status=200 bytes=2852
+2015-02-24T03:51:20.794187+00:00 heroku[router]: at=info method=GET path="/new.js" host=vote.ajoberstar.com request_id=20ebd10d-102d-4980-aa5c-b9f2789bd96f fwd="71.193.75.8" dyno=web.1 connect=1ms service=11ms status=200 bytes=1276
+2015-02-24T03:51:21.052717+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=vote.ajoberstar.com request_id=557e5f17-d11f-4f44-88b7-d4266021ec7b fwd="71.193.75.8" dyno=web.1 connect=3ms service=18ms status=404 bytes=100
+2015-02-24T03:51:35.755861+00:00 heroku[router]: at=info method=POST path="/poll/new" host=vote.ajoberstar.com request_id=a86ccb86-48cb-45d4-9d7a-160748083c89 fwd="71.193.75.8" dyno=web.1 connect=1ms service=23ms status=302 bytes=120
+2015-02-24T03:51:35.952980+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=vote.ajoberstar.com request_id=45447671-9c82-42c5-a2ef-ec967013d33a fwd="71.193.75.8" dyno=web.1 connect=1ms service=141ms status=200 bytes=2197
+2015-02-24T03:51:36.138975+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=vote.ajoberstar.com request_id=fff1d1ac-1a11-46de-8c1b-daa25084efbb fwd="71.193.75.8" dyno=web.1 connect=1ms service=6ms status=200 bytes=2853
+2015-02-24T03:51:36.142587+00:00 heroku[router]: at=info method=GET path="/vote.js" host=vote.ajoberstar.com request_id=b83281ea-15be-45b1-b794-a4dafc272102 fwd="71.193.75.8" dyno=web.1 connect=2ms service=6ms status=200 bytes=722
+2015-02-24T03:51:37.517857+00:00 heroku[router]: at=info method=POST path="/poll/0/vote" host=vote.ajoberstar.com request_id=cb25eb77-7a31-46db-8937-e8398318600d fwd="71.193.75.8" dyno=web.1 connect=1ms service=42ms status=302 bytes=123
+2015-02-24T03:51:37.576967+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=vote.ajoberstar.com request_id=b9ce030f-3c84-4640-85d7-593e7a09562b fwd="71.193.75.8" dyno=web.1 connect=1ms service=8ms status=200 bytes=1568
+2015-02-24T03:51:37.750682+00:00 heroku[router]: at=info method=GET path="/results.js" host=vote.ajoberstar.com request_id=71356dfb-b970-4fdf-99cf-ad83a2f43861 fwd="71.193.75.8" dyno=web.1 connect=2ms service=9ms status=200 bytes=1063
+2015-02-24T03:51:41.274934+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=vote.ajoberstar.com request_id=7160a810-6c18-49db-aa2f-ef1d05884a7f fwd="71.193.75.8" dyno=web.1 connect=1ms service=50ms status=200 bytes=2197
+2015-02-24T03:51:41.342589+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=vote.ajoberstar.com request_id=792125ca-6148-4182-a560-6b3479930c6a fwd="71.193.75.8" dyno=web.1 connect=0ms service=3361ms status=101 bytes=203
+2015-02-24T03:51:46.095344+00:00 heroku[router]: at=info method=POST path="/poll/0/vote" host=vote.ajoberstar.com request_id=33903c4f-a88f-41fe-ae62-bdd1015dd04b fwd="71.193.75.8" dyno=web.1 connect=1ms service=13ms status=302 bytes=123
+2015-02-24T03:51:46.154612+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=vote.ajoberstar.com request_id=f5e2c97e-6b43-4016-bc58-460b47b6be87 fwd="71.193.75.8" dyno=web.1 connect=1ms service=4ms status=200 bytes=1568
+2015-02-24T03:51:46.280965+00:00 heroku[router]: at=info method=GET path="/results.js" host=vote.ajoberstar.com request_id=df6d4485-cd82-48fe-a174-49f6b760dd27 fwd="71.193.75.8" dyno=web.1 connect=1ms service=6ms status=200 bytes=1063
+2015-02-24T03:51:51.923958+00:00 heroku[router]: at=info method=GET path="/poll/monitor" host=vote.ajoberstar.com request_id=f3663997-a1ee-402d-a9c1-9a4982593013 fwd="71.193.75.8" dyno=web.1 connect=4ms service=15ms status=200 bytes=1723
+2015-02-24T03:51:51.989590+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=vote.ajoberstar.com request_id=73f4e98b-5f2e-499e-8510-c107abc890a6 fwd="71.193.75.8" dyno=web.1 connect=1ms service=5600ms status=101 bytes=203
+2015-02-24T03:51:53.704587+00:00 heroku[router]: at=info method=GET path="/poll/0/close" host=vote.ajoberstar.com request_id=3985fadd-9e0a-4ee3-b03a-d61cde7eb472 fwd="71.193.75.8" dyno=web.1 connect=1ms service=3ms status=302 bytes=121
+2015-02-24T03:51:53.779396+00:00 heroku[router]: at=info method=GET path="/poll/monitor" host=vote.ajoberstar.com request_id=0f119b34-1438-4f9d-837f-c466be5362c9 fwd="71.193.75.8" dyno=web.1 connect=1ms service=18ms status=200 bytes=1452
+2015-02-24T03:51:58.408168+00:00 heroku[router]: at=info method=GET path="/poll/new" host=vote.ajoberstar.com request_id=37ab6a05-aae4-4cb6-9805-592d9ae89bbc fwd="71.193.75.8" dyno=web.1 connect=1ms service=5ms status=200 bytes=2852
+2015-02-24T03:51:58.531772+00:00 heroku[router]: at=info method=GET path="/new.js" host=vote.ajoberstar.com request_id=e8628682-608e-48e4-be27-d8477e7a5fa1 fwd="71.193.75.8" dyno=web.1 connect=1ms service=4ms status=200 bytes=1276
+2015-02-24T03:52:06.643305+00:00 heroku[router]: at=info method=POST path="/poll/new" host=vote.ajoberstar.com request_id=7d500f0c-6b24-498a-bfbd-903bc92ef1a0 fwd="71.193.75.8" dyno=web.1 connect=1ms service=4ms status=302 bytes=120
+2015-02-24T03:52:06.715492+00:00 heroku[router]: at=info method=GET path="/poll/1/vote" host=vote.ajoberstar.com request_id=37668064-78ac-45a9-bc1e-b79a9112073c fwd="71.193.75.8" dyno=web.1 connect=1ms service=16ms status=200 bytes=2153
+2015-02-24T03:52:06.832709+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=vote.ajoberstar.com request_id=533b9762-94a9-49ed-b5ed-e6a97261330d fwd="71.193.75.8" dyno=web.1 connect=2ms service=3ms status=200 bytes=2853
+2015-02-24T03:52:06.832341+00:00 heroku[router]: at=info method=GET path="/vote.js" host=vote.ajoberstar.com request_id=a92c9bb9-01bc-4429-81db-b716d7fc5825 fwd="71.193.75.8" dyno=web.1 connect=1ms service=4ms status=200 bytes=722
+2015-02-24T03:52:08.391299+00:00 heroku[router]: at=info method=POST path="/poll/1/vote" host=vote.ajoberstar.com request_id=1e5f39a4-5c35-4b83-841c-a72ce7a9ec12 fwd="71.193.75.8" dyno=web.1 connect=10ms service=31ms status=302 bytes=123
+2015-02-24T03:52:08.463396+00:00 heroku[router]: at=info method=GET path="/poll/1/results" host=vote.ajoberstar.com request_id=48334fea-6fc1-46a4-9815-29410087e440 fwd="71.193.75.8" dyno=web.1 connect=2ms service=16ms status=200 bytes=1568
+2015-02-24T03:52:08.591267+00:00 heroku[router]: at=info method=GET path="/results.js" host=vote.ajoberstar.com request_id=26a36bbd-428b-4fee-9101-78147da40b83 fwd="71.193.75.8" dyno=web.1 connect=2ms service=5ms status=200 bytes=1063
+2015-02-24T03:52:14.198513+00:00 heroku[router]: at=info method=GET path="/poll/monitor" host=vote.ajoberstar.com request_id=e827b400-fa89-487f-aa54-701542b9bc32 fwd="71.193.75.8" dyno=web.1 connect=2ms service=8ms status=200 bytes=1720
+2015-02-24T03:52:14.269779+00:00 heroku[router]: at=info method=GET path="/poll/1/results?socket=true" host=vote.ajoberstar.com request_id=bb43daa2-2adc-4988-ba8e-fb5f97cd8da1 fwd="71.193.75.8" dyno=web.1 connect=1ms service=5519ms status=101 bytes=203
+2015-02-24T03:52:15.735850+00:00 heroku[router]: at=info method=GET path="/poll/1/close" host=vote.ajoberstar.com request_id=5e87786a-70fc-40d9-95d6-d757f46c7774 fwd="71.193.75.8" dyno=web.1 connect=1ms service=4ms status=302 bytes=121
+2015-02-24T03:52:15.801014+00:00 heroku[router]: at=info method=GET path="/poll/monitor" host=vote.ajoberstar.com request_id=3f423fd5-97b4-4518-9a09-6b8bd632d4e3 fwd="71.193.75.8" dyno=web.1 connect=2ms service=7ms status=200 bytes=1452
+2015-02-24T03:52:17.919669+00:00 heroku[router]: at=info method=GET path="/" host=vote.ajoberstar.com request_id=b7ac49fc-afda-4694-ae4f-5c60116e657f fwd="71.193.75.8" dyno=web.1 connect=2ms service=2ms status=302 bytes=117
+2015-02-24T03:52:17.980190+00:00 heroku[router]: at=info method=GET path="/poll/new" host=vote.ajoberstar.com request_id=19004e1c-2ac5-44d8-9aa0-353c4de61a8f fwd="71.193.75.8" dyno=web.1 connect=2ms service=4ms status=200 bytes=2852
+2015-02-24T03:52:18.149860+00:00 heroku[router]: at=info method=GET path="/new.js" host=vote.ajoberstar.com request_id=579538db-7145-46a8-86ed-0cd4c5446072 fwd="71.193.75.8" dyno=web.1 connect=1ms service=6ms status=200 bytes=1276
+2015-02-24T04:55:25.762237+00:00 heroku[web.1]: Idling
+2015-02-24T04:55:25.763273+00:00 heroku[web.1]: State changed from up to down
+2015-02-24T04:55:29.205716+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-02-24T04:55:32.988348+00:00 heroku[web.1]: Process exited with status 143
+2015-02-24T15:42:53.358558+00:00 heroku[web.1]: Unidling
+2015-02-24T15:42:53.358558+00:00 heroku[web.1]: State changed from down to starting
+2015-02-24T15:42:59.868804+00:00 heroku[web.1]: Starting process with command `java -jar target/uberjar/ranked-choice.jar 24204`
+2015-02-24T15:44:08.562926+00:00 heroku[router]: at=error code=H20 desc="App boot timeout" method=GET path="/" host=ranked-choice.herokuapp.com request_id=aeb5a369-2a8b-4df0-bd31-cbb27e6c2991 fwd="170.11.30.141" dyno= connect= service= status=503 bytes=
+2015-02-24T15:45:03.954106+00:00 heroku[web.1]: State changed from starting to down
+2015-02-24T15:45:08.371751+00:00 heroku[router]: at=error code=H20 desc="App boot timeout" method=GET path="/" host=ranked-choice.herokuapp.com request_id=63b7eb57-567c-4f0a-b793-ef379d43d091 fwd="170.11.30.141" dyno= connect= service= status=503 bytes=
+2015-02-24T15:46:14.721477+00:00 heroku[router]: at=error code=H20 desc="App boot timeout" method=GET path="/" host=ranked-choice.herokuapp.com request_id=2c7acadc-8e44-4d80-bd89-38487174ae33 fwd="170.11.30.141" dyno= connect= service= status=503 bytes=
+2015-02-24T15:47:24.682293+00:00 heroku[router]: at=error code=H20 desc="App boot timeout" method=GET path="/" host=ranked-choice.herokuapp.com request_id=e543e261-6a93-4b5d-a3f4-ff3fc60bd916 fwd="170.11.30.141" dyno= connect= service= status=503 bytes=
+2015-02-24T15:52:35.112292+00:00 heroku[web.1]: Unidling
+2015-02-24T15:52:35.112586+00:00 heroku[web.1]: State changed from down to starting
+2015-02-24T15:52:42.198989+00:00 heroku[web.1]: Starting process with command `java -jar target/uberjar/ranked-choice.jar 26131`
+2015-02-24T15:52:44.199203+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx384m -Xss512k -Dfile.encoding=UTF-8 -Djava.rmi.server.useCodebaseOnly=true
+2015-02-24T15:53:14.548346+00:00 heroku[router]: at=info method=GET path="/" host=ranked-choice.herokuapp.com request_id=5eeffc3d-9895-459f-997a-79d84e31166f fwd="170.11.30.141" dyno=web.1 connect=1ms service=336ms status=302 bytes=117
+2015-02-24T15:53:14.783841+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=a031e890-0c01-46f9-8b08-be848220d656 fwd="170.11.30.141" dyno=web.1 connect=1ms service=18ms status=200 bytes=1276
+2015-02-24T15:53:14.642067+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=d869e5b2-8507-44bc-b235-d415750d772b fwd="170.11.30.141" dyno=web.1 connect=1ms service=44ms status=200 bytes=2852
+2015-02-24T15:53:14.909908+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=804b6eb2-8ee7-4c89-8c75-949797525c2b fwd="170.11.30.141" dyno=web.1 connect=1ms service=49ms status=404 bytes=100
+2015-02-24T15:53:13.644591+00:00 heroku[web.1]: State changed from starting to up
+2015-02-24T16:08:09.782388+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=ef3ebc8f-5fa8-471c-a8d7-dc2c7a778752 fwd="170.11.30.141" dyno=web.1 connect=0ms service=44ms status=200 bytes=2852
+2015-02-24T17:11:15.995202+00:00 heroku[web.1]: Idling
+2015-02-24T17:11:15.996269+00:00 heroku[web.1]: State changed from up to down
+2015-02-24T17:11:19.520470+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-02-24T17:11:22.805749+00:00 heroku[web.1]: Process exited with status 143
+2015-02-24T17:13:34.304722+00:00 heroku[web.1]: Unidling
+2015-02-24T17:13:34.304722+00:00 heroku[web.1]: State changed from down to starting
+2015-02-24T17:13:40.152792+00:00 heroku[web.1]: Starting process with command `java -jar target/uberjar/ranked-choice.jar 22336`
+2015-02-24T17:13:41.824953+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx384m -Xss512k -Dfile.encoding=UTF-8 -Djava.rmi.server.useCodebaseOnly=true
+2015-02-24T17:13:51.756133+00:00 heroku[web.1]: State changed from starting to up
+2015-02-24T17:13:54.441307+00:00 heroku[router]: at=info method=GET path="/" host=ranked-choice.herokuapp.com request_id=db6afb8e-d96c-48e8-811d-a5da19090195 fwd="170.11.30.141" dyno=web.1 connect=2ms service=46ms status=302 bytes=117
+2015-02-24T17:13:54.583678+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=209a9350-d129-4cf5-924f-17ad23a6122a fwd="170.11.30.141" dyno=web.1 connect=4ms service=22ms status=200 bytes=1276
+2015-02-24T17:34:33.543464+00:00 heroku[router]: at=info method=GET path="/" host=ranked-choice.herokuapp.com request_id=ead5bd58-f25c-4536-8316-7544b1841ece fwd="170.11.30.141" dyno=web.1 connect=4ms service=16ms status=302 bytes=117
+2015-02-24T17:34:33.618580+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=c8e5c7db-0b17-44c7-b4c4-372aeff08b79 fwd="170.11.30.141" dyno=web.1 connect=1ms service=16ms status=200 bytes=2852
+2015-02-24T18:36:03.993846+00:00 heroku[web.1]: State changed from up to down
+2015-02-24T18:36:03.993262+00:00 heroku[web.1]: Idling
+2015-02-24T18:36:07.038043+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-02-24T18:36:09.586649+00:00 heroku[web.1]: Process exited with status 143
+2015-02-24T18:37:28.991263+00:00 heroku[web.1]: State changed from down to starting
+2015-02-24T18:37:28.990969+00:00 heroku[web.1]: Unidling
+2015-02-24T18:37:35.260863+00:00 heroku[web.1]: Starting process with command `java -jar target/uberjar/ranked-choice.jar 54707`
+2015-02-24T18:37:37.099445+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS: -Xmx384m -Xss512k -Dfile.encoding=UTF-8 -Djava.rmi.server.useCodebaseOnly=true
+2015-02-24T18:37:52.266030+00:00 heroku[web.1]: State changed from starting to up
+2015-02-24T18:37:55.258051+00:00 heroku[router]: at=info method=GET path="/" host=ranked-choice.herokuapp.com request_id=1f3c86d7-a4bd-482d-a3e3-6138bb8c3176 fwd="170.11.30.141" dyno=web.1 connect=2ms service=187ms status=302 bytes=117
+2015-02-24T18:37:55.441928+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=c8501a94-c853-42ae-8f6e-c86a588bda8d fwd="170.11.30.141" dyno=web.1 connect=6ms service=32ms status=200 bytes=1276
+2015-02-24T19:26:24.258646+00:00 heroku[router]: at=info method=GET path="/" host=ranked-choice.herokuapp.com request_id=56aac959-f1e5-40af-8ce4-dfa5f22d231b fwd="170.11.30.141" dyno=web.1 connect=4ms service=349ms status=302 bytes=117
+2015-02-24T19:26:24.668193+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=c61d7005-18ac-4db7-babb-4f7b74c2a882 fwd="170.11.30.141" dyno=web.1 connect=11ms service=316ms status=200 bytes=2852
+2015-02-24T19:27:26.856374+00:00 heroku[router]: at=info method=GET path="/" host=ranked-choice.herokuapp.com request_id=a468b1d5-6ba4-4f96-8854-794079e1e4db fwd="170.11.30.141" dyno=web.1 connect=1ms service=11ms status=302 bytes=117
+2015-02-24T19:27:29.932012+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=b06474f8-a02b-40dd-830b-212403f7ca0a fwd="170.11.30.141" dyno=web.1 connect=1ms service=19ms status=200 bytes=2852
+2015-02-24T19:27:30.087384+00:00 heroku[router]: at=info method=GET
+ path="/new.js" host=ranked-choice.herokuapp.com request_id=924995e7-84a1-4cad-b25d-be14749f923b fwd="170.11.30.141" dyno=web.1 connect=0ms service=13ms status=200 bytes=1276
+2015-02-24T19:27:30.360919+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=19aa723a-12f6-41ae-b873-f4ddea66598c fwd="170.11.30.141" dyno=web.1 connect=1ms service=10ms status=404 bytes=100
+2015-02-24T19:27:32.876885+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=0ba2a1cc-ad68-4069-bb9f-e9f34fa92557 fwd="170.11.30.141" dyno=web.1 connect=1ms service=11ms status=200 bytes=2852
+2015-02-24T19:27:32.984841+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=65604658-2057-425d-9e91-9d543d28f88c fwd="170.11.30.141" dyno=web.1 connect=1ms service=12ms status=200 bytes=1276
+2015-02-24T19:30:06.517298+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=839d4307-6c0d-40ed-94f9-216c95538494 fwd="170.11.30.141" dyno=web.1 connect=3ms service=10ms status=200 bytes=2852
+2015-02-24T19:30:06.678622+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=5ce1107f-e1d7-41f4-9e52-19de48d3c2e9 fwd="170.11.30.141" dyno=web.1 connect=2ms service=14ms status=200 bytes=1276
+2015-02-24T19:30:40.173457+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=2601b1ee-6cb1-4be8-b92b-16c9e7c66e9f fwd="170.11.30.141" dyno=web.1 connect=1ms service=14ms status=200 bytes=2852
+2015-02-24T19:52:18.716709+00:00 heroku[router]: at=info method=GET path="/" host=ranked-choice.herokuapp.com request_id=6e031384-eed6-440b-8383-426646a81f73 fwd="170.11.30.141" dyno=web.1 connect=1ms service=5ms status=302 bytes=117
+2015-02-24T19:52:20.900531+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=361f3600-e7af-44bd-85c6-83d5ae06eba5 fwd="170.11.30.141" dyno=web.1 connect=1ms service=4ms status=200 bytes=2852
+2015-02-24T19:52:21.025348+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=64ffb551-2d03-498d-a723-166ef797c462 fwd="170.11.30.141" dyno=web.1 connect=2ms service=7ms status=200 bytes=1276
+2015-02-24T19:52:21.655757+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=2127a231-5e75-4ddd-ba9c-ce700782bde9 fwd="170.11.30.141" dyno=web.1 connect=4ms service=9ms status=200 bytes=2852
+2015-02-24T19:52:21.762213+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=78595600-2b7d-4279-ada9-2c81c93c7795 fwd="170.11.30.141" dyno=web.1 connect=1ms service=4ms status=200 bytes=1276
+2015-02-24T19:52:22.447819+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=71b904a2-b8d9-4a10-995b-3c20e5162658 fwd="170.11.30.141" dyno=web.1 connect=8ms service=60ms status=200 bytes=2852
+2015-02-24T19:52:22.566796+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=54e50548-2a04-4c98-96d1-6b2e5732c8fc fwd="170.11.30.141" dyno=web.1 connect=1ms service=14ms status=200 bytes=1276
+2015-02-24T19:52:26.268242+00:00 heroku[router]: at=info method=GET path="/poll/monitor" host=ranked-choice.herokuapp.com request_id=ca6aa695-a12d-409a-88c9-69024e9ca896 fwd="170.11.30.141" dyno=web.1 connect=0ms service=310ms status=200 bytes=1452
+2015-02-24T20:01:49.935041+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=6edb3252-ddf2-483e-ac72-d5888051eb4d fwd="170.11.30.141" dyno=web.1 connect=1ms service=8ms status=200 bytes=2852
+2015-02-24T20:01:50.148274+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=31bd70a6-6ece-44d2-9f1d-4e689f8ec351 fwd="170.11.30.141" dyno=web.1 connect=1ms service=6ms status=200 bytes=1276
+2015-02-24T20:01:56.123560+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=9d7da694-4393-4f5c-85db-9db6e3c22bc9 fwd="170.11.30.141" dyno=web.1 connect=2ms service=6ms status=200 bytes=2852
+2015-02-24T20:01:56.318988+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=f9aa64f9-83a2-411e-8ca3-56498386aa78 fwd="170.11.30.141" dyno=web.1 connect=1ms service=8ms status=200 bytes=1276
+2015-02-24T20:02:45.709976+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=b2242b52-d98d-4015-9b1a-ebaa507d77cd fwd="170.11.30.141" dyno=web.1 connect=1ms service=103ms status=200 bytes=2852
+2015-02-24T20:02:45.923418+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=5882fdab-8817-4eee-b6c6-28d5dcd49e81 fwd="170.11.30.141" dyno=web.1 connect=1ms service=31ms status=200 bytes=1276
+2015-02-24T20:02:48.324525+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=068f81c8-eb23-4bbc-8ae6-d67d94d0a0d3 fwd="170.11.30.141" dyno=web.1 connect=0ms service=33ms status=200 bytes=2852
+2015-02-24T20:02:48.546035+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=69115ffb-f947-43f1-9d76-23613b0f2208 fwd="170.11.30.141" dyno=web.1 connect=7ms service=47ms status=200 bytes=1276
+2015-02-24T20:02:49.462708+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=ca968b69-caea-4c4d-a580-1ba836f3cbef fwd="170.11.30.141" dyno=web.1 connect=1ms service=17ms status=200 bytes=2852
+2015-02-24T20:02:49.639350+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=2554f383-76e2-447a-ae72-92d845472279 fwd="170.11.30.141" dyno=web.1 connect=2ms service=20ms status=200 bytes=1276
+2015-02-24T20:02:51.406180+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=a8300b4f-e520-42e8-ac66-403d04e7d121 fwd="170.11.30.141" dyno=web.1 connect=2ms service=186ms status=200 bytes=2852
+2015-02-24T20:02:51.680009+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=348b4782-b438-470d-9f43-dc17b69ad9eb fwd="170.11.30.141" dyno=web.1 connect=4ms service=8ms status=200 bytes=1276
+2015-02-24T20:02:54.340726+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=70eec179-1765-45b8-a947-86258ed07820 fwd="170.11.30.141" dyno=web.1 connect=5ms service=9ms status=200 bytes=2852
+2015-02-24T20:02:54.574197+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=f686c2b7-298c-4c1f-aab6-2e6523116b5f fwd="170.11.30.141" dyno=web.1 connect=4ms service=8ms status=200 bytes=1276
+2015-02-24T20:02:55.359336+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=c71d725d-dae8-4e5c-b549-cff7095a2022 fwd="170.11.30.141" dyno=web.1 connect=1ms service=25ms status=200 bytes=2852
+2015-02-24T20:02:55.521222+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=7d198ac3-8caf-407c-ba01-ad71b0264e0d fwd="170.11.30.141" dyno=web.1 connect=4ms service=27ms status=200 bytes=1276
+2015-02-24T20:02:56.782499+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=11756999-af43-4339-ad32-083e379f7794 fwd="170.11.30.141" dyno=web.1 connect=29ms service=41ms status=200 bytes=2852
+2015-02-24T20:02:56.939509+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=ee5a8a7a-23fa-4a6c-918f-6056391b65a2 fwd="170.11.30.141" dyno=web.1 connect=2ms service=38ms status=200 bytes=1276
+2015-02-24T20:02:57.953046+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=f7663ad9-c423-4ab2-a846-7fde4c803231 fwd="170.11.30.141" dyno=web.1 connect=2ms service=24ms status=200 bytes=2852
+2015-02-24T20:02:58.141784+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=15e52739-6d70-4a4b-848f-eb567a76312b fwd="170.11.30.141" dyno=web.1 connect=8ms service=32ms status=200 bytes=1276
+2015-02-24T20:03:00.356270+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=93905c2a-7ea5-43ba-8e74-8245c2d3eeab fwd="170.11.30.141" dyno=web.1 connect=9ms service=22ms status=200 bytes=2852
+2015-02-24T20:03:00.563521+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=92a1cf54-1b81-4d75-aa4e-d42e229b4cad fwd="170.11.30.141" dyno=web.1 connect=23ms service=37ms status=200 bytes=1276
+2015-02-24T20:03:01.424922+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=c45fb8df-c693-4f6b-a343-cd275140baa0 fwd="170.11.30.141" dyno=web.1 connect=1ms service=13ms status=200 bytes=2852
+2015-02-24T20:03:01.582849+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=1c391457-5a27-45fb-a267-2f81089476da fwd="170.11.30.141" dyno=web.1 connect=1ms service=7ms status=200 bytes=1276
+2015-02-24T20:03:05.197371+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=22b6dbc7-4c56-42f9-b881-c5bea073bc17 fwd="170.11.30.141" dyno=web.1 connect=1ms service=33ms status=200 bytes=2852
+2015-02-24T20:03:05.418087+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=27340c71-190c-47fb-ba9a-e58408e5f1c6 fwd="170.11.30.141" dyno=web.1 connect=2ms service=78ms status=200 bytes=1276
+2015-02-24T20:03:06.471508+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=0bf8d6e1-0936-4fea-9c37-c94419ece042 fwd="170.11.30.141" dyno=web.1 connect=2ms service=77ms status=200 bytes=2852
+2015-02-24T20:03:06.717205+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=8c0f768b-ec42-4ac8-9a36-a27fb04939a5 fwd="170.11.30.141" dyno=web.1 connect=2ms service=63ms status=200 bytes=1276
+2015-02-24T20:03:07.573693+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=181a438c-d5e3-4a5c-8af6-958e8cd914ef fwd="170.11.30.141" dyno=web.1 connect=13ms service=48ms status=200 bytes=2852
+2015-02-24T20:03:07.877282+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=7d8d0c65-f5a1-48ed-9d06-f90dcde1773c fwd="170.11.30.141" dyno=web.1 connect=1ms service=7ms status=200 bytes=1276
+2015-02-24T20:03:09.746035+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=6e8e0ad4-b1e5-46f2-a03e-59b965ea52bf fwd="170.11.30.141" dyno=web.1 connect=21ms service=23ms status=200 bytes=2852
+2015-02-24T20:03:09.916902+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=f9ba0258-8f5e-47b2-a33b-510c6a939778 fwd="170.11.30.141" dyno=web.1 connect=1ms service=37ms status=200 bytes=1276
+2015-02-24T20:03:12.552625+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=c5e553dc-fb3b-4639-9d0c-198f33cc8270 fwd="170.11.30.141" dyno=web.1 connect=5ms service=28ms status=200 bytes=2852
+2015-02-24T20:03:12.735486+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=04eff896-0c09-4527-a4ab-d757fb3631e4 fwd="170.11.30.141" dyno=web.1 connect=7ms service=12ms status=200 bytes=1276
+2015-02-24T20:03:17.362181+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=c949ebed-c257-4330-8cf7-2f06943c7498 fwd="170.11.30.141" dyno=web.1 connect=2ms service=19ms status=200 bytes=2852
+2015-02-24T20:03:17.606162+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=7752e125-0f68-42ec-98d5-7484d40c698a fwd="170.11.30.141" dyno=web.1 connect=2ms service=27ms status=200 bytes=1276
+2015-02-24T20:03:18.617668+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=44cb9e15-de9a-435d-838b-d46046a21b74 fwd="170.11.30.141" dyno=web.1 connect=3ms service=24ms status=200 bytes=2852
+2015-02-24T20:03:18.846888+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=6cd10ece-cfe8-4783-ae3d-6a7f66b35da5 fwd="170.11.30.141" dyno=web.1 connect=72ms service=12ms status=200 bytes=1276
+2015-02-24T20:03:20.117183+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=19941ad9-b763-4f8a-94c7-55f9aeb96bf9 fwd="170.11.30.141" dyno=web.1 connect=3ms service=15ms status=200 bytes=2852
+2015-02-24T20:03:20.252961+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=3a40f1d2-4e80-40c9-b8ab-c6641e0ff026 fwd="170.11.30.141" dyno=web.1 connect=4ms service=10ms status=200 bytes=1276
+2015-02-24T20:03:20.940231+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=1ba9472e-7e73-490a-945b-c4732fa68d4a fwd="170.11.30.141" dyno=web.1 connect=4ms service=5ms status=200 bytes=2852
+2015-02-24T20:03:21.084335+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=66f56f89-2284-431a-9184-fea3bf9e7325 fwd="170.11.30.141" dyno=web.1 connect=1ms service=16ms status=200 bytes=1276
+2015-02-24T20:05:29.906972+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=dc34a253-0731-4cb2-a9bd-a0540ebc74fe fwd="170.11.30.141" dyno=web.1 connect=11ms service=12ms status=200 bytes=2852
+2015-02-24T20:05:30.177816+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=689828cb-1090-4351-9301-084dc007b6eb fwd="170.11.30.141" dyno=web.1 connect=2ms service=6ms status=200 bytes=1276
+2015-02-24T20:08:00.397316+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=fc277f30-d3d4-4bc3-aee2-bde76e525e9f fwd="170.11.30.141" dyno=web.1 connect=4ms service=7ms status=200 bytes=2852
+2015-02-24T20:08:00.686520+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=200334e7-3d79-4b9f-aaf8-d9afe76ceb50 fwd="170.11.30.141" dyno=web.1 connect=33ms service=8ms status=200 bytes=1276
+2015-02-24T20:08:10.635532+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=3bab3940-b295-46f6-b17e-821ffa51601e fwd="170.11.30.141" dyno=web.1 connect=3ms service=5ms status=200 bytes=2852
+2015-02-24T20:08:10.792293+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=e2db8172-630d-4411-8d0e-045e0a465531 fwd="170.11.30.141" dyno=web.1 connect=4ms service=11ms status=200 bytes=1276
+2015-02-24T20:08:16.678895+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=faaee561-4ee0-4e82-a8ab-733962505ede fwd="170.11.30.141" dyno=web.1 connect=3ms service=5ms status=200 bytes=2852
+2015-02-24T20:08:16.863932+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=aa500620-2a88-49b2-aa7d-325d9c3aaae3 fwd="170.11.30.141" dyno=web.1 connect=1ms service=6ms status=200 bytes=1276
+2015-02-24T20:10:46.478822+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=be0c5fd4-6ca6-4396-a67d-d52ea1b3eecc fwd="170.11.30.141" dyno=web.1 connect=0ms service=3ms status=200 bytes=2852
+2015-02-24T20:10:46.665834+0
+0:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=910cd484-5013-4cac-80c1-dc3b7ca14d97 fwd="170.11.30.141" dyno=web.1 connect=0ms service=3ms status=200 bytes=1276
+2015-02-24T20:11:33.530283+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=cb4df5a1-037c-4912-bcc8-3c45c8e46eac fwd="170.11.30.141" dyno=web.1 connect=1ms service=129ms status=200 bytes=2852
+2015-02-24T20:11:33.913382+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=faef3c7e-4346-41dc-ab0b-4e1fe9a1cf1a fwd="170.11.30.141" dyno=web.1 connect=1ms service=58ms status=200 bytes=1276
+2015-02-24T20:12:45.191941+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=13a55197-4e65-4cd7-81c3-bfab528bc588 fwd="170.11.30.141" dyno=web.1 connect=1ms service=6ms status=200 bytes=2852
+2015-02-24T20:12:45.347713+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=fe2299b7-76d7-4cb7-8dd6-b3b748919194 fwd="170.11.30.141" dyno=web.1 connect=16ms service=11ms status=200 bytes=1276
+2015-02-24T20:25:02.089691+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=cc808a00-45d8-4d98-a110-29a52632e04b fwd="170.11.30.141" dyno=web.1 connect=1ms service=3ms status=200 bytes=2852
+2015-02-24T20:25:02.300531+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=c041f034-e682-4d62-919a-0a039357e4a0 fwd="170.11.30.141" dyno=web.1 connect=1ms service=4ms status=200 bytes=1276
+2015-02-24T20:25:04.000572+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=03a8f133-8406-4134-8b13-597bac75db56 fwd="170.11.30.141" dyno=web.1 connect=1ms service=7ms status=200 bytes=2852
+2015-02-24T20:25:04.200611+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=5b3b6f56-a47d-4142-adfe-19de1c1bbef8 fwd="170.11.30.141" dyno=web.1 connect=1ms service=5ms status=200 bytes=1276
+2015-02-24T20:25:06.260484+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=88c969b8-4583-478d-8fac-0a13a0c8fc60 fwd="170.11.30.141" dyno=web.1 connect=1ms service=8ms status=200 bytes=2852
+2015-02-24T20:25:06.814769+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=672b4dd6-aa34-4943-ad92-bd9fab07f60e fwd="170.11.30.141" dyno=web.1 connect=1ms service=5ms status=200 bytes=1276
+2015-02-24T20:25:08.161557+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=36596f41-daa5-468b-9326-0ceaeb783ff3 fwd="170.11.30.141" dyno=web.1 connect=1ms service=7ms status=200 bytes=2852
+2015-02-24T20:25:08.287744+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=967a61c7-e995-4489-8cf0-a756c6f1bee2 fwd="170.11.30.141" dyno=web.1 connect=1ms service=5ms status=200 bytes=1276
+2015-02-24T20:25:10.620162+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=637bc1c8-acd8-46f7-b83e-2be571b7bb62 fwd="170.11.30.141" dyno=web.1 connect=1ms service=4ms status=200 bytes=2852
+2015-02-24T20:25:10.748989+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=79ba565d-6e18-4258-88fe-c7e5ff8b44b6 fwd="170.11.30.141" dyno=web.1 connect=1ms service=5ms status=200 bytes=1276
+2015-02-24T20:25:12.380139+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=2d90b29e-b191-4896-bf81-774e3941ae6e fwd="170.11.30.141" dyno=web.1 connect=1ms service=12ms status=200 bytes=2852
+2015-02-24T20:25:12.506975+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=96d0dfe1-0792-43e5-8fb9-99f08f9e1b67 fwd="170.11.30.141" dyno=web.1 connect=1ms service=4ms status=200 bytes=1276
+2015-02-24T20:25:39.121046+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=cef0dc6e-c3f5-4ecf-8c46-88899a3c3887 fwd="170.11.30.141" dyno=web.1 connect=1ms service=4ms status=200 bytes=2852
+2015-02-24T20:25:39.270367+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=aa7bcb0c-37fc-440e-81e6-91912f1c975b fwd="170.11.30.141" dyno=web.1 connect=2ms service=18ms status=200 bytes=1276
+2015-02-24T20:26:01.418134+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=1115bf44-18e4-4f4d-8e50-26ce6b16dc80 fwd="170.11.30.141" dyno=web.1 connect=1ms service=5ms status=200 bytes=2852
+2015-02-24T20:26:01.598207+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=99f8b829-7249-4a94-abc9-89d7c6c1d246 fwd="170.11.30.141" dyno=web.1 connect=1ms service=6ms status=200 bytes=1276
+2015-02-24T20:41:27.968570+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=b67c8869-7467-417e-90cb-be6ccd2d2214 fwd="170.11.30.141" dyno=web.1 connect=3ms service=4ms status=200 bytes=2852
+2015-02-24T20:41:28.185849+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=f1eb8990-b52b-4a3b-a077-59e2663d973d fwd="170.11.30.141" dyno=web.1 connect=1ms service=7ms status=200 bytes=1276
+2015-02-24T21:00:15.348468+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=8fa19834-7125-4dc8-9060-051e1fd36fe6 fwd="170.11.30.141" dyno=web.1 connect=4ms service=11ms status=200 bytes=2852
+2015-02-24T21:00:15.545254+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=a403caa1-1ac6-4e97-934b-b1fb8b7d0dbf fwd="170.11.30.141" dyno=web.1 connect=3ms service=5ms status=200 bytes=1276
+2015-02-24T21:01:10.027013+00:00 heroku[router]: at=info method=POST path="/poll/new" host=ranked-choice.herokuapp.com request_id=3eeff5ff-a4d5-481b-bc26-9cb44dcc7fd2 fwd="170.11.30.141" dyno=web.1 connect=1ms service=180ms status=302 bytes=120
+2015-02-24T21:01:10.415607+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=0a07915c-316f-4ed5-8e00-fbacb182d9ca fwd="170.11.30.141" dyno=web.1 connect=1ms service=222ms status=200 bytes=2462
+2015-02-24T21:01:10.673276+00:00 heroku[router]: at=info method=GET path="/vote.js" host=ranked-choice.herokuapp.com request_id=a6f5efb4-8050-49f4-a775-3b14e729b87f fwd="170.11.30.141" dyno=web.1 connect=1ms service=11ms status=200 bytes=722
+2015-02-24T21:01:10.643967+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=ranked-choice.herokuapp.com request_id=526e355b-c0f6-4471-a12b-02d3cac4687b fwd="170.11.30.141" dyno=web.1 connect=1ms service=19ms status=200 bytes=2853
+2015-02-24T21:01:59.070605+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=a153b738-2a95-4c84-8224-74934af364dc fwd="170.11.30.141" dyno=web.1 connect=1ms service=33ms status=200 bytes=2462
+2015-02-24T21:01:59.184148+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=ranked-choice.herokuapp.com request_id=28d3ff08-0328-4462-ad86-9b97f0df1137 fwd="170.11.30.141" dyno=web.1 connect=6ms service=10ms status=200 bytes=2853
+2015-02-24T21:01:59.204780+00:00 heroku[router]: at=info method=GET path="/vote.js" host=ranked-choice.herokuapp.com request_id=66cd95e6-02de-439b-826b-011330a3c56c fwd="170.11.30.141" dyno=web.1 connect=1ms service=5ms status=200 bytes=722
+2015-02-24T21:01:59.451665+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=66774fc0-8dfc-409a-9186-c92c206d4cfc fwd="170.11.30.141" dyno=web.1 connect=1ms service=8ms status=404 bytes=100
+2015-02-24T21:02:01.974778+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=3abd851b-e7d4-4844-bd0a-f4825be4120d fwd="170.11.30.141" dyno=web.1 connect=1ms service=20ms status=200 bytes=2462
+2015-02-24T21:02:02.074049+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=ranked-choice.herokuapp.com request_id=5364daf6-61fe-48eb-927f-494f13762c34 fwd="170.11.30.141" dyno=web.1 connect=1ms service=12ms status=200 bytes=2853
+2015-02-24T21:02:02.059532+00:00 heroku[router]: at=info method=GET path="/vote.js" host=ranked-choice.herokuapp.com request_id=96991ff6-79e2-49e9-b2d1-1529983aefa5 fwd="170.11.30.141" dyno=web.1 connect=1ms service=12ms status=200 bytes=722
+2015-02-24T21:02:02.349978+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=37daf6c9-399c-48ae-aeab-295e5267300e fwd="170.11.30.141" dyno=web.1 connect=5ms service=3ms status=404 bytes=100
+2015-02-24T21:02:07.572250+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=d36628ec-8b21-412a-a1bd-33e2918c79dc fwd="170.11.30.141" dyno=web.1 connect=3ms service=20ms status=200 bytes=2462
+2015-02-24T21:02:07.685708+00:00 heroku[router]: at=info method=GET path="/vote.js" host=ranked-choice.herokuapp.com request_id=4f492936-28a7-489e-9c89-432de4b848f8 fwd="170.11.30.141" dyno=web.1 connect=1ms service=7ms status=200 bytes=722
+2015-02-24T21:02:07.685785+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=ranked-choice.herokuapp.com request_id=5884d021-40ca-4e19-b4d0-9fbb92448c0e fwd="170.11.30.141" dyno=web.1 connect=1ms service=6ms status=200 bytes=2853
+2015-02-24T21:02:11.226825+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=17a8a27c-cc59-40d3-845a-31734eb941b8 fwd="170.11.30.141" dyno=web.1 connect=2ms service=5ms status=404 bytes=100
+2015-02-24T21:02:26.807495+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=d67957d6-d86f-4f19-89c9-5148bc561e14 fwd="170.11.30.141" dyno=web.1 connect=3ms service=122ms status=200 bytes=2462
+2015-02-24T21:02:26.945543+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=3160a2e4-4e1a-47b2-b937-ecbb024060be fwd="170.11.30.141" dyno=web.1 connect=9ms service=12ms status=404 bytes=100
+2015-02-24T21:02:30.618810+00:00 heroku[router]: at=info method=POST path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=6505fa60-0ea3-4843-977f-7618ee76c8dd fwd="170.11.30.141" dyno=web.1 connect=1ms service=62ms status=302 bytes=123
+2015-02-24T21:02:30.716902+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=ff0e49fe-a22f-4069-929c-b323e6c652e8 fwd="170.11.30.141" dyno=web.1 connect=1ms service=38ms status=200 bytes=1568
+2015-02-24T21:02:30.891350+00:00 heroku[router]: at=info method=GET path="/results.js" host=ranked-choice.herokuapp.com request_id=57073f05-7c5e-4fc2-9816-c86973e392a1 fwd="170.11.30.141" dyno=web.1 connect=1ms service=16ms status=200 bytes=1063
+2015-02-24T21:02:42.875517+00:00 heroku[router]: at=info method=POST path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=20f081c1-c8a7-4d40-be6e-6c75ac01e2e4 fwd="170.11.30.141" dyno=web.1 connect=1ms service=6ms status=302 bytes=123
+2015-02-24T21:02:42.954225+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=c5128f73-b69e-4fbd-9b12-9fe03c771d2d fwd="170.11.30.141" dyno=web.1 connect=1ms service=34ms status=200 bytes=1568
+2015-02-24T21:02:43.076649+00:00 heroku[router]: at=info method=GET path="/results.js" host=ranked-choice.herokuapp.com request_id=9bc38a8f-fa5e-4a44-8efd-5dcc2fd5ac34 fwd="170.11.30.141" dyno=web.1 connect=1ms service=63ms status=200 bytes=1063
+2015-02-24T21:02:43.134185+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=bc32f108-5853-4781-a5ad-99d6f01f2309 fwd="170.11.30.141" dyno=web.1 connect=1ms service=9ms status=200 bytes=2462
+2015-02-24T21:02:43.249845+00:00 heroku[router]: at=info method=GET path="/vote.js" host=ranked-choice.herokuapp.com request_id=f6828244-20f1-4f8a-9af7-83d297ae5a53 fwd="170.11.30.141" dyno=web.1 connect=2ms service=21ms status=200 bytes=722
+2015-02-24T21:02:43.246211+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=ranked-choice.herokuapp.com request_id=eb35d5e7-87e2-451b-90ba-ab82badd7bdc fwd="170.11.30.141" dyno=web.1 connect=1ms service=16ms status=200 bytes=2853
+2015-02-24T21:02:43.545574+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=400c50ff-2a98-4b41-a828-9eeafa3b39e0 fwd="170.11.30.141" dyno=web.1 connect=1ms service=4ms status=404 bytes=100
+2015-02-24T21:02:48.624102+00:00 heroku[router]: at=info method=GET path="/" host=ranked-choice.herokuapp.com request_id=2c6559f4-9d7c-4a15-8e4a-144020361848 fwd="170.11.30.141" dyno=web.1 connect=5ms service=3ms status=302 bytes=117
+2015-02-24T21:02:48.772825+00:00 heroku[router]: at=info method=GET path="/new.js" host=ranked-choice.herokuapp.com request_id=60846f56-896e-4e0d-9466-55e207748461 fwd="170.11.30.141" dyno=web.1 connect=1ms service=7ms status=200 bytes=1276
+2015-02-24T21:02:48.762251+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=733d88d2-7df0-41ba-9fdb-d75040f91b81 fwd="170.11.30.141" dyno=web.1 connect=1ms service=5583ms status=101 bytes=203
+2015-02-24T21:02:48.701832+00:00 heroku[router]: at=info method=GET path="/poll/new" host=ranked-choice.herokuapp.com request_id=b623df84-b7d2-4af5-9206-fc58957bf60a fwd="170.11.30.141" dyno=web.1 connect=11ms service=8ms status=200 bytes=2852
+2015-02-24T21:02:50.684155+00:00 heroku[router]: at=info method=POST path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=dc98b199-5c2b-45fa-8ece-be06908789b7 fwd="170.11.30.141" dyno=web.1 connect=1ms service=8ms status=302 bytes=123
+2015-02-24T21:02:50.785842+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=3825e2d5-07e6-466a-8a4a-b870dcee3276 fwd="170.11.30.141" dyno=web.1 connect=1ms service=10ms status=200 bytes=1568
+2015-02-24T21:02:51.043180+00:00 heroku[router]: at=info method=GET path="/results.js" host=ranked-choice.herokuapp.com request_id=5635885b-c412-4169-8d36-924c369013f5 fwd="170.11.30.141" dyno=web.1 connect=1ms service=6ms status=200 bytes=1063
+2015-02-24T21:02:52.480790+00:00 heroku[router]: at=info method=POST path="/poll/new" host=ranked-choice.herokuapp.com request_id=e62cbb98-d141-45c9-8f76-90ec65efdf81 fwd="170.11.30.141" dyno=web.1 connect=2ms service=3ms status=302 bytes=120
+2015-02-24T21:02:52.544738+00:00 heroku[router]: at=info method=GET path="/poll/1/vote" host=ranked-choice.herokuapp.com request_id=51b17a3e-cd56-4ff7-b142-b536f6328cc3 fwd="170.11.30.141" dyno=web.1 connect=3ms service=15ms status=500 bytes=112
+2015-02-24T21:02:52.630323+00:00 app[web.1]: Tue Feb 24 21:02:52 UTC 2015 [worker-2] ERROR - GET /poll/1/vote
+2015-02-24T21:02:52.630372+00:00 app[web.1]: 	at ring.middleware.params$wrap_params$fn__7916.invoke(params.clj:64)
+2015-02-24T21:02:52.630332+00:00 app[web.1]: java.lang.NullPointerException
+2015-02-24T21:02:52.630348+00:00 app[web.1]: 	at compojure.core$routing.doInvoke(core.clj:127)
+2015-02-24T21:02:52.630364+00:00 app[web.1]: 	at compojure.core$routing$fn__7790.invoke(core.clj:127)
+2015-02-24T21:02:52.630378+00:00 app[web.1]: 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2015-02-24T21:02:52.630340+00:00 app[web.1]: 	at compojure.core$wrap_route_middleware$fn__7780.invoke(core.clj:103)
+2015-02-24T21:02:52.630347+00:00 app[web.1]: 	at clojure.core$some.invoke(core
+.clj:2560)
+2015-02-24T21:02:52.630356+00:00 app[web.1]: 	at clojure.core$some.invoke(core.clj:2560)
+2015-02-24T21:02:52.630374+00:00 app[web.1]: 	at ranked_choice.httpkit$wrap_component$fn__6253.invoke(httpkit.clj:53)
+2015-02-24T21:02:52.630336+00:00 app[web.1]: 	at clojure.core$shuffle.invoke(core.clj:6976)
+2015-02-24T21:02:52.630353+00:00 app[web.1]: 	at compojure.core$routes$fn__7794.invoke(core.clj:132)
+2015-02-24T21:02:52.630366+00:00 app[web.1]: 	at compojure.core$routing.doInvoke(core.clj:127)
+2015-02-24T21:02:52.630383+00:00 app[web.1]: 	at java.lang.Thread.run(Thread.java:745)
+2015-02-24T21:02:52.630344+00:00 app[web.1]: 	at compojure.core$if_method$fn__7755.invoke(core.clj:27)
+2015-02-24T21:02:52.630362+00:00 app[web.1]: 	at compojure.core$if_context$fn__7812.invoke(core.clj:198)
+2015-02-24T21:02:52.630377+00:00 app[web.1]: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+2015-02-24T21:02:52.630334+00:00 app[web.1]: 	at java.util.ArrayList.<init>(ArrayList.java:177)
+2015-02-24T21:02:52.630350+00:00 app[web.1]: 	at clojure.lang.RestFn.applyTo(RestFn.java:139)
+2015-02-24T21:02:52.630365+00:00 app[web.1]: 	at clojure.core$some.invoke(core.clj:2560)
+2015-02-24T21:02:52.630382+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+2015-02-24T21:02:52.630339+00:00 app[web.1]: 	at compojure.core$make_route$fn__7784.invoke(core.clj:113)
+2015-02-24T21:02:52.630358+00:00 app[web.1]: 	at compojure.core$routing.doInvoke(core.clj:127)
+2015-02-24T21:02:52.630369+00:00 app[web.1]: 	at clojure.core$apply.invoke(core.clj:628)
+2015-02-24T21:02:52.630380+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+2015-02-24T21:02:52.630345+00:00 app[web.1]: 	at compojure.core$routing$fn__7790.invoke(core.clj:127)
+2015-02-24T21:02:52.630375+00:00 app[web.1]: 	at org.httpkit.server.HttpHandler.run(RingHandler.java:91)
+2015-02-24T21:02:52.630342+00:00 app[web.1]: 	at compojure.core$if_route$fn__7763.invoke(core.clj:41)
+2015-02-24T21:02:52.630355+00:00 app[web.1]: 	at compojure.core$routing$fn__7790.invoke(core.clj:127)
+2015-02-24T21:02:52.630368+00:00 app[web.1]: 	at clojure.lang.RestFn.applyTo(RestFn.java:139)
+2015-02-24T21:02:52.630337+00:00 app[web.1]: 	at ranked_choice.routes$poll_routes$fn__8873.invoke(routes.clj:27)
+2015-02-24T21:02:52.630352+00:00 app[web.1]: 	at clojure.core$apply.invoke(core.clj:628)
+2015-02-24T21:02:52.630359+00:00 app[web.1]: 	at clojure.lang.RestFn.invoke(RestFn.java:423)
+2015-02-24T21:02:52.630361+00:00 app[web.1]: 	at ranked_choice.routes$fn__8892.invoke(routes.clj:62)
+2015-02-24T21:02:52.630371+00:00 app[web.1]: 	at compojure.core$routes$fn__7794.invoke(core.clj:132)
+2015-02-24T21:02:59.987053+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=aa45daab-ab69-40cd-b332-850fe4a11a99 fwd="170.11.30.141" dyno=web.1 connect=2ms service=8844ms status=101 bytes=203
+2015-02-24T21:02:59.935227+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=0aa98f52-b87d-403f-bee5-18d0817d97c1 fwd="170.11.30.141" dyno=web.1 connect=2ms service=13ms status=200 bytes=1568
+2015-02-24T21:03:00.140885+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=21bbe646-8cc4-46fe-befa-3376c3b7a7f1 fwd="170.11.30.141" dyno=web.1 connect=1ms service=7ms status=200 bytes=2462
+2015-02-24T21:03:00.221879+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=ranked-choice.herokuapp.com request_id=31710fbf-9316-4fda-a801-5b64ff3d5653 fwd="170.11.30.141" dyno=web.1 connect=1ms service=7ms status=200 bytes=2853
+2015-02-24T21:03:00.226249+00:00 heroku[router]: at=info method=GET path="/vote.js" host=ranked-choice.herokuapp.com request_id=9f28fdaa-0bd1-4305-be57-558fb85b029a fwd="170.11.30.141" dyno=web.1 connect=1ms service=4ms status=200 bytes=722
+2015-02-24T21:03:01.426711+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=235df21b-8b89-43cd-969e-fe56be068b2b fwd="170.11.30.141" dyno=web.1 connect=1ms service=30425ms status=101 bytes=203
+2015-02-24T21:03:01.372431+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=bdf770c3-94e5-4c84-b276-869668611f80 fwd="170.11.30.141" dyno=web.1 connect=5ms service=9ms status=200 bytes=1568
+2015-02-24T21:03:01.476176+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=1e7900df-34f8-424a-b34e-6e4ed6bb3a8e fwd="170.11.30.141" dyno=web.1 connect=1ms service=9ms status=200 bytes=1568
+2015-02-24T21:03:01.603772+00:00 heroku[router]: at=info method=GET path="/results.js" host=ranked-choice.herokuapp.com request_id=8375103b-a070-4f42-aa76-1cc7543fe773 fwd="170.11.30.141" dyno=web.1 connect=1ms service=3ms status=200 bytes=1063
+2015-02-24T21:03:01.532685+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=1673b6f3-1377-49f2-ba28-c7160d25d1ce fwd="170.11.30.141" dyno=web.1 connect=4ms service=1385ms status=101 bytes=203
+2015-02-24T21:03:03.208582+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=b6707d98-e702-4747-8d80-1d8001ff4d14 fwd="170.11.30.141" dyno=web.1 connect=1ms service=11ms status=200 bytes=1568
+2015-02-24T21:03:03.261673+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=93ea38cb-d618-4cb7-a15f-01f346e9d47b fwd="170.11.30.141" dyno=web.1 connect=3ms service=1726ms status=101 bytes=203
+2015-02-24T21:03:04.284109+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=780261b7-a157-4bb9-befd-2191b861ce4d fwd="170.11.30.141" dyno=web.1 connect=2ms service=61ms status=200 bytes=1568
+2015-02-24T21:03:04.344038+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=8ab62b84-a3e0-427c-a6ab-f4f654883de3 fwd="170.11.30.141" dyno=web.1 connect=51ms service=931ms status=101 bytes=203
+2015-02-24T21:03:09.675262+00:00 heroku[router]: at=info method=POST path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=eefdc6ff-3eb4-4751-97d9-8d2dd1e1720f fwd="170.11.30.141" dyno=web.1 connect=0ms service=3ms status=302 bytes=123
+2015-02-24T21:03:09.640543+00:00 heroku[router]: at=info method=GET path="/poll/monitor" host=ranked-choice.herokuapp.com request_id=64bd2d39-6d2b-4932-878b-3828f5093247 fwd="170.11.30.141" dyno=web.1 connect=1ms service=84ms status=200 bytes=2074
+2015-02-24T21:03:09.729425+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=d2929736-2330-420b-98b3-65afae86c09a fwd="170.11.30.141" dyno=web.1 connect=4ms service=8ms status=200 bytes=1568
+2015-02-24T21:03:09.793290+00:00 heroku[router]: at=info method=GET path="/results.js" host=ranked-choice.herokuapp.com request_id=d51a26cd-020c-40c1-a089-f365a4b72fb2 fwd="170.11.30.141" dyno=web.1 connect=1ms service=10ms status=200 bytes=1063
+2015-02-24T21:03:14.786027+00:00 heroku[router]: at=info method=GET path="/poll/1/close" host=ranked-choice.herokuapp.com request_id=f92eb7b5-3cf8-479b-ba4e-e27a2749e949 fwd="170.11.30.141" dyno=web.1 connect=1ms service=16ms status=302 bytes=121
+2015-02-24T21:03:14.859058+00:00 heroku[router]: at=info method=GET path="/poll/monitor" host=ranked-choice.herokuapp.com request_id=944605c0-1c03-4f1a-91e1-b008a9319bf4 fwd="170.11.30.141" dyno=web.1 connect=3ms service=24ms status=200 bytes=1824
+2015-02-24T21:03:17.164176+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=eb90c414-93f8-4d08-a5ac-9c3d96a81a15 fwd="170.11.30.141" dyno=web.1 connect=1ms service=8ms status=200 bytes=1568
+2015-02-24T21:03:17.351071+00:00 heroku[router]: at=info method=GET path="/results.js" host=ranked-choice.herokuapp.com request_id=1fd2dc54-6b7f-4905-9cb1-955f98dd8b8d fwd="170.11.30.141" dyno=web.1 connect=1ms service=18ms status=200 bytes=1063
+2015-02-24T21:03:17.215315+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=28dd51bc-6c4a-4c46-ac4a-c21fb467ed9f fwd="170.11.30.141" dyno=web.1 connect=1ms service=15496ms status=101 bytes=203
+2015-02-24T21:03:18.862095+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=51720bfe-bb74-4f5d-93b4-f814341b6f46 fwd="170.11.30.141" dyno=web.1 connect=0ms service=1392ms status=101 bytes=203
+2015-02-24T21:03:18.810067+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=6ef196fe-9ccc-4172-9022-96e7cb12b39f fwd="170.11.30.141" dyno=web.1 connect=1ms service=12ms status=200 bytes=1568
+2015-02-24T21:03:18.993333+00:00 heroku[router]: at=info method=GET path="/results.js" host=ranked-choice.herokuapp.com request_id=6c4aebd8-038c-480d-b39e-bfb83d23fda0 fwd="170.11.30.141" dyno=web.1 connect=1ms service=5ms status=200 bytes=1063
+2015-02-24T21:03:19.219845+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=82d68e3e-2c53-4ad3-9927-2e3b2644406b fwd="170.11.30.141" dyno=web.1 connect=1ms service=3ms status=404 bytes=100
+2015-02-24T21:03:19.999245+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=f0527006-8306-4c89-a199-e989268189cd fwd="170.11.30.141" dyno=web.1 connect=0ms service=10113ms status=101 bytes=203
+2015-02-24T21:03:22.379861+00:00 app[web.1]: Tue Feb 24 21:03:22 UTC 2015 [worker-3] ERROR - GET /poll/results
+2015-02-24T21:03:22.379881+00:00 app[web.1]: 	at clojure.core$some.invoke(core.clj:2560)
+2015-02-24T21:03:22.379882+00:00 app[web.1]: 	at compojure.core$routing.doInvoke(core.clj:127)
+2015-02-24T21:03:22.379871+00:00 app[web.1]: 	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+2015-02-24T21:03:22.379874+00:00 app[web.1]: 	at java.lang.Integer.parseInt(Integer.java:615)
+2015-02-24T21:03:22.379869+00:00 app[web.1]: java.lang.NumberFormatException: For input string: "results"
+2015-02-24T21:03:22.379884+00:00 app[web.1]: 	at clojure.lang.RestFn.applyTo(RestFn.java:139)
+2015-02-24T21:03:22.379877+00:00 app[web.1]: 	at compojure.core$if_context$fn__7812.invoke(core.clj:198)
+2015-02-24T21:03:22.379879+00:00 app[web.1]: 	at compojure.core$routing$fn__7790.invoke(core.clj:127)
+2015-02-24T21:03:22.379873+00:00 app[web.1]: 	at java.lang.Integer.parseInt(Integer.java:580)
+2015-02-24T21:03:22.379876+00:00 app[web.1]: 	at ranked_choice.routes$fn__8892.invoke(routes.clj:59)
+2015-02-24T21:03:22.379888+00:00 app[web.1]: 	at ring.middleware.params$wrap_params$fn__7916.invoke(params.clj:64)
+2015-02-24T21:03:22.379896+00:00 app[web.1]: 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+2015-02-24T21:03:22.379897+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+2015-02-24T21:03:22.379890+00:00 app[web.1]: 	at ranked_choice.httpkit$wrap_component$fn__6253.invoke(httpkit.clj:53)
+2015-02-24T21:03:22.379885+00:00 app[web.1]: 	at clojure.core$apply.invoke(core.clj:628)
+2015-02-24T21:03:22.379891+00:00 app[web.1]: 	at org.httpkit.server.HttpHandler.run(RingHandler.java:91)
+2015-02-24T21:03:22.379899+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+2015-02-24T21:03:22.379900+00:00 app[web.1]: 	at java.lang.Thread.run(Thread.java:745)
+2015-02-24T21:03:22.379887+00:00 app[web.1]: 	at compojure.core$routes$fn__7794.invoke(core.clj:132)
+2015-02-24T21:03:22.379893+00:00 app[web.1]: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+2015-02-24T21:03:22.425068+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=8662f664-aa94-4e41-94d5-4670dfd531ce fwd="170.11.30.141" dyno=web.1 connect=1ms service=17976ms status=101 bytes=203
+2015-02-24T21:03:22.379121+00:00 heroku[router]: at=info method=GET path="/poll/results" host=ranked-choice.herokuapp.com request_id=a49fa4e2-7b70-494c-9d39-75280e461352 fwd="170.11.30.141" dyno=web.1 connect=1ms service=7ms status=500 bytes=140
+2015-02-24T21:03:22.736864+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=86025fa7-e861-4de4-babf-f37abff3296a fwd="170.11.30.141" dyno=web.1 connect=1ms service=6ms status=200 bytes=1568
+2015-02-24T21:03:22.796551+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=3872c6e0-3a37-4968-ba67-a3e65d100442 fwd="170.11.30.141" dyno=web.1 connect=0ms service=3599ms status=101 bytes=203
+2015-02-24T21:03:22.859890+00:00 heroku[router]: at=info method=GET path="/results.js" host=ranked-choice.herokuapp.com request_id=7bc0ed99-f823-4eb2-a051-6f2858a68c8b fwd="170.11.30.141" dyno=web.1 connect=2ms service=8ms status=200 bytes=1063
+2015-02-24T21:03:23.024907+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=a9ca5af0-00ac-4995-a9bf-0840128a751b fwd="170.11.30.141" dyno=web.1 connect=1ms service=8ms status=404 bytes=100
+2015-02-24T21:03:25.975234+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=ef9d474e-d2e1-4ed4-bad0-6a8accd4669b fwd="170.11.30.141" dyno=web.1 connect=1ms service=31ms status=200 bytes=2462
+2015-02-24T21:03:26.036451+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=ranked-choice.herokuapp.com request_id=94554532-86b6-4cc2-894d-0a55b3faf24f fwd="170.11.30.141" dyno=web.1 connect=0ms service=4ms status=200 bytes=2853
+2015-02-24T21:03:26.038974+00:00 heroku[router]: at=info method=GET path="/vote.js" host=ranked-choice.herokuapp.com request_id=a69fac8c-af8a-42c7-9d98-ad46a630d6fa fwd="170.11.30.141" dyno=web.1 connect=1ms service=3ms status=200 bytes=722
+2015-02-24T21:03:26.913056+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=2b43571a-896b-46e2-84a4-eb93affb263f fwd="170.11.30.141" dyno=web.1 connect=0ms service=51ms status=200 bytes=2462
+2015-02-24T21:03:26.980463+00:00 heroku[router]: at=info method=GET path="/vote.js" host=ranked-choice.herokuapp.com request_id=680a6496-cb2f-497f-b7cc-1653d5068739 fwd="170.11.30.141" dyno=web.1 connect=1ms service=3ms status=200 bytes=722
+2015-02-24T21:03:26.975600+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=ranked-choice.herokuapp.com request_id=0912c24c-ebbf-481d-8ec9-c3678e152f9e fwd="170.11.30.141" dyno=web.1 connect=1ms service=3ms status=200 bytes=2853
+2015-02-24T21:03:27.175962+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=162f6f8c-d15c-432a-a4ce-1efd27f8e55f fwd="170.11.30.141" dyno=web.1 connect=1ms service=18ms status=200 bytes=2462
+2015-02-24T21:03:27.284932+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=ranked-choice.herokuapp.com request_id=0bd5e1f9-f92d-417c-9f0c-9b9b408f7357 fwd="170.11.30.141" dyno=web.1 connect=1ms service=11ms status=200 bytes=2853
+2015-02-24T21:03:27.286817+00:00 heroku[router]: at=info method=GET path="/vote.js" host=ranked-choice.herokuapp.com request_id=30f91427-957e-4921-a95c-5ebb0d3e86b8 fwd="170.11.30.141" dyno=web.1 connect=1ms service=11ms status=200 bytes=722
+2015-02-24T21:03:27.585717+00:00 heroku[router]: 
+at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=03da3ce4-02b9-4a55-a66e-bd9a281b53ff fwd="170.11.30.141" dyno=web.1 connect=1ms service=3ms status=404 bytes=100
+2015-02-24T21:03:27.883371+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=e73154da-a3f2-4332-8684-a37d966cc558 fwd="170.11.30.141" dyno=web.1 connect=1ms service=13ms status=200 bytes=1568
+2015-02-24T21:03:27.936121+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=0da06880-1c10-4cab-8dcf-79d4e3dc8065 fwd="170.11.30.141" dyno=web.1 connect=0ms service=4902ms status=101 bytes=486
+2015-02-24T21:04:23.171809+00:00 heroku[router]: at=error code=H15 desc="Idle connection" method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=b3ac7171-3cbb-4dcc-b6fa-3782cddbd49b fwd="170.11.30.141" dyno=web.1 connect=2ms service=55008ms status=503 bytes=486
+2015-02-24T21:38:49.953836+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=3a447faf-f75c-42b3-b248-8eaff0a6b1b1 fwd="170.11.30.141" dyno=web.1 connect=1ms service=12ms status=200 bytes=1568
+2015-02-24T21:38:50.123960+00:00 heroku[router]: at=info method=GET path="/results.js" host=ranked-choice.herokuapp.com request_id=d71c41f2-d08e-4da0-90c4-77ba377271e8 fwd="170.11.30.141" dyno=web.1 connect=1ms service=6ms status=200 bytes=1063
+2015-02-24T21:38:52.834508+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=2549af1f-719e-467a-8d52-55c82d6946b9 fwd="170.11.30.141" dyno=web.1 connect=1ms service=5ms status=200 bytes=1568
+2015-02-24T21:38:52.887550+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=306881ec-5617-46cf-8369-538fdfb97749 fwd="170.11.30.141" dyno=web.1 connect=3ms service=2589ms status=101 bytes=203
+2015-02-24T21:39:48.081339+00:00 heroku[router]: at=error code=H15 desc="Idle connection" method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=89b5ee26-7cfc-4a29-bbc6-abe268101b4f fwd="170.11.30.141" dyno=web.1 connect=1ms service=55044ms status=503 bytes=486
+2015-02-24T21:39:57.249110+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=d7eb4597-e1fc-48b4-a502-b135f7115059 fwd="170.11.30.141" dyno=web.1 connect=0ms service=8ms status=200 bytes=1568
+2015-02-24T21:39:57.196048+00:00 heroku[router]: at=info method=POST path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=c2707c00-6d27-45f3-9e99-703c4d668fbe fwd="170.11.30.141" dyno=web.1 connect=4ms service=10ms status=302 bytes=123
+2015-02-24T21:39:59.127485+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=47597fd1-9890-491c-8d14-726fc0f069cc fwd="170.11.30.141" dyno=web.1 connect=1ms service=1658ms status=101 bytes=203
+2015-02-24T21:43:14.395906+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=987b5614-f3d7-4771-b098-65919e594fda fwd="170.11.30.141" dyno=web.1 connect=2ms service=6ms status=200 bytes=1568
+2015-02-24T21:43:14.582183+00:00 heroku[router]: at=info method=GET path="/results.js" host=ranked-choice.herokuapp.com request_id=f9a170be-f4bd-49dd-b778-938b0fe084aa fwd="170.11.30.141" dyno=web.1 connect=1ms service=8ms status=200 bytes=1063
+2015-02-24T21:44:09.781671+00:00 heroku[router]: at=error code=H15 desc="Idle connection" method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=a60c35bb-f10a-4ca7-9ac6-d559c5d5c875 fwd="170.11.30.141" dyno=web.1 connect=1ms service=55014ms status=503 bytes=515
+2015-02-24T22:09:54.441213+00:00 heroku[router]: at=info method=POST path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=9530c78c-7d2e-46db-a214-4b70d09380b9 fwd="170.11.30.141" dyno=web.1 connect=2ms service=5ms status=302 bytes=123
+2015-02-24T22:09:54.504961+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=5f6f504a-fde7-4b38-ba0e-06393edca2d3 fwd="170.11.30.141" dyno=web.1 connect=2ms service=5ms status=200 bytes=1568
+2015-02-24T22:09:54.606218+00:00 heroku[router]: at=info method=GET path="/results.js" host=ranked-choice.herokuapp.com request_id=85ebb50c-81dc-4273-9eeb-29452ff82e2a fwd="170.11.30.141" dyno=web.1 connect=1ms service=2ms status=200 bytes=1063
+2015-02-24T22:09:54.592704+00:00 heroku[router]: at=info method=GET path="/results.js" host=ranked-choice.herokuapp.com request_id=3982fbb0-980a-4108-9219-e1fdc6547515 fwd="170.11.30.141" dyno=web.1 connect=3ms service=7ms status=200 bytes=1063
+2015-02-24T22:09:54.728591+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=fa58ea52-0ac3-4932-99b0-39ace0214372 fwd="170.11.30.141" dyno=web.1 connect=1ms service=2ms status=404 bytes=100
+2015-02-24T22:22:58.199201+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=3bb55064-3e3e-43cc-8a04-35ea5b5ab1f6 fwd="170.11.30.141" dyno=web.1 connect=3ms service=13ms status=200 bytes=2462
+2015-02-24T22:23:01.714613+00:00 heroku[router]: at=info method=POST path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=472cefe9-9246-46a6-8a7f-c578c0ff8e79 fwd="170.11.30.141" dyno=web.1 connect=1ms service=8ms status=302 bytes=123
+2015-02-24T22:23:01.797012+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=df4021f1-773a-49c5-83dd-e30afed11b86 fwd="170.11.30.141" dyno=web.1 connect=1ms service=24ms status=200 bytes=1568
+2015-02-24T22:23:01.914964+00:00 heroku[router]: at=info method=GET path="/results.js" host=ranked-choice.herokuapp.com request_id=ffc2aa85-40d5-4b63-85c4-758850ab709c fwd="170.11.30.141" dyno=web.1 connect=1ms service=5ms status=200 bytes=1063
+2015-02-24T22:23:05.476278+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=7f811689-e338-48ce-9b89-16d34d34cca2 fwd="170.11.30.141" dyno=web.1 connect=1ms service=21ms status=200 bytes=2462
+2015-02-24T22:23:05.543582+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=bec28937-2b30-4fed-960f-29d8de885443 fwd="170.11.30.141" dyno=web.1 connect=1ms service=3543ms status=101 bytes=203
+2015-02-24T22:23:24.892047+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=97daa1e7-ad37-4292-ade5-6f48a68ff43d fwd="170.11.30.141" dyno=web.1 connect=1ms service=246ms status=200 bytes=2462
+2015-02-24T22:23:24.994978+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=ranked-choice.herokuapp.com request_id=7bb5efd0-58af-4d57-81a4-ac6b1b81f52a fwd="170.11.30.141" dyno=web.1 connect=2ms service=3ms status=200 bytes=2853
+2015-02-24T22:23:25.072684+00:00 heroku[router]: at=info method=GET path="/vote.js" host=ranked-choice.herokuapp.com request_id=330b18d4-64a8-4e20-b1ac-1537abc31f07 fwd="170.11.30.141" dyno=web.1 connect=3ms service=5ms status=200 bytes=722
+2015-02-24T22:23:25.234135+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=4d9a5806-46e1-4376-a2f1-920eaa3bb132 fwd="170.11.30.141" dyno=web.1 connect=1ms service=3ms status=404 bytes=100
+2015-02-24T22:23:25.287349+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=de939ef4-433c-4d1a-8fe2-30d6d6a58626 fwd="170.11.30.141" dyno=web.1 connect=2ms service=4ms status=404 bytes=100
+2015-02-24T22:23:30.691401+00:00 heroku[router]: at=info method=POST path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=2b7d7386-89a8-42ba-8fbb-712303725f7e fwd="170.11.30.141" dyno=web.1 connect=1ms service=7ms status=302 bytes=123
+2015-02-24T22:23:30.741035+00:00 heroku[router]: at=info method=GET path="/poll/0/results" host=ranked-choice.herokuapp.com request_id=8862c827-75e5-47f7-aa37-fd89de1d08db fwd="170.11.30.141" dyno=web.1 connect=2ms service=6ms status=200 bytes=1568
+2015-02-24T22:23:30.821333+00:00 heroku[router]: at=info method=GET path="/results.js" host=ranked-choice.herokuapp.com request_id=250b7caf-4950-43a9-8f2a-6ed6f2c69196 fwd="170.11.30.141" dyno=web.1 connect=1ms service=8ms status=200 bytes=1063
+2015-02-24T22:23:32.828633+00:00 heroku[router]: at=info method=GET path="/poll/0/results?socket=true" host=ranked-choice.herokuapp.com request_id=c5efe6a1-a517-46ac-939f-503b08294cb8 fwd="170.11.30.141" dyno=web.1 connect=1ms service=1912ms status=101 bytes=203
+2015-02-24T22:33:00.695029+00:00 heroku[router]: at=info method=GET path="/html.sortable.min.js" host=ranked-choice.herokuapp.com request_id=a434cedb-9c05-4142-8052-bf77389d38f5 fwd="170.11.30.141" dyno=web.1 connect=5ms service=13ms status=200 bytes=2853
+2015-02-24T22:33:00.594148+00:00 heroku[router]: at=info method=GET path="/poll/0/vote" host=ranked-choice.herokuapp.com request_id=384a380c-8dc9-46aa-9e10-343adf17ae0d fwd="170.11.30.141" dyno=web.1 connect=5ms service=80ms status=200 bytes=2462
+2015-02-24T22:33:00.695938+00:00 heroku[router]: at=info method=GET path="/vote.js" host=ranked-choice.herokuapp.com request_id=e5658813-a6d3-49ea-a8aa-5e687a593897 fwd="170.11.30.141" dyno=web.1 connect=6ms service=16ms status=200 bytes=722
+2015-02-24T22:33:01.278942+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=ranked-choice.herokuapp.com request_id=26d4cbfd-6d1f-4c15-992d-9fe122520e3a fwd="170.11.30.141" dyno=web.1 connect=1ms service=3ms status=404 bytes=100
+2015-02-24T23:34:42.962668+00:00 heroku[web.1]: Idling
+2015-02-24T23:34:42.963479+00:00 heroku[web.1]: State changed from up to down
+2015-02-24T23:34:47.007656+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2015-02-24T23:34:51.036969+00:00 heroku[web.1]: Process exited with status 143
