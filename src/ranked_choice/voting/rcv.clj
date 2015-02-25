@@ -1,7 +1,8 @@
 (ns ranked-choice.voting.rcv
   (:require [ranked-choice.voting :as voting]
             [clojure.core.async :as async]
-            [ranked-choice.transducers :as xf]))
+            [ranked-choice.transducers :as xf]
+            [clojure.tools.logging :as log]))
 
 (defn tally-xf [tally]
   (map (fn [ballots]
@@ -18,11 +19,12 @@
           base-tally (zipmap candidates (repeat 0))
           {:keys [tally no-winner? runoff]} vsys
           votes-ch (async/chan 1 (comp (dedupe)
-                                       (xf/peek (partial log/info "Processing Ballots: "))
+                                       (xf/peek #(log/info "Processing Ballots: " %))
                                        (tally-xf tally)))
           runoff-ch (async/chan 1 (comp (take-while no-winner?)
                                         (map runoff)))
           results-ch (async/chan 1 (comp (map :tally)
+                                         (xf/peek #(log/info "Interim Results: " %))
                                          (map #(into base-tally %))))
           tally-mult (async/mult votes-ch)]
       (async/tap tally-mult runoff-ch)
