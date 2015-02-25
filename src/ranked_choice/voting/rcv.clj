@@ -17,7 +17,8 @@
     (let [base-results (zipmap candidates (repeat []))
           base-tally (zipmap candidates (repeat 0))
           {:keys [tally no-winner? runoff]} vsys
-          votes-ch (async/chan 1 (tally-xf tally))
+          votes-ch (async/chan 1 (comp (dedupe)
+                                       (tally-xf tally)))
           runoff-ch (async/chan 1 (comp (take-while no-winner?)
                                         (map runoff)))
           results-ch (async/chan 1 (comp (map :tally)

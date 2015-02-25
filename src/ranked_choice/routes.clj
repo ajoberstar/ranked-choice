@@ -31,8 +31,8 @@
             (redirect (str "/poll/" id "/results"))))
     (GET "/results" [socket :as request]
          (if socket
-           (let [in-ch (async/chan (async/sliding-buffer 1))
-                 out-ch (async/chan (async/sliding-buffer 1) (map json/write-str))]
+           (let [in-ch (async/chan (async/sliding-buffer 3))
+                 out-ch (async/chan (async/sliding-buffer 3) (map json/write-str))]
              (poll/pipe-results poll out-ch)
              (httpkit/websocket-handler in-ch out-ch))
            (resource-response "/results.html")))
