@@ -26,17 +26,16 @@
   (reductions rf (rf)). That is, (rf) will be executed eagerly before
   returning the transducer."
   ([rf]
-    (reductions rf (rf)))
+   (reductions rf (rf)))
   ([rf init]
-    (fn [xf]
-      (let [acc (volatile! init)]
-        (completing
-          (fn [result input]
-            (->> input (vswap! acc rf) (xf result))))))))
+   (fn [xf]
+     (let [acc (volatile! init)]
+       (completing
+         (fn [result input]
+           (->> input (vswap! acc rf) (xf result))))))))
 
 (defn zipmapv
   [vs]
   (fn [xf]
     (completing
-      (fn [result input]
-        ))))
+      (fn [result input]))))

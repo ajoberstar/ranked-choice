@@ -13,7 +13,7 @@
 
 (html/deftemplate vote "vote.html" [id candidates]
   [:li.candidate] (html/clone-for [candidate candidates] (html/content candidate))
-  [:#abstain-btn] (html/set-attr :href (str "/poll/" id "/results") ))
+  [:#abstain-btn] (html/set-attr :href (str "/poll/" id "/results")))
 
 (html/deftemplate monitor "monitor.html" [polls-by-id]
   [:div.poll] (html/clone-for [[id poll] polls-by-id]
