@@ -11,3 +11,4 @@ pom.xml.asc
 *.iml
 *.swp
 *.sublime-workspace
+*.log

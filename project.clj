@@ -16,10 +16,34 @@
                  [ring/ring-core "1.4.0"]
                  [http-kit "2.1.19"]
                  [compojure "1.4.0"]
-                 [enlive "1.1.6"]]
-  :main ^:skip-aot ranked-choice.core
+                 [enlive "1.1.6"]
+
+                 ;; clojurescript
+                 [org.clojure/clojurescript "1.7.228"]
+                 [re-frame "0.6.0"]
+                 [figwheel "0.5.0-6"]]
+
+  :resource-paths ["resources" "target/resources"]
   :target-path "target/%s"
+
+  :main ^:skip-aot ranked-choice.core
   :uberjar-name "ranked-choice.jar"
+
+  :hooks [leiningen.cljsbuild]
+  :plugins [[lein-cljsbuild "1.1.2"]
+            [lein-figwheel "0.5.0-6"]]
+  :cljsbuild {:builds [{:id "development"
+                        :source-paths ["src" "dev"]
+                        :compiler {:output-to "target/resources/public/js/main.js"
+                                   :output-dir "target/resources/public/js"
+                                   :asset-path "js"
+                                   :main org.ajoberstar.dev
+                                   :optimizations :none}}
+                       {:id "production"
+                        :source-paths ["src"]
+                        :compile {:output-to "target/resources/public/js/main.js"
+                                  :optimizations :advanced}}]}
+  :figwheel {:css-dirs ["resources/public/css"]}
   :profiles {:uberjar {:aot :all}
              :dev {:dependencies [[reloaded.repl "0.2.1"]
                                   [org.clojure/tools.namespace "0.2.11"]]
