@@ -1,0 +1,59 @@
+plugins {
+  id 'org.ajoberstar.reckon' version '0.6.0'
+  id 'gradle-clojure.clojure' version '0.4.0-beta.6'
+  id 'gradle-clojure.clojurescript-base' version '0.4.0-beta.6'
+  id 'application'
+  id 'com.github.johnrengelman.shadow' version '2.0.4'
+}
+
+mainClassName = 'ranked_choice.core'
+
+repositories {
+  mavenCentral()
+  maven {
+    name = 'clojars'
+    url = 'https://repo.clojars.org/'
+  }
+}
+
+dependencies {
+  // backend
+  implementation 'org.clojure:clojure:latest.release'
+  implementation 'org.clojure:tools.logging:latest.release'
+  implementation 'mount:mount:latest.release'
+  implementation 'org.clojure:core.async:latest.release'
+  implementation 'ring:ring-core:latest.release'
+  implementation 'http-kit:http-kit:latest.release'
+  implementation 'bidi:bidi:latest.release'
+  implementation 'hiccup:hiccup:latest.release'
+
+  // frontend
+  implementation 'org.clojure:clojurescript:latest.release'
+  implementation 're-frame:re-frame:latest.release'
+
+  // testing
+  testImplementation 'junit:junit:latest.release'
+
+  // development
+  devImplementation 'com.bhauman:figwheel-main:latest.integration'
+}
+
+dependencyLocking {
+  lockAllConfigurations()
+}
+
+compileClojure {
+  options {
+    aotCompile = true
+  }
+}
+
+compileClojurescript {
+  options {
+    outputTo = 'public/js/main.js'
+    outputDir = 'public/js'
+    assetPath = 'js'
+    main = 'org.ajoberstar.dev'
+    optimizations = 'none'
+  }
+}
