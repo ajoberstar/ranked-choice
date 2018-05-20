@@ -22,9 +22,16 @@ dependencies {
   implementation 'org.clojure:tools.logging:latest.release'
   implementation 'mount:mount:latest.release'
   implementation 'org.clojure:core.async:latest.release'
+
+  // http
   implementation 'ring:ring-core:latest.release'
-  implementation 'http-kit:http-kit:latest.release'
+  implementation 'ring:ring-jetty-adapter:latest.release'
+  implementation 'org.eclipse.jetty:jetty-server:latest.release'
+
+  // routing
   implementation 'bidi:bidi:latest.release'
+
+  // rendering
   implementation 'hiccup:hiccup:latest.release'
 
   // frontend
