@@ -33,9 +33,3 @@
        (completing
          (fn [result input]
            (->> input (vswap! acc rf) (xf result))))))))
-
-(defn zipmapv
-  [vs]
-  (fn [xf]
-    (completing
-      (fn [result input]))))

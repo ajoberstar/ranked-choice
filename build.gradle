@@ -1,12 +1,18 @@
 plugins {
-  id 'org.ajoberstar.reckon' version '0.6.0'
   id 'gradle-clojure.clojure' version '0.4.0-beta.6'
   id 'gradle-clojure.clojurescript-base' version '0.4.0-beta.6'
   id 'application'
   id 'com.github.johnrengelman.shadow' version '2.0.4'
+  id 'org.ajoberstar.grgit' version '2.2.0'
+  id 'org.ajoberstar.reckon' version '0.6.0'
 }
 
-mainClassName = 'ranked_choice.core'
+mainClassName = 'ranked_choice.main'
+
+reckon {
+  normal = scopeFromProp()
+  preRelease = snapshotFromProp()
+}
 
 repositories {
   mavenCentral()
@@ -43,6 +49,14 @@ dependencies {
 
   // development
   devImplementation 'com.bhauman:figwheel-main:latest.integration'
+
+  // TODO remove these old deps
+  implementation 'http-kit:http-kit:latest.release'
+  implementation 'com.stuartsierra:component:latest.release'
+  devImplementation 'com.stuartsierra:component.repl:latest.release'
+  implementation 'compojure:compojure:latest.release'
+  implementation 'enlive:enlive:latest.release'
+
 }
 
 dependencyLocking {

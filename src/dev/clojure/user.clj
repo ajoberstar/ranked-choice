@@ -1,5 +1,13 @@
- (ns user
-   (:require [reloaded.repl :refer :all]
-             [ranked-choice.core]))
+(ns user
+  (:require [ranked-choice.main]
+            [mount.core :as mount]
+            [clojure.tools.namespace.repl :as tn]))
 
- (set-init! #(ranked-choice.core/system {}))
+(defn go []
+  (mount/start-with-args
+    {:http-port 8888})
+  :ready)
+
+(defn reset []
+  (mount/stop)
+  (tn/refresh :after 'user/go))
