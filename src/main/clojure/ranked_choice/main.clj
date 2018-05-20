@@ -1,12 +1,3 @@
-(ns ranked-choice.main
-  (:require [mount.core :as mount]
-            [ranked-choice.server :as server])
-  (:gen-class))
+(ns ranked-choice.main)
 
-(defn parse-args [args]
-  (let [[port & rest] args]
-    {:http-port (Integer/parseInt port)}))
-
-(defn -main [& args]
-  (mount/start-with-args
-    (parse-args args)))
+(defn -main [& args])

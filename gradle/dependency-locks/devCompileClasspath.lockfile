@@ -11,9 +11,9 @@ cljsjs:react-dom:15.5.4-0
 cljsjs:react:15.5.4-0
 clout:clout:2.2.1
 co.deps:ring-etag-middleware:0.2.0
-com.bhauman:figwheel-core:0.1.0-SNAPSHOT:20180510.203120-5
-com.bhauman:figwheel-main:0.1.0-SNAPSHOT:20180510.203242-6
-com.bhauman:figwheel-repl:0.1.0-SNAPSHOT:20180510.203157-6
+com.bhauman:figwheel-core:0.1.0-SNAPSHOT:20180520.160815-6
+com.bhauman:figwheel-main:0.1.0-SNAPSHOT:20180520.160929-7
+com.bhauman:figwheel-repl:0.1.0-SNAPSHOT:20180520.160852-7
 com.cognitect:transit-clj:0.8.300
 com.cognitect:transit-java:0.8.324
 com.fasterxml.jackson.core:jackson-core:2.8.7
@@ -27,6 +27,7 @@ com.google.javascript:closure-compiler-unshaded:v20180204
 com.google.jsinterop:jsinterop-annotations:1.0.0
 com.google.protobuf:protobuf-java:3.0.2
 com.googlecode.json-simple:json-simple:1.1.1
+com.stuartsierra:component.repl:0.2.0
 com.stuartsierra:component:0.3.2
 com.stuartsierra:dependency:0.2.0
 commons-codec:commons-codec:1.10
@@ -64,7 +65,7 @@ org.clojure:data.json:0.2.6
 org.clojure:data.priority-map:0.0.7
 org.clojure:google-closure-library-third-party:0.0-20170809-b9c14c6b
 org.clojure:google-closure-library:0.0-20170809-b9c14c6b
-org.clojure:java.classpath:0.2.3
+org.clojure:java.classpath:0.3.0
 org.clojure:spec.alpha:0.1.143
 org.clojure:tools.analyzer.jvm:0.7.0
 org.clojure:tools.analyzer:0.6.9

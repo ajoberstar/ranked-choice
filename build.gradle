@@ -57,6 +57,11 @@ dependencies {
   implementation 'compojure:compojure:latest.release'
   implementation 'enlive:enlive:latest.release'
 
+  constraints {
+    devImplementation('org.clojure:java.classpath:0.3.0') {
+      because 'Previous versions are not compatible with Java 9'
+    }
+  }
 }
 
 dependencyLocking {
@@ -76,5 +81,11 @@ compileClojurescript {
     assetPath = 'js'
     main = 'org.ajoberstar.dev'
     optimizations = 'none'
+  }
+}
+
+compileDevClojurescript {
+  options {
+    outputDir = 'public/js'
   }
 }
