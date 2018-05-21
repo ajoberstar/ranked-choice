@@ -31,8 +31,9 @@ dependencies {
 
   // http
   implementation 'ring:ring-core:latest.release'
-  implementation 'ring:ring-jetty-adapter:latest.release'
-  implementation 'org.eclipse.jetty:jetty-server:latest.release'
+  implementation 'ring:ring-defaults:latest.release'
+  implementation 'ring:ring-json:latest.release'
+  implementation 'http-kit:http-kit:latest.release'
 
   // routing
   implementation 'bidi:bidi:latest.release'
@@ -49,13 +50,6 @@ dependencies {
 
   // development
   devImplementation 'com.bhauman:figwheel-main:latest.integration'
-
-  // TODO remove these old deps
-  implementation 'http-kit:http-kit:latest.release'
-  implementation 'com.stuartsierra:component:latest.release'
-  devImplementation 'com.stuartsierra:component.repl:latest.release'
-  implementation 'compojure:compojure:latest.release'
-  implementation 'enlive:enlive:latest.release'
 
   constraints {
     devImplementation('org.clojure:java.classpath:0.3.0') {
