@@ -1,5 +1,5 @@
 plugins {
-  id 'gradle-clojure.clojure' version '0.4.0-beta.6'
+  id 'gradle-clojure.clojure' version '0.4.0-beta.7'
   id 'gradle-clojure.clojurescript-base' version '0.4.0-beta.6'
   id 'application'
   id 'com.github.johnrengelman.shadow' version '2.0.4'
@@ -60,12 +60,6 @@ dependencies {
 
 dependencyLocking {
   lockAllConfigurations()
-}
-
-compileClojure {
-  options {
-    aotCompile = true
-  }
 }
 
 compileClojurescript {
