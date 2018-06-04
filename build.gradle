@@ -50,6 +50,7 @@ dependencies {
 
   // development
   devImplementation 'com.bhauman:figwheel-main:latest.integration'
+  devRuntimeOnly 'cider:cider-nrepl:0.17.0'
 
   constraints {
     devImplementation('org.clojure:java.classpath:0.3.0') {
