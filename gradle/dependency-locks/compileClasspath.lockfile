@@ -19,8 +19,8 @@ com.google.code.gson:gson:2.7
 com.google.errorprone:error_prone_annotations:2.0.18
 com.google.guava:guava:22.0
 com.google.j2objc:j2objc-annotations:1.1
-com.google.javascript:closure-compiler-externs:v20180204
-com.google.javascript:closure-compiler-unshaded:v20180204
+com.google.javascript:closure-compiler-externs:v20180610
+com.google.javascript:closure-compiler-unshaded:v20180610
 com.google.jsinterop:jsinterop-annotations:1.0.0
 com.google.protobuf:protobuf-java:3.0.2
 com.googlecode.json-simple:json-simple:1.1.1
@@ -31,13 +31,13 @@ crypto-equality:crypto-equality:1.0.0
 crypto-random:crypto-random:1.2.0
 hiccup:hiccup:2.0.0-alpha1
 http-kit:http-kit:2.3.0
-io.github.gradle-clojure:gradle-clojure-tools:0.4.0-beta.7
+io.github.gradle-clojure:gradle-clojure-tools:0.4.0-beta.10
 javax.servlet:javax.servlet-api:3.1.0
 joda-time:joda-time:2.9.9
 mount:mount:0.1.12
 net.cgrand:macrovich:0.2.0
 org.clojure:clojure:1.10.0-alpha4
-org.clojure:clojurescript:1.10.238
+org.clojure:clojurescript:1.10.329
 org.clojure:core.async:0.4.474
 org.clojure:core.cache:0.6.5
 org.clojure:core.memoize:0.5.9

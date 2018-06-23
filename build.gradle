@@ -1,6 +1,6 @@
 plugins {
-  id 'gradle-clojure.clojure' version '0.4.0-beta.7'
-  id 'gradle-clojure.clojurescript-base' version '0.4.0-beta.7'
+  id 'gradle-clojure.clojure' version '0.4.0-beta.10'
+  id 'gradle-clojure.clojurescript' version '0.4.0-beta.10'
   id 'application'
   id 'com.github.johnrengelman.shadow' version '2.0.4'
   id 'org.ajoberstar.grgit' version '2.2.1'
@@ -49,32 +49,35 @@ dependencies {
   testImplementation 'junit:junit:latest.release'
 
   // development
-  devImplementation 'com.bhauman:figwheel-main:latest.integration'
+  devImplementation 'com.bhauman:figwheel-main:latest.release'
   devRuntimeOnly 'cider:cider-nrepl:0.17.0'
-
-  constraints {
-    devImplementation('org.clojure:java.classpath:0.3.0') {
-      because 'Previous versions are not compatible with Java 9'
-    }
-  }
 }
 
 dependencyLocking {
   lockAllConfigurations()
 }
 
-compileClojurescript {
-  options {
-    outputTo = 'public/js/main.js'
-    outputDir = 'public/js'
-    assetPath = 'js'
-    main = 'org.ajoberstar.dev'
-    optimizations = 'none'
-  }
-}
-
-compileDevClojurescript {
-  options {
-    outputDir = 'public/js'
+clojurescript {
+  builds {
+    all {
+      compiler {
+        outputTo = 'public/js/main.js'
+        outputDir = 'public/js/out'
+        assetPath = 'js/out'
+        main = 'ranked-choice.main'
+      }
+    }
+    main {
+      compiler {
+        optimizations = 'advanced'
+        sourceMap = 'public/js/main.js.map'
+      }
+    }
+    dev {
+      compiler {
+        optimizations = 'none'
+        preloads = ['ranked-choice.dev']
+      }
+    }
   }
 }
