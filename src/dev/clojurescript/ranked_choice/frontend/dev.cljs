@@ -1,4 +1,4 @@
-(ns ranked-choice.dev)
+(ns ranked-choice.frontend.dev)
 
 (enable-console-print!)
 

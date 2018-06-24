@@ -7,7 +7,7 @@ plugins {
   id 'org.ajoberstar.reckon' version '0.7.0'
 }
 
-mainClassName = 'ranked_choice.main'
+mainClassName = 'ranked_choice.backend.main'
 
 reckon {
   scopeFromProp()
@@ -23,36 +23,40 @@ repositories {
 }
 
 dependencies {
-  // backend
-  implementation 'org.clojure:clojure:latest.release'
-  implementation 'org.clojure:tools.logging:latest.release'
-  implementation 'mount:mount:latest.release'
-  implementation 'org.clojure:core.async:latest.release'
+  // clojure
+  implementation 'org.clojure:clojure:latest.prerelease'
+  implementation 'org.clojure:clojurescript:latest.prerelease'
+  implementation 'org.clojure:spec.alpha:latest.final'
 
-  // http
-  implementation 'ring:ring-core:latest.release'
-  implementation 'ring:ring-defaults:latest.release'
-  implementation 'ring:ring-json:latest.release'
-  implementation 'http-kit:http-kit:latest.release'
-
-  // routing
-  implementation 'bidi:bidi:latest.release'
-
-  // rendering
-  implementation 'hiccup:hiccup:latest.release'
-
-  // frontend
-  implementation 'org.clojure:clojurescript:latest.release'
-  implementation 're-frame:re-frame:latest.release'
-  implementation 're-posh:re-posh:latest.release'
+  // system framework
+  implementation 'com.stuartsierra:component:latest.final'
+  devImplementation 'com.stuartsierra:component.repl:latest.final'
 
   // testing
-  testImplementation 'junit:junit:latest.release'
+  testImplementation 'junit:junit:latest.final'
+  testImplementation 'org.clojure:test.check:latest.final'
 
-  // development
-  devImplementation 'binaryage:devtools:latest.release'
-  devImplementation 'day8.re-frame:re-frame-10x:latest.release'
-  devImplementation 'devcards:devcards:latest.release'
+  // glue
+  implementation 'org.clojure:tools.logging:latest.final'
+  implementation 'org.clojure:core.async:latest.final'
+
+  // http backend
+  implementation 'io.pedestal:pedestal.service:latest.final'
+  implementation 'io.pedestal:pedestal.jetty:latest.final'
+
+  // frontend
+  // implementation 'fulcrologic:fulcro:latest.final'
+  // devImplementation 'fulcrologic:fulcro-inspect:latest.final'
+  // testImplementation 'fulcrologic:fulcro-spec:latest.final'
+  implementation 'org.omcljs:om:latest.prerelease'
+  devImplementation 'devcards:devcards:latest.final'
+  devImplementation 'binaryage:devtools:latest.final'
+
+  constraints {
+    implementation('com.cognitect:transit-cljs:0.8.243') {
+      because 'cljs.core introduced a uri? that conflicts with transit'
+    }
+  }
 }
 
 dependencyLocking {
@@ -65,16 +69,16 @@ clojurescript {
       compiler {
         outputDir = 'public/js/out'
         assetPath = 'js/out'
-        modules {
-          main {
-            outputTo = 'public/js/main.js'
-            entries = ['ranked-choice.client']
-          }
-          cards {
-            outputTo = 'public/js/cards.js'
-            entries = ['ranked-choice.cards']
-          }
-        }
+        outputTo = 'public/js/main.js'
+        main = 'ranked-choice.frontend.main'
+        // module('main') {
+        //   outputTo = 'public/js/main.js'
+        //   entries = ['ranked-choice.frontend.main']
+        // }
+        // module('cards') {
+        //   outputTo = 'public/js/cards.js'
+        //   entries = ['ranked-choice.frontend.cards']
+        // }
       }
     }
     main {
@@ -85,7 +89,24 @@ clojurescript {
     dev {
       compiler {
         optimizations = 'none'
-        preloads = ['ranked-choice.dev', 'devtools.preload', 'day8.re-frame-10x.preload']
+        preloads = ['ranked-choice.frontend.dev', 'devtools.preload']
+      }
+    }
+  }
+}
+
+dependencies {
+  def versionPattern = ~/^(?<normal>\d+(?:\.\d+)*)(?:-(?<prerelease>.+?))?(?:\+(?<buildmetadata>.+))?$/
+  components.all { details ->
+    def matcher = details.id.version =~ versionPattern
+    if (matcher.find()) {
+      details.statusScheme = ['snapshot', 'prerelease', 'final']
+      if (matcher.group('prerelease') == 'SNAPSHOT') {
+        details.status = 'snapshot'
+      } else if (matcher.group('prerelease')) {
+        details.status = 'prerelease'
+      } else {
+        details.status = 'final'
       }
     }
   }

@@ -1,11 +1,4 @@
 (ns user
-  (:require [mount.core :as mount]
-            [clojure.tools.namespace.repl :as tn]
-            [gradle-clojure.tools.figwheel :as fw]))
+  (:require [com.stuartsierra.component.user-helpers :refer [dev go reset set-dev-ns]]))
 
-(defn dev []
-  (in-ns 'dev))
-
-(defn reset []
-  (mount/stop)
-  (tn/refresh :after 'dev/go))
+(set-dev-ns 'ranked-choice.backend.dev)
