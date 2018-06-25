@@ -8,4 +8,4 @@
 
 (set-init new-system)
 
-(swap! gradle-clojure.tools.clojure-nrepl/context assoc-in [:cljs-builds "dev" :figwheel :devcards] true)
+(swap! gradle-clojure.tools.clojure-nrepl/context assoc-in [:cljs-builds "dev" :compiler :devcards] true)

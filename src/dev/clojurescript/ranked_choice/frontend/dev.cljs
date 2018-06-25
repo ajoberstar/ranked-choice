@@ -2,4 +2,4 @@
 
 (enable-console-print!)
 
-(println "It's dev time!")
+(println "It's dev times two!")
