@@ -32,7 +32,7 @@ crypto-equality:crypto-equality:1.0.0
 crypto-random:crypto-random:1.2.0
 io.dropwizard.metrics:metrics-core:4.0.2
 io.dropwizard.metrics:metrics-jmx:4.0.2
-io.github.gradle-clojure:gradle-clojure-tools:0.4.0-beta.10
+io.github.gradle-clojure:gradle-clojure-tools:0.4.0-beta.11
 io.opentracing:opentracing-api:0.31.0
 io.opentracing:opentracing-noop:0.31.0
 io.opentracing:opentracing-util:0.31.0
@@ -45,7 +45,7 @@ javax.servlet:javax.servlet-api:3.1.0
 joda-time:joda-time:2.8.2
 junit:junit:4.12
 org.clojure:clojure:1.10.0-alpha4
-org.clojure:clojurescript:1.10.329
+org.clojure:clojurescript:1.10.339
 org.clojure:core.async:0.4.474
 org.clojure:core.cache:0.6.5
 org.clojure:core.incubator:0.1.4

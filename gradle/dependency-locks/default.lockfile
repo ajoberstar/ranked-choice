@@ -43,7 +43,7 @@ io.pedestal:pedestal.service:0.5.4
 javax.servlet:javax.servlet-api:3.1.0
 joda-time:joda-time:2.8.2
 org.clojure:clojure:1.10.0-alpha4
-org.clojure:clojurescript:1.10.329
+org.clojure:clojurescript:1.10.339
 org.clojure:core.async:0.4.474
 org.clojure:core.cache:0.6.5
 org.clojure:core.incubator:0.1.4
