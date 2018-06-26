@@ -7,5 +7,3 @@
   (component/system-map))
 
 (set-init new-system)
-
-(swap! gradle-clojure.tools.clojure-nrepl/context assoc-in [:cljs-builds "dev" :compiler :devcards] true)
